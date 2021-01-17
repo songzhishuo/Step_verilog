@@ -8,7 +8,7 @@ reg [31:0]cnt;                  //晶振计数器12M
 
 reg [31:0]duty_cnt;             //占空比计数器
 reg [31:0]duty;                 //实时占空比
-reg inc_dec_flag;               //占空比增减标志
+reg inc_dec_flag = 1'b1;               //占空比增减标志
 
 assign led = duty_cnt>duty ? 1'b1 : 1'b0;
 
@@ -32,11 +32,11 @@ always @(posedge clk) begin
         end
     end   
     
-    if (duty >= 32'd12000) begin
+    if (duty == 32'd12000) begin
        // duty = 1'b0;
         inc_dec_flag <= 1'b0;
     end
-    else if (duty <= 32'd0) begin
+    else if (duty == 32'd0) begin
         inc_dec_flag <= 1'b1;
     end
 end

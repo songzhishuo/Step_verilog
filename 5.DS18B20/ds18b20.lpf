@@ -1,0 +1,7 @@
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+LOCATE COMP "sys_clk" SITE "C1" ;
+LOCATE COMP "sys_rst" SITE "L14" ;
+LOCATE COMP "led1_pin" SITE "N13" ;
+LOCATE COMP "uart_txd" SITE "C8" ;
+LOCATE COMP "one_wire" SITE "N7" ;

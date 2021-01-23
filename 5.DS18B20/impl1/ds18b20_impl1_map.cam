@@ -1,0 +1,80 @@
+[ START MERGED ]
+n2478 u_DS18B20Z/one_wire_N_436
+u_uart_send/n7868 u_uart_send/uart_tx_busy
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+VCC_net
+u_clock_1s/add_8899_10/S1
+u_clock_1s/add_8899_10/S0
+u_clock_1s/add_8899_12/S1
+u_clock_1s/add_8899_12/S0
+u_clock_1s/add_8899_14/S1
+u_clock_1s/add_8899_14/S0
+u_clock_1s/clk_cnt_898_add_4_33/S1
+u_clock_1s/clk_cnt_898_add_4_33/CO
+u_clock_1s/add_8899_16/S1
+u_clock_1s/add_8899_16/S0
+u_clock_1s/add_8899_18/S1
+u_clock_1s/add_8899_18/S0
+u_clock_1s/add_8899_20/S1
+u_clock_1s/add_8899_20/S0
+u_clock_1s/add_8899_22/S1
+u_clock_1s/add_8899_22/S0
+u_clock_1s/add_8899_24/S0
+u_clock_1s/add_8899_24/CO
+u_clock_1s/clk_cnt_898_add_4_1/S0
+u_clock_1s/clk_cnt_898_add_4_1/CI
+u_clock_1s/add_8899_2/S1
+u_clock_1s/add_8899_2/S0
+u_clock_1s/add_8899_2/CI
+u_clock_1s/add_8899_4/S1
+u_clock_1s/add_8899_4/S0
+u_clock_1s/add_8899_6/S1
+u_clock_1s/add_8899_6/S0
+u_clock_1s/add_8899_8/S1
+u_clock_1s/add_8899_8/S0
+u_uart_send/clk_cnt_900_add_4_1/S0
+u_uart_send/clk_cnt_900_add_4_1/CI
+u_uart_send/clk_cnt_900_add_4_17/S1
+u_uart_send/clk_cnt_900_add_4_17/CO
+u_DS18B20Z/sub_818_add_2_1/S1
+u_DS18B20Z/sub_818_add_2_1/S0
+u_DS18B20Z/sub_818_add_2_1/CI
+u_DS18B20Z/sub_818_add_2_3/S1
+u_DS18B20Z/sub_818_add_2_3/S0
+u_DS18B20Z/sub_818_add_2_5/S1
+u_DS18B20Z/sub_818_add_2_5/S0
+u_DS18B20Z/sub_818_add_2_7/S1
+u_DS18B20Z/sub_818_add_2_7/S0
+u_DS18B20Z/sub_818_add_2_9/S1
+u_DS18B20Z/sub_818_add_2_9/S0
+u_DS18B20Z/sub_818_add_2_11/S1
+u_DS18B20Z/sub_818_add_2_11/S0
+u_DS18B20Z/add_48_21/S1
+u_DS18B20Z/add_48_21/CO
+u_DS18B20Z/sub_818_add_2_13/S1
+u_DS18B20Z/sub_818_add_2_13/S0
+u_DS18B20Z/sub_818_add_2_15/S1
+u_DS18B20Z/sub_818_add_2_15/S0
+u_DS18B20Z/sub_818_add_2_17/S1
+u_DS18B20Z/sub_818_add_2_17/S0
+u_DS18B20Z/sub_818_add_2_19/S1
+u_DS18B20Z/sub_818_add_2_19/S0
+u_DS18B20Z/sub_818_add_2_21/S0
+u_DS18B20Z/sub_818_add_2_21/CO
+u_DS18B20Z/add_48_1/S0
+u_DS18B20Z/add_48_1/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Sat Jan 23 13:30:59 2021
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF ;
+LOCATE COMP "uart_txd" SITE "C8" ;
+LOCATE COMP "led1_pin" SITE "N13" ;
+LOCATE COMP "one_wire" SITE "N7" ;
+LOCATE COMP "sys_clk" SITE "C1" ;
+LOCATE COMP "sys_rst" SITE "L14" ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

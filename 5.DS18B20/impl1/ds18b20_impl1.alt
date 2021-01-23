@@ -1,0 +1,13 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Sat Jan 23 13:31:05 2021 *
+NOTE DESIGN NAME: top_module *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS uart_txd : C8 : out *
+NOTE PINS led1_pin : N13 : out *
+NOTE PINS one_wire : N7 : inout *
+NOTE PINS sys_clk : C1 : in *
+NOTE PINS sys_rst : L14 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

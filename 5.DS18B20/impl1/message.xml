@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/top_module.v(1): </Dynamic>
+            <Dynamic>top_module</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/top_module.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/clock.v(1): </Dynamic>
+            <Dynamic>clock_1s</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/clock.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/led.v(1): </Dynamic>
+            <Dynamic>blink</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/led.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/uart.v(1): </Dynamic>
+            <Dynamic>uart_send</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/uart.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/ds18b20.v(18): </Dynamic>
+            <Dynamic>DS18B20Z</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/ds18b20.v</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>\u_uart_send/tx_cnt</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/top_module.v(81): </Dynamic>
+            <Dynamic>Temp_H_i7</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/top_module.v</Navigation>
+            <Navigation>81</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/ds18b20.v(263): </Dynamic>
+            <Dynamic>\u_DS18B20Z/data_wr_i0_i0</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/ds18b20.v</Navigation>
+            <Navigation>263</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/uart.v(66): </Dynamic>
+            <Dynamic>\u_uart_send/tx_data_i7</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/uart.v</Navigation>
+            <Navigation>66</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/downloads/step/proj/4.ds18b20/ds18b20.v(263): </Dynamic>
+            <Dynamic>\u_DS18B20Z/data_wr_i0_i2</Dynamic>
+            <Navigation>c:/users/argon/downloads/step/proj/4.ds18b20/ds18b20.v</Navigation>
+            <Navigation>263</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>sys_clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>sys_clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=u_DS18B20Z/clk_1mhz loads=12 clock_loads=2</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=u_DS18B20Z/clk_1mhz loads=12 clock_loads=2</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

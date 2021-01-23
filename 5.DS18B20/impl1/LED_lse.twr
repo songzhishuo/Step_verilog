@@ -1,0 +1,155 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Fri Jan 22 19:06:29 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     LED
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 1000.000000 -name clk0 [get_nets clk_c]
+            1617 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 990.386ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \LED1/duty_i0_i31  (from clk_c +)
+   Destination:    FD1P3AX    SP             \LED1/inc_dec_flag_29  (to clk_c +)
+
+   Delay:                   9.329ns  (31.2% logic, 68.8% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.329ns data_path \LED1/duty_i0_i31 to \LED1/inc_dec_flag_29 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 990.386ns
+
+ Path Details: \LED1/duty_i0_i31 to \LED1/inc_dec_flag_29
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \LED1/duty_i0_i31 (from clk_c)
+Route         2   e 1.198                                  \LED1/duty[31]
+LUT4        ---     0.493              A to Z              \LED1/i13_4_lut
+Route         1   e 0.941                                  \LED1/n31
+LUT4        ---     0.493              A to Z              \LED1/i16_4_lut
+Route         1   e 0.941                                  \LED1/n34
+LUT4        ---     0.493              B to Z              \LED1/i17_4_lut
+Route         3   e 1.258                                  \LED1/n255
+LUT4        ---     0.493              C to Z              \LED1/i1_4_lut_rep_12
+Route         2   e 1.141                                  \LED1/n547
+LUT4        ---     0.493              A to Z              \LED1/i352_4_lut_4_lut
+Route         1   e 0.941                                  \LED1/clk_c_enable_1
+                  --------
+                    9.329  (31.2% logic, 68.8% route), 6 logic levels.
+
+
+Passed:  The following path meets requirements by 990.386ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \LED1/duty_i0_i30  (from clk_c +)
+   Destination:    FD1P3AX    SP             \LED1/inc_dec_flag_29  (to clk_c +)
+
+   Delay:                   9.329ns  (31.2% logic, 68.8% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.329ns data_path \LED1/duty_i0_i30 to \LED1/inc_dec_flag_29 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 990.386ns
+
+ Path Details: \LED1/duty_i0_i30 to \LED1/inc_dec_flag_29
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \LED1/duty_i0_i30 (from clk_c)
+Route         2   e 1.198                                  \LED1/duty[30]
+LUT4        ---     0.493              C to Z              \LED1/i10_4_lut
+Route         1   e 0.941                                  \LED1/n28
+LUT4        ---     0.493              C to Z              \LED1/i16_4_lut
+Route         1   e 0.941                                  \LED1/n34
+LUT4        ---     0.493              B to Z              \LED1/i17_4_lut
+Route         3   e 1.258                                  \LED1/n255
+LUT4        ---     0.493              C to Z              \LED1/i1_4_lut_rep_12
+Route         2   e 1.141                                  \LED1/n547
+LUT4        ---     0.493              A to Z              \LED1/i352_4_lut_4_lut
+Route         1   e 0.941                                  \LED1/clk_c_enable_1
+                  --------
+                    9.329  (31.2% logic, 68.8% route), 6 logic levels.
+
+
+Passed:  The following path meets requirements by 990.386ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \LED1/duty_i0_i26  (from clk_c +)
+   Destination:    FD1P3AX    SP             \LED1/inc_dec_flag_29  (to clk_c +)
+
+   Delay:                   9.329ns  (31.2% logic, 68.8% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.329ns data_path \LED1/duty_i0_i26 to \LED1/inc_dec_flag_29 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 990.386ns
+
+ Path Details: \LED1/duty_i0_i26 to \LED1/inc_dec_flag_29
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \LED1/duty_i0_i26 (from clk_c)
+Route         2   e 1.198                                  \LED1/duty[26]
+LUT4        ---     0.493              D to Z              \LED1/i10_4_lut
+Route         1   e 0.941                                  \LED1/n28
+LUT4        ---     0.493              C to Z              \LED1/i16_4_lut
+Route         1   e 0.941                                  \LED1/n34
+LUT4        ---     0.493              B to Z              \LED1/i17_4_lut
+Route         3   e 1.258                                  \LED1/n255
+LUT4        ---     0.493              C to Z              \LED1/i1_4_lut_rep_12
+Route         2   e 1.141                                  \LED1/n547
+LUT4        ---     0.493              A to Z              \LED1/i352_4_lut_4_lut
+Route         1   e 0.941                                  \LED1/clk_c_enable_1
+                  --------
+                    9.329  (31.2% logic, 68.8% route), 6 logic levels.
+
+Report: 9.614 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk0 [get_nets clk_c]                   |  1000.000 ns|     9.614 ns|     6  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover  2278 paths, 176 nets, and 394 connections (79.4% coverage)
+
+
+Peak memory: 61022208 bytes, TRCE: 1089536 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

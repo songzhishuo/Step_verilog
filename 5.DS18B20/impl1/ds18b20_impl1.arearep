@@ -1,0 +1,70 @@
+----------------------------------------------------------------------
+Report for cell top_module.TECH
+Register bits:  179 of 4635 (3.862%)
+I/O cells:      5
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB         1          100.0
+                              CCU2D        60          100.0
+                            FD1P3AX        81          100.0
+                            FD1P3IX        30          100.0
+                            FD1P3JX         2          100.0
+                            FD1S3AX        14          100.0
+                            FD1S3AY         1          100.0
+                            FD1S3IX        51          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                            L6MUX21         3          100.0
+                               LUT4       271          100.0
+                                 OB         2          100.0
+                              PFUMX        19          100.0
+SUB MODULES
+                           DS18B20Z         1
+                              blink         1
+                           clock_1s         1
+                          uart_send         1
+                              TOTAL       542
+----------------------------------------------------------------------
+Report for cell DS18B20Z.v1
+Instance Path : u_DS18B20Z
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        22           36.7
+                            FD1P3AX        67           82.7
+                            FD1P3IX        15           50.0
+                            FD1S3AX         2           14.3
+                            FD1S3IX         3            5.9
+                            L6MUX21         3          100.0
+                               LUT4       234           86.3
+                              PFUMX        18           94.7
+                              TOTAL       364
+----------------------------------------------------------------------
+Report for cell uart_send.v1
+Instance Path : u_uart_send
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9           15.0
+                            FD1P3IX        15           50.0
+                            FD1P3JX         2          100.0
+                            FD1S3AX        10           71.4
+                            FD1S3IX        16           31.4
+                               LUT4        34           12.5
+                              PFUMX         1            5.3
+                              TOTAL        87
+----------------------------------------------------------------------
+Report for cell blink.v1
+Instance Path : u_blink
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AY         1          100.0
+                               LUT4         1            0.4
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell clock_1s.v1
+Instance Path : u_clock_1s
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        29           48.3
+                            FD1S3AX         1            7.1
+                            FD1S3IX        32           62.7
+                              TOTAL        62

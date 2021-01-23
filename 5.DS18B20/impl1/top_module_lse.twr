@@ -1,0 +1,170 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat Jan 23 13:30:58 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top_module
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 1000.000000 -name clk1 [get_nets \u_DS18B20Z/clk_1mhz]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 1000.000000 -name clk0 [get_nets sys_clk_c]
+            247 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 987.977ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_DS18B20Z/cnt_write_i0_i1  (from sys_clk_c +)
+   Destination:    FD1P3AX    SP             \u_DS18B20Z/num_delay_i0_i6  (to sys_clk_c +)
+
+   Delay:                  11.738ns  (29.0% logic, 71.0% route), 7 logic levels.
+
+ Constraint Details:
+
+     11.738ns data_path \u_DS18B20Z/cnt_write_i0_i1 to \u_DS18B20Z/num_delay_i0_i6 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 987.977ns
+
+ Path Details: \u_DS18B20Z/cnt_write_i0_i1 to \u_DS18B20Z/num_delay_i0_i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \u_DS18B20Z/cnt_write_i0_i1 (from sys_clk_c)
+Route        22   e 1.891                                  \u_DS18B20Z/cnt_write[1]
+LUT4        ---     0.493              C to Z              \u_DS18B20Z/i1_2_lut_rep_101_3_lut
+Route         8   e 1.540                                  \u_DS18B20Z/n11335
+LUT4        ---     0.493              D to Z              \u_DS18B20Z/i1_3_lut_4_lut_4_lut_adj_45
+Route         2   e 1.141                                  \u_DS18B20Z/n10828
+LUT4        ---     0.493              C to Z              \u_DS18B20Z/i1_4_lut_adj_22
+Route         1   e 0.941                                  \u_DS18B20Z/n35
+LUT4        ---     0.493              B to Z              \u_DS18B20Z/i64_4_lut
+Route         1   e 0.941                                  \u_DS18B20Z/n62
+LUT4        ---     0.493              B to Z              \u_DS18B20Z/i1_4_lut_adj_21
+Route         1   e 0.941                                  \u_DS18B20Z/n31
+LUT4        ---     0.493              C to Z              \u_DS18B20Z/i9625_4_lut_4_lut
+Route         1   e 0.941                                  \u_DS18B20Z/sys_clk_c_enable_31
+                  --------
+                   11.738  (29.0% logic, 71.0% route), 7 logic levels.
+
+
+Passed:  The following path meets requirements by 987.977ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_DS18B20Z/cnt_write_i0_i2  (from sys_clk_c +)
+   Destination:    FD1P3AX    SP             \u_DS18B20Z/num_delay_i0_i6  (to sys_clk_c +)
+
+   Delay:                  11.738ns  (29.0% logic, 71.0% route), 7 logic levels.
+
+ Constraint Details:
+
+     11.738ns data_path \u_DS18B20Z/cnt_write_i0_i2 to \u_DS18B20Z/num_delay_i0_i6 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 987.977ns
+
+ Path Details: \u_DS18B20Z/cnt_write_i0_i2 to \u_DS18B20Z/num_delay_i0_i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \u_DS18B20Z/cnt_write_i0_i2 (from sys_clk_c)
+Route        22   e 1.891                                  \u_DS18B20Z/cnt_write[2]
+LUT4        ---     0.493              B to Z              \u_DS18B20Z/i1_2_lut_rep_101_3_lut
+Route         8   e 1.540                                  \u_DS18B20Z/n11335
+LUT4        ---     0.493              D to Z              \u_DS18B20Z/i1_3_lut_4_lut_4_lut_adj_45
+Route         2   e 1.141                                  \u_DS18B20Z/n10828
+LUT4        ---     0.493              C to Z              \u_DS18B20Z/i1_4_lut_adj_22
+Route         1   e 0.941                                  \u_DS18B20Z/n35
+LUT4        ---     0.493              B to Z              \u_DS18B20Z/i64_4_lut
+Route         1   e 0.941                                  \u_DS18B20Z/n62
+LUT4        ---     0.493              B to Z              \u_DS18B20Z/i1_4_lut_adj_21
+Route         1   e 0.941                                  \u_DS18B20Z/n31
+LUT4        ---     0.493              C to Z              \u_DS18B20Z/i9625_4_lut_4_lut
+Route         1   e 0.941                                  \u_DS18B20Z/sys_clk_c_enable_31
+                  --------
+                   11.738  (29.0% logic, 71.0% route), 7 logic levels.
+
+
+Passed:  The following path meets requirements by 987.980ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \u_DS18B20Z/cnt_write_i0_i3  (from sys_clk_c +)
+   Destination:    FD1P3AX    SP             \u_DS18B20Z/num_delay_i0_i6  (to sys_clk_c +)
+
+   Delay:                  11.735ns  (29.0% logic, 71.0% route), 7 logic levels.
+
+ Constraint Details:
+
+     11.735ns data_path \u_DS18B20Z/cnt_write_i0_i3 to \u_DS18B20Z/num_delay_i0_i6 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 987.980ns
+
+ Path Details: \u_DS18B20Z/cnt_write_i0_i3 to \u_DS18B20Z/num_delay_i0_i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \u_DS18B20Z/cnt_write_i0_i3 (from sys_clk_c)
+Route        21   e 1.888                                  \u_DS18B20Z/cnt_write[3]
+LUT4        ---     0.493              A to Z              \u_DS18B20Z/i1_2_lut_rep_101_3_lut
+Route         8   e 1.540                                  \u_DS18B20Z/n11335
+LUT4        ---     0.493              D to Z              \u_DS18B20Z/i1_3_lut_4_lut_4_lut_adj_45
+Route         2   e 1.141                                  \u_DS18B20Z/n10828
+LUT4        ---     0.493              C to Z              \u_DS18B20Z/i1_4_lut_adj_22
+Route         1   e 0.941                                  \u_DS18B20Z/n35
+LUT4        ---     0.493              B to Z              \u_DS18B20Z/i64_4_lut
+Route         1   e 0.941                                  \u_DS18B20Z/n62
+LUT4        ---     0.493              B to Z              \u_DS18B20Z/i1_4_lut_adj_21
+Route         1   e 0.941                                  \u_DS18B20Z/n31
+LUT4        ---     0.493              C to Z              \u_DS18B20Z/i9625_4_lut_4_lut
+Route         1   e 0.941                                  \u_DS18B20Z/sys_clk_c_enable_31
+                  --------
+                   11.735  (29.0% logic, 71.0% route), 7 logic levels.
+
+Report: 12.023 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk1 [get_nets \u_DS18B20Z/clk_1mhz]    |            -|            -|     0  
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk0 [get_nets sys_clk_c]               |  1000.000 ns|    12.023 ns|     7  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover  4853 paths, 561 nets, and 1601 connections (92.6% coverage)
+
+
+Peak memory: 72519680 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "ds18b20_impl1.log"
+-o "ds18b20_impl1.csv"
+-pr "ds18b20_impl1.prf"

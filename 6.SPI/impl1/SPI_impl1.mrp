@@ -1,0 +1,402 @@
+
+           Lattice Mapping Report File for Design Module 'top_mod'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     SPI_impl1.ngd -o SPI_impl1_map.ncd -pr SPI_impl1.prf -mp SPI_impl1.mrp -lpf
+     C:/Users/Argon/Downloads/step/Proj/6.SPI/impl1/SPI_impl1.lpf -lpf
+     C:/Users/Argon/Downloads/step/Proj/6.SPI/SPI.lpf -c 0 -gui 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.8.0.115.3
+Mapped on:  01/31/21  13:42:55
+
+Design Summary
+--------------
+
+   Number of registers:     92 out of  4635 (2%)
+      PFU registers:           92 out of  4320 (2%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       138 out of  2160 (6%)
+      SLICEs as Logic/ROM:    138 out of  2160 (6%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:         59 out of  2160 (3%)
+   Number of LUT4s:        276 out of  4320 (6%)
+      Number used as logic LUTs:        158
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      118
+      Number used as shift registers:     0
+   Number of PIO sites used: 8 + 4(JTAG) out of 105 (11%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  1
+     Net sys_clk_c: 56 loads, 56 rising, 0 falling (Driver: PIO sys_clk )
+   Number of Clock Enables:  9
+     Net sys_clk_c_enable_49: 5 loads, 5 LSLICEs
+     Net sys_clk_c_enable_4: 1 loads, 1 LSLICEs
+
+                                    Page 1
+
+
+
+
+Design:  top_mod                                       Date:  01/31/21  13:42:55
+
+Design Summary (cont)
+---------------------
+     Net sys_clk_c_enable_28: 3 loads, 3 LSLICEs
+     Net sys_clk_c_enable_57: 11 loads, 11 LSLICEs
+     Net sys_clk_c_enable_9: 1 loads, 1 LSLICEs
+     Net sys_clk_c_enable_12: 1 loads, 1 LSLICEs
+     Net sys_clk_c_enable_56: 10 loads, 10 LSLICEs
+     Net sys_clk_c_enable_31: 3 loads, 3 LSLICEs
+     Net sys_clk_c_enable_32: 1 loads, 1 LSLICEs
+   Number of LSRs:  4
+     Net n2923: 5 loads, 5 LSLICEs
+     Net n2932: 11 loads, 11 LSLICEs
+     Net n2930: 3 loads, 3 LSLICEs
+     Net u_clock_1s/clk_cnt_31__N_324: 17 loads, 17 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net comm_cnt_4: 35 loads
+     Net comm_cnt_3: 30 loads
+     Net n5036: 30 loads
+     Net comm_cnt_2: 25 loads
+     Net comm_cnt_5: 24 loads
+     Net comm_cnt_1: 20 loads
+     Net u_clock_1s/clk_cnt_31__N_324: 18 loads
+     Net comm_cnt_0: 16 loads
+     Net n5035: 15 loads
+     Net n2777: 13 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| SPI_CLK             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SPI_MOSI            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SPI_RES             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SPI_DC              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SPI_CS              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  top_mod                                       Date:  01/31/21  13:42:55
+
+IO (PIO) Attributes (cont)
+--------------------------
+| sys_clk             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sys_rst             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i4121 undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_18/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_18/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_20/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_20/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_22/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_22/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_24/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_24/CO undriven or does not drive anything - clipped.
+Signal u_clock_1s/clk_cnt_730_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal u_clock_1s/clk_cnt_730_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal u_clock_1s/add_3498_2/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_2/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_2/CI undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_4/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_4/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/clk_cnt_730_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_clock_1s/clk_cnt_730_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_clock_1s/add_3498_6/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_6/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_8/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_8/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_10/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_10/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_12/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_12/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_14/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_14/S0 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_16/S1 undriven or does not drive anything - clipped.
+Signal u_clock_1s/add_3498_16/S0 undriven or does not drive anything - clipped.
+Signal add_10_9/S1 undriven or does not drive anything - clipped.
+Signal add_10_9/CO undriven or does not drive anything - clipped.
+Signal sub_649_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_649_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal add_90_1/S0 undriven or does not drive anything - clipped.
+Signal add_90_1/CI undriven or does not drive anything - clipped.
+Signal sub_649_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_7/S0 undriven or does not drive anything - clipped.
+
+                                    Page 3
+
+
+
+
+Design:  top_mod                                       Date:  01/31/21  13:42:55
+
+Removed logic (cont)
+--------------------
+Signal sub_649_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal add_6_21/S1 undriven or does not drive anything - clipped.
+Signal add_6_21/CO undriven or does not drive anything - clipped.
+Signal add_90_9/S1 undriven or does not drive anything - clipped.
+Signal add_90_9/CO undriven or does not drive anything - clipped.
+Signal sub_649_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal sub_649_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal add_10_1/S0 undriven or does not drive anything - clipped.
+Signal add_10_1/CI undriven or does not drive anything - clipped.
+Signal add_6_1/S0 undriven or does not drive anything - clipped.
+Signal add_6_1/CI undriven or does not drive anything - clipped.
+
+Memory Usage
+------------
+
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'sys_rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'sys_rst_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 10 
+
+     Type and instance name of component: 
+   Register : num_delay_i0_i16
+   Register : SPI_RES_172
+   Register : num_delay_i0_i15
+   Register : num_delay_i0_i10
+   Register : num_delay_i0_i9
+   Register : num_delay_i0_i7
+   Register : num_delay_i0_i5
+
+                                    Page 4
+
+
+
+
+Design:  top_mod                                       Date:  01/31/21  13:42:55
+
+GSR Usage (cont)
+----------------
+   Register : SPI_CS_169
+   Register : SPI_CLK_170
+   Register : SPI_MOSI_171
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'sys_rst_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 63 
+
+     Type and instance name of component: 
+   Register : write_cnt_i1
+   Register : write_cnt_i2
+   Register : write_cnt_i3
+   Register : cnt_delay_i7
+   Register : cnt_delay_i10
+   Register : cnt_delay_i15
+   Register : cnt_delay_i16
+   Register : cnt_delay_i1
+   Register : cnt_delay_i2
+   Register : write_cnt_i4
+   Register : cnt_delay_i17
+   Register : write_cnt_i5
+   Register : comm_cnt_i6
+   Register : write_cnt_i7
+   Register : cnt_delay_i11
+   Register : cnt_delay_i3
+   Register : cnt_delay_i8
+   Register : cnt_delay_i18
+   Register : comm_cnt_i7
+   Register : cnt_delay_i12
+   Register : write_cnt_i0
+   Register : cnt_delay_i19
+   Register : comm_cnt_i2
+   Register : write_cnt_i6
+   Register : cnt_delay_i13
+   Register : cnt_delay_i4
+   Register : cnt_delay_i5
+   Register : cnt_delay_i9
+   Register : cnt_delay_i0
+   Register : cnt_delay_i6
+   Register : cnt_delay_i14
+   Register : u_clock_1s/clk_cnt_730__i0
+   Register : u_clock_1s/clk_cnt_730__i31
+   Register : u_clock_1s/clk_cnt_730__i30
+   Register : u_clock_1s/clk_cnt_730__i29
+   Register : u_clock_1s/clk_cnt_730__i28
+   Register : u_clock_1s/clk_cnt_730__i27
+   Register : u_clock_1s/clk_cnt_730__i26
+   Register : u_clock_1s/clk_cnt_730__i25
+   Register : u_clock_1s/clk_cnt_730__i24
+
+                                    Page 5
+
+
+
+
+Design:  top_mod                                       Date:  01/31/21  13:42:55
+
+GSR Usage (cont)
+----------------
+   Register : u_clock_1s/clk_cnt_730__i23
+   Register : u_clock_1s/clk_cnt_730__i22
+   Register : u_clock_1s/clk_cnt_730__i21
+   Register : u_clock_1s/clk_cnt_730__i20
+   Register : u_clock_1s/clk_cnt_730__i19
+   Register : u_clock_1s/clk_cnt_730__i18
+   Register : u_clock_1s/clk_cnt_730__i17
+   Register : u_clock_1s/clk_cnt_730__i16
+   Register : u_clock_1s/clk_cnt_730__i15
+   Register : u_clock_1s/clk_cnt_730__i14
+   Register : u_clock_1s/clk_cnt_730__i13
+   Register : u_clock_1s/clk_cnt_730__i12
+   Register : u_clock_1s/clk_cnt_730__i11
+   Register : u_clock_1s/clk_cnt_730__i10
+   Register : u_clock_1s/clk_cnt_730__i9
+   Register : u_clock_1s/clk_cnt_730__i8
+   Register : u_clock_1s/clk_cnt_730__i7
+   Register : u_clock_1s/clk_cnt_730__i6
+   Register : u_clock_1s/clk_cnt_730__i5
+   Register : u_clock_1s/clk_cnt_730__i4
+   Register : u_clock_1s/clk_cnt_730__i3
+   Register : u_clock_1s/clk_cnt_730__i2
+   Register : u_clock_1s/clk_cnt_730__i1
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 49 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 6
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights
+     reserved.

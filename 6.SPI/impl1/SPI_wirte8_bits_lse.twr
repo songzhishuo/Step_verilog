@@ -1,0 +1,143 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun Jan 31 13:26:55 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     SPI_wirte8_bits
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 1000.000000 -name clk0 [get_nets sys_clk_c]
+            167 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 992.855ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             cnt_write_com__i5  (from sys_clk_c +)
+   Destination:    FD1P3AY    SP             SPI_DC_83  (to sys_clk_c +)
+
+   Delay:                   6.860ns  (28.0% logic, 72.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.860ns data_path cnt_write_com__i5 to SPI_DC_83 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 992.855ns
+
+ Path Details: cnt_write_com__i5 to SPI_DC_83
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              cnt_write_com__i5 (from sys_clk_c)
+Route         4   e 1.398                                  cnt_write_com[5]
+LUT4        ---     0.493              B to Z              i2_3_lut_rep_10
+Route         6   e 1.457                                  n913
+LUT4        ---     0.493              A to Z              i2_3_lut
+Route         2   e 1.141                                  n857
+LUT4        ---     0.493              D to Z              i742_4_lut
+Route         1   e 0.941                                  sys_clk_c_enable_1
+                  --------
+                    6.860  (28.0% logic, 72.0% route), 4 logic levels.
+
+
+Passed:  The following path meets requirements by 992.855ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             cnt_write_com__i6  (from sys_clk_c +)
+   Destination:    FD1P3AY    SP             SPI_DC_83  (to sys_clk_c +)
+
+   Delay:                   6.860ns  (28.0% logic, 72.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.860ns data_path cnt_write_com__i6 to SPI_DC_83 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 992.855ns
+
+ Path Details: cnt_write_com__i6 to SPI_DC_83
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              cnt_write_com__i6 (from sys_clk_c)
+Route         4   e 1.398                                  cnt_write_com[6]
+LUT4        ---     0.493              A to Z              i2_3_lut_rep_10
+Route         6   e 1.457                                  n913
+LUT4        ---     0.493              A to Z              i2_3_lut
+Route         2   e 1.141                                  n857
+LUT4        ---     0.493              D to Z              i742_4_lut
+Route         1   e 0.941                                  sys_clk_c_enable_1
+                  --------
+                    6.860  (28.0% logic, 72.0% route), 4 logic levels.
+
+
+Passed:  The following path meets requirements by 992.855ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             cnt_write_com__i7  (from sys_clk_c +)
+   Destination:    FD1P3AY    SP             SPI_DC_83  (to sys_clk_c +)
+
+   Delay:                   6.860ns  (28.0% logic, 72.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.860ns data_path cnt_write_com__i7 to SPI_DC_83 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 992.855ns
+
+ Path Details: cnt_write_com__i7 to SPI_DC_83
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              cnt_write_com__i7 (from sys_clk_c)
+Route         4   e 1.398                                  cnt_write_com[7]
+LUT4        ---     0.493              C to Z              i2_3_lut_rep_10
+Route         6   e 1.457                                  n913
+LUT4        ---     0.493              A to Z              i2_3_lut
+Route         2   e 1.141                                  n857
+LUT4        ---     0.493              D to Z              i742_4_lut
+Route         1   e 0.941                                  sys_clk_c_enable_1
+                  --------
+                    6.860  (28.0% logic, 72.0% route), 4 logic levels.
+
+Report: 7.145 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk0 [get_nets sys_clk_c]               |  1000.000 ns|     7.145 ns|     4  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover  167 paths, 53 nets, and 130 connections (81.8% coverage)
+
+
+Peak memory: 58470400 bytes, TRCE: 1105920 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

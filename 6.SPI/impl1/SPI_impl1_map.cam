@@ -1,0 +1,80 @@
+[ START MERGED ]
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+u_clock_1s/add_3498_18/S1
+u_clock_1s/add_3498_18/S0
+u_clock_1s/add_3498_20/S1
+u_clock_1s/add_3498_20/S0
+u_clock_1s/add_3498_22/S1
+u_clock_1s/add_3498_22/S0
+u_clock_1s/add_3498_24/S0
+u_clock_1s/add_3498_24/CO
+u_clock_1s/clk_cnt_730_add_4_33/S1
+u_clock_1s/clk_cnt_730_add_4_33/CO
+u_clock_1s/add_3498_2/S1
+u_clock_1s/add_3498_2/S0
+u_clock_1s/add_3498_2/CI
+u_clock_1s/add_3498_4/S1
+u_clock_1s/add_3498_4/S0
+u_clock_1s/clk_cnt_730_add_4_1/S0
+u_clock_1s/clk_cnt_730_add_4_1/CI
+u_clock_1s/add_3498_6/S1
+u_clock_1s/add_3498_6/S0
+u_clock_1s/add_3498_8/S1
+u_clock_1s/add_3498_8/S0
+u_clock_1s/add_3498_10/S1
+u_clock_1s/add_3498_10/S0
+u_clock_1s/add_3498_12/S1
+u_clock_1s/add_3498_12/S0
+u_clock_1s/add_3498_14/S1
+u_clock_1s/add_3498_14/S0
+u_clock_1s/add_3498_16/S1
+u_clock_1s/add_3498_16/S0
+add_10_9/S1
+add_10_9/CO
+sub_649_add_2_1/S1
+sub_649_add_2_1/S0
+sub_649_add_2_1/CI
+sub_649_add_2_3/S1
+sub_649_add_2_3/S0
+sub_649_add_2_5/S1
+sub_649_add_2_5/S0
+add_90_1/S0
+add_90_1/CI
+sub_649_add_2_7/S1
+sub_649_add_2_7/S0
+sub_649_add_2_9/S1
+sub_649_add_2_9/S0
+sub_649_add_2_11/S1
+sub_649_add_2_11/S0
+add_6_21/S1
+add_6_21/CO
+add_90_9/S1
+add_90_9/CO
+sub_649_add_2_13/S1
+sub_649_add_2_13/S0
+sub_649_add_2_15/S1
+sub_649_add_2_15/S0
+sub_649_add_2_cout/S1
+sub_649_add_2_cout/CO
+add_10_1/S0
+add_10_1/CI
+add_6_1/S0
+add_6_1/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Sun Jan 31 13:42:55 2021
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF ;
+LOCATE COMP "SPI_CLK" SITE "E12" ;
+LOCATE COMP "led" SITE "N13" ;
+LOCATE COMP "SPI_MOSI" SITE "F12" ;
+LOCATE COMP "SPI_RES" SITE "G12" ;
+LOCATE COMP "SPI_DC" SITE "F13" ;
+LOCATE COMP "SPI_CS" SITE "F14" ;
+LOCATE COMP "sys_clk" SITE "C1" ;
+LOCATE COMP "sys_rst" SITE "L14" ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

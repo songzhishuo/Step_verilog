@@ -1,0 +1,40 @@
+----------------------------------------------------------------------
+Report for cell top_mod.TECH
+Register bits:  92 of 4635 (1.985%)
+I/O cells:      8
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        59          100.0
+                            FD1P3AX        25          100.0
+                            FD1P3AY         1          100.0
+                            FD1P3IX        31          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3AY         2          100.0
+                            FD1S3IX        32          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                            L6MUX21         1          100.0
+                               LUT4       157          100.0
+                                 OB         6          100.0
+                              PFUMX         6          100.0
+SUB MODULES
+                              blink         1
+                           clock_1s         1
+                              TOTAL       326
+----------------------------------------------------------------------
+Report for cell blink.v1
+Instance Path : m_blink
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AY         1           50.0
+                               LUT4         1            0.6
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell clock_1s.v1
+Instance Path : u_clock_1s
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        29           49.2
+                            FD1S3AX         1          100.0
+                            FD1S3IX        32          100.0
+                              TOTAL        62

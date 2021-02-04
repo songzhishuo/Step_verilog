@@ -1,0 +1,402 @@
+
+           Lattice Mapping Report File for Design Module 'LCD_RGB'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     OLED_test_scan_impl1.ngd -o OLED_test_scan_impl1_map.ncd -pr
+     OLED_test_scan_impl1.prf -mp OLED_test_scan_impl1.mrp -lpf
+     C:/Users/Argon/Desktop/program4/impl1/OLED_test_scan_impl1.lpf -lpf
+     C:/Users/Argon/Desktop/program4/OLED_test_scan.lpf -c 0 -gui -msgset
+     C:/Users/Argon/Desktop/program4/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.8.0.115.3
+Mapped on:  02/04/21  20:19:25
+
+Design Summary
+--------------
+
+   Number of registers:     66 out of  4635 (1%)
+      PFU registers:           66 out of  4320 (2%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:        79 out of  2160 (4%)
+      SLICEs as Logic/ROM:     79 out of  2160 (4%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:         65 out of  2160 (3%)
+   Number of LUT4s:        157 out of  4320 (4%)
+      Number used as logic LUTs:         27
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      130
+      Number used as shift registers:     0
+   Number of PIO sites used: 5 + 4(JTAG) out of 105 (9%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  1
+     Net clk_out_c_c: 36 loads, 36 rising, 0 falling (Driver: PIO clk_in )
+   Number of Clock Enables:  0
+
+                                    Page 1
+
+
+
+
+Design:  LCD_RGB                                       Date:  02/04/21  20:19:25
+
+Design Summary (cont)
+---------------------
+   Number of LSRs:  2
+     Net divide_1MHz/n128: 17 loads, 17 LSLICEs
+     Net divide_1KHz/n127: 17 loads, 17 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net divide_1KHz/n127: 17 loads
+     Net divide_1MHz/n128: 17 loads
+     Net divide_1MHz/cnt_p_1: 3 loads
+     Net divide_1MHz/cnt_p_10: 3 loads
+     Net divide_1MHz/cnt_p_11: 3 loads
+     Net divide_1MHz/cnt_p_12: 3 loads
+     Net divide_1MHz/cnt_p_17: 3 loads
+     Net divide_1MHz/cnt_p_19: 3 loads
+     Net divide_1MHz/cnt_p_21: 3 loads
+     Net divide_1MHz/cnt_p_26: 3 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| clk_out_1MHz        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk_out_1KHZ        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk_out             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk_in              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst_n_in            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i300 undriven or does not drive anything - clipped.
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal divide_1KHz/cnt_p_16_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1KHz/cnt_p_16_add_4_33/CO undriven or does not drive anything -
+     clipped.
+
+                                    Page 2
+
+
+
+
+Design:  LCD_RGB                                       Date:  02/04/21  20:19:25
+
+Removed logic (cont)
+--------------------
+Signal divide_1KHz/add_261_2/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_2/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_2/CI undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_4/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_4/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_6/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_6/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_8/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_8/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_10/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_10/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_12/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_12/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_14/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_14/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_16/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_16/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_18/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_18/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_20/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_20/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_22/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_22/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_24/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_24/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/cnt_p_16_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1KHz/cnt_p_16_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal divide_1KHz/add_261_26/S1 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_26/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_28/S0 undriven or does not drive anything - clipped.
+Signal divide_1KHz/add_261_28/CO undriven or does not drive anything - clipped.
+Signal divide_1MHz/sub_7_add_2_6/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_6/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_8/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_8/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_10/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_10/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/cnt_p_15_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/cnt_p_15_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/cnt_p_15_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/cnt_p_15_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_18/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_18/S0 undriven or does not drive anything -
+
+                                    Page 3
+
+
+
+
+Design:  LCD_RGB                                       Date:  02/04/21  20:19:25
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal divide_1MHz/sub_7_add_2_20/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_20/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_22/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_22/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_24/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_24/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_12/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_12/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_14/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_14/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_26/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_26/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_28/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_28/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_30/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_30/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_32/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_32/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_cout/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_cout/CO undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_16/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_16/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_4/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_4/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_2/S1 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_2/S0 undriven or does not drive anything -
+     clipped.
+Signal divide_1MHz/sub_7_add_2_2/CI undriven or does not drive anything -
+     clipped.
+Block i1 was optimized away.
+
+                                    Page 4
+
+
+
+
+Design:  LCD_RGB                                       Date:  02/04/21  20:19:25
+
+
+Memory Usage
+------------
+
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rst_n_in_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'rst_n_in_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 64 
+
+     Type and instance name of component: 
+   Register : divide_1MHz/cnt_p_15__i31
+   Register : divide_1MHz/cnt_p_15__i0
+   Register : divide_1MHz/cnt_p_15__i30
+   Register : divide_1MHz/cnt_p_15__i29
+   Register : divide_1MHz/cnt_p_15__i28
+   Register : divide_1MHz/cnt_p_15__i27
+   Register : divide_1MHz/cnt_p_15__i26
+   Register : divide_1MHz/cnt_p_15__i25
+   Register : divide_1MHz/cnt_p_15__i24
+   Register : divide_1MHz/cnt_p_15__i23
+   Register : divide_1MHz/cnt_p_15__i22
+   Register : divide_1MHz/cnt_p_15__i21
+   Register : divide_1MHz/cnt_p_15__i20
+   Register : divide_1MHz/cnt_p_15__i19
+   Register : divide_1MHz/cnt_p_15__i18
+   Register : divide_1MHz/cnt_p_15__i17
+   Register : divide_1MHz/cnt_p_15__i16
+   Register : divide_1MHz/cnt_p_15__i15
+   Register : divide_1MHz/cnt_p_15__i14
+   Register : divide_1MHz/cnt_p_15__i13
+   Register : divide_1MHz/cnt_p_15__i12
+   Register : divide_1MHz/cnt_p_15__i11
+   Register : divide_1MHz/cnt_p_15__i10
+   Register : divide_1MHz/cnt_p_15__i9
+   Register : divide_1MHz/cnt_p_15__i8
+
+                                    Page 5
+
+
+
+
+Design:  LCD_RGB                                       Date:  02/04/21  20:19:25
+
+GSR Usage (cont)
+----------------
+   Register : divide_1MHz/cnt_p_15__i7
+   Register : divide_1MHz/cnt_p_15__i6
+   Register : divide_1MHz/cnt_p_15__i5
+   Register : divide_1MHz/cnt_p_15__i4
+   Register : divide_1MHz/cnt_p_15__i3
+   Register : divide_1MHz/cnt_p_15__i2
+   Register : divide_1MHz/cnt_p_15__i1
+   Register : divide_1KHz/cnt_p_16__i1
+   Register : divide_1KHz/cnt_p_16__i0
+   Register : divide_1KHz/cnt_p_16__i31
+   Register : divide_1KHz/cnt_p_16__i30
+   Register : divide_1KHz/cnt_p_16__i29
+   Register : divide_1KHz/cnt_p_16__i28
+   Register : divide_1KHz/cnt_p_16__i27
+   Register : divide_1KHz/cnt_p_16__i26
+   Register : divide_1KHz/cnt_p_16__i25
+   Register : divide_1KHz/cnt_p_16__i24
+   Register : divide_1KHz/cnt_p_16__i23
+   Register : divide_1KHz/cnt_p_16__i22
+   Register : divide_1KHz/cnt_p_16__i21
+   Register : divide_1KHz/cnt_p_16__i20
+   Register : divide_1KHz/cnt_p_16__i19
+   Register : divide_1KHz/cnt_p_16__i18
+   Register : divide_1KHz/cnt_p_16__i17
+   Register : divide_1KHz/cnt_p_16__i16
+   Register : divide_1KHz/cnt_p_16__i15
+   Register : divide_1KHz/cnt_p_16__i14
+   Register : divide_1KHz/cnt_p_16__i13
+   Register : divide_1KHz/cnt_p_16__i12
+   Register : divide_1KHz/cnt_p_16__i11
+   Register : divide_1KHz/cnt_p_16__i10
+   Register : divide_1KHz/cnt_p_16__i9
+   Register : divide_1KHz/cnt_p_16__i8
+   Register : divide_1KHz/cnt_p_16__i7
+   Register : divide_1KHz/cnt_p_16__i6
+   Register : divide_1KHz/cnt_p_16__i5
+   Register : divide_1KHz/cnt_p_16__i4
+   Register : divide_1KHz/cnt_p_16__i3
+   Register : divide_1KHz/cnt_p_16__i2
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 49 MB
+        
+
+
+
+
+
+
+
+
+
+
+                                    Page 6
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights
+     reserved.

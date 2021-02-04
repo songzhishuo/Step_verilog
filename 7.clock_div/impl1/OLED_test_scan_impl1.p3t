@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "OLED_test_scan_impl1.log"
+-o "OLED_test_scan_impl1.csv"
+-pr "OLED_test_scan_impl1.prf"

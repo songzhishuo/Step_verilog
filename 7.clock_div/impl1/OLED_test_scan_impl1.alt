@@ -1,0 +1,13 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Feb 04 20:19:34 2021 *
+NOTE DESIGN NAME: LCD_RGB *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS clk_out_1MHz : F12 : out *
+NOTE PINS clk_out_1KHZ : G12 : out *
+NOTE PINS clk_out : E12 : out *
+NOTE PINS clk_in : C1 : in *
+NOTE PINS rst_n_in : L14 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

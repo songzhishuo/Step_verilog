@@ -1,0 +1,26 @@
+PAR: Place And Route Diamond (64-bit) 3.8.0.115.3.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Feb 04 20:19:26 2021
+
+C:/lscc/diamond/3.8_x64/ispfpga\bin\nt64\par -f OLED_test_scan_impl1.p2t
+OLED_test_scan_impl1_map.ncd OLED_test_scan_impl1.dir OLED_test_scan_impl1.prf
+-gui -msgset C:/Users/Argon/Desktop/program4/promote.xml
+
+
+Preference file: OLED_test_scan_impl1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            72.607       0            0.379        0            06           Complete
+
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 6 secs 
+
+par done!

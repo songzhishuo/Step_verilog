@@ -1,0 +1,32 @@
+---------------------------------------------------
+Report for cell LCD_RGB
+   Instance path: LCD_RGB
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      79.00        100.0
+                                  LUT4	      27.00        100.0
+                                 IOBUF	          5        100.0
+                                PFUREG	         66        100.0
+                                RIPPLE	         65        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                divide	          1        51.9
+                             divide_U0	          1        48.1
+---------------------------------------------------
+Report for cell divide
+   Instance path: LCD_RGB/divide_1MHz
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.00        51.9
+                                  LUT4	      14.00        51.9
+                                PFUREG	         33        50.0
+                                RIPPLE	         34        52.3
+---------------------------------------------------
+Report for cell divide_U0
+   Instance path: LCD_RGB/divide_1KHz
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.00        48.1
+                                  LUT4	      13.00        48.1
+                                PFUREG	         33        50.0
+                                RIPPLE	         31        47.7

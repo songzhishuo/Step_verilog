@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/argon/desktop/program4/top.v(1): </Dynamic>
+            <Dynamic>LCD_RGB</Dynamic>
+            <Navigation>c:/users/argon/desktop/program4/top.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/argon/desktop/program4/clock.v(1): </Dynamic>
+            <Dynamic>divide</Dynamic>
+            <Navigation>c:/users/argon/desktop/program4/clock.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>clk_out_c_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk_in</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

@@ -1,0 +1,37 @@
+----------------------------------------------------------------------
+Report for cell LCD_RGB.TECH
+Register bits:  66 of 4635 (1.424%)
+I/O cells:      5
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        65          100.0
+                            FD1S3AX         2          100.0
+                            FD1S3IX        64          100.0
+                                GSR         1          100.0
+                                 IB         2          100.0
+                               LUT4        27          100.0
+                                 OB         3          100.0
+SUB MODULES
+                             divide         1
+                          divide_U0         1
+                              TOTAL       166
+----------------------------------------------------------------------
+Report for cell divide.v1
+Instance Path : divide_1MHz
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        34           52.3
+                            FD1S3AX         1           50.0
+                            FD1S3IX        32           50.0
+                               LUT4        14           51.9
+                              TOTAL        81
+----------------------------------------------------------------------
+Report for cell divide_U0.v1
+Instance Path : divide_1KHz
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        31           47.7
+                            FD1S3AX         1           50.0
+                            FD1S3IX        32           50.0
+                               LUT4        13           48.1
+                              TOTAL        77

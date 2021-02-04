@@ -1,0 +1,242 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Thu Feb 04 20:19:25 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     LCD_RGB
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_out_c_c]
+            1600 items scored, 1600 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 5.187ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \divide_1KHz/cnt_p_16__i30  (from clk_out_c_c +)
+   Destination:    FD1S3IX    CD             \divide_1KHz/cnt_p_16__i1  (to clk_out_c_c +)
+
+   Delay:                  10.027ns  (29.0% logic, 71.0% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.027ns data_path \divide_1KHz/cnt_p_16__i30 to \divide_1KHz/cnt_p_16__i1 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 5.187ns
+
+ Path Details: \divide_1KHz/cnt_p_16__i30 to \divide_1KHz/cnt_p_16__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \divide_1KHz/cnt_p_16__i30 (from clk_out_c_c)
+Route         3   e 1.315                                  \divide_1KHz/cnt_p[30]
+LUT4        ---     0.493              D to Z              \divide_1KHz/i14_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n36
+LUT4        ---     0.493              B to Z              \divide_1KHz/i18_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n40
+LUT4        ---     0.493              B to Z              \divide_1KHz/i20_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n42
+LUT4        ---     0.493              B to Z              \divide_1KHz/i21_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n447
+LUT4        ---     0.493              A to Z              \divide_1KHz/i288_4_lut
+Route        32   e 2.039                                  \divide_1KHz/n127
+                  --------
+                   10.027  (29.0% logic, 71.0% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 5.187ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \divide_1KHz/cnt_p_16__i30  (from clk_out_c_c +)
+   Destination:    FD1S3IX    CD             \divide_1KHz/cnt_p_16__i0  (to clk_out_c_c +)
+
+   Delay:                  10.027ns  (29.0% logic, 71.0% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.027ns data_path \divide_1KHz/cnt_p_16__i30 to \divide_1KHz/cnt_p_16__i0 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 5.187ns
+
+ Path Details: \divide_1KHz/cnt_p_16__i30 to \divide_1KHz/cnt_p_16__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \divide_1KHz/cnt_p_16__i30 (from clk_out_c_c)
+Route         3   e 1.315                                  \divide_1KHz/cnt_p[30]
+LUT4        ---     0.493              D to Z              \divide_1KHz/i14_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n36
+LUT4        ---     0.493              B to Z              \divide_1KHz/i18_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n40
+LUT4        ---     0.493              B to Z              \divide_1KHz/i20_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n42
+LUT4        ---     0.493              B to Z              \divide_1KHz/i21_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n447
+LUT4        ---     0.493              A to Z              \divide_1KHz/i288_4_lut
+Route        32   e 2.039                                  \divide_1KHz/n127
+                  --------
+                   10.027  (29.0% logic, 71.0% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 5.187ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \divide_1KHz/cnt_p_16__i30  (from clk_out_c_c +)
+   Destination:    FD1S3IX    CD             \divide_1KHz/cnt_p_16__i31  (to clk_out_c_c +)
+
+   Delay:                  10.027ns  (29.0% logic, 71.0% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.027ns data_path \divide_1KHz/cnt_p_16__i30 to \divide_1KHz/cnt_p_16__i31 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 5.187ns
+
+ Path Details: \divide_1KHz/cnt_p_16__i30 to \divide_1KHz/cnt_p_16__i31
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \divide_1KHz/cnt_p_16__i30 (from clk_out_c_c)
+Route         3   e 1.315                                  \divide_1KHz/cnt_p[30]
+LUT4        ---     0.493              D to Z              \divide_1KHz/i14_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n36
+LUT4        ---     0.493              B to Z              \divide_1KHz/i18_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n40
+LUT4        ---     0.493              B to Z              \divide_1KHz/i20_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n42
+LUT4        ---     0.493              B to Z              \divide_1KHz/i21_4_lut
+Route         1   e 0.941                                  \divide_1KHz/n447
+LUT4        ---     0.493              A to Z              \divide_1KHz/i288_4_lut
+Route        32   e 2.039                                  \divide_1KHz/n127
+                  --------
+                   10.027  (29.0% logic, 71.0% route), 6 logic levels.
+
+Warning: 10.187 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_out_c_c]             |     5.000 ns|    10.187 ns|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\divide_1KHz/n127                       |      32|     832|     52.00%
+                                        |        |        |
+\divide_1KHz/n447                       |       1|     832|     52.00%
+                                        |        |        |
+\divide_1MHz/n128                       |      32|     768|     48.00%
+                                        |        |        |
+\divide_1KHz/n42                        |       1|     576|     36.00%
+                                        |        |        |
+\divide_1MHz/n56                        |       1|     448|     28.00%
+                                        |        |        |
+\divide_1MHz/n55                        |       1|     320|     20.00%
+                                        |        |        |
+\divide_1KHz/n40                        |       1|     256|     16.00%
+                                        |        |        |
+\divide_1MHz/n52                        |       1|     256|     16.00%
+                                        |        |        |
+\divide_1MHz/n54                        |       1|     256|     16.00%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 1600  Score: 5400768
+
+Constraints cover  3193 paths, 219 nets, and 469 connections (99.2% coverage)
+
+
+Peak memory: 60547072 bytes, TRCE: 1556480 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

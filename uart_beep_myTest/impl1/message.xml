@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Map">
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf(3): Semantic error in &quot;LOCATE COMP &quot;uart_rxd&quot; SITE &quot;C8&quot; ;&quot;: </Dynamic>
+            <Dynamic>uart_rxd</Dynamic>
+            <Navigation>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf(4): Semantic error in &quot;LOCATE COMP &quot;sys_clk&quot; SITE &quot;C1&quot; ;&quot;: </Dynamic>
+            <Dynamic>sys_clk</Dynamic>
+            <Navigation>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf(5): Semantic error in &quot;LOCATE COMP &quot;sys_rst_n&quot; SITE &quot;L14&quot; ;&quot;: </Dynamic>
+            <Dynamic>sys_rst_n</Dynamic>
+            <Navigation>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf(6): Semantic error in &quot;LOCATE COMP &quot;led&quot; SITE &quot;N13&quot; ;&quot;: </Dynamic>
+            <Dynamic>led</Dynamic>
+            <Navigation>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf(7): Semantic error in &quot;LOCATE COMP &quot;blink&quot; SITE &quot;M12&quot; ;&quot;: </Dynamic>
+            <Dynamic>blink</Dynamic>
+            <Navigation>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf(8): Semantic error in &quot;LOCATE COMP &quot;beep&quot; SITE &quot;P8&quot; ;&quot;: </Dynamic>
+            <Dynamic>beep</Dynamic>
+            <Navigation>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf(9): Semantic error in &quot;LOCATE COMP &quot;uart_txd&quot; SITE &quot;B8&quot; ;&quot;: </Dynamic>
+            <Dynamic>uart_txd</Dynamic>
+            <Navigation>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>1104062</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>7 semantic errors</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001230</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/test_bink/blink.lpf</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/test_bink/beep.v(18): </Dynamic>
+            <Dynamic>Beeper</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/test_bink/beep.v</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+</BaliMessageLog>

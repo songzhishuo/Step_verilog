@@ -1,0 +1,15 @@
+----------------------------------------------------------------------
+Report for cell Beeper.TECH
+Register bits:  19 of 4635 (0.410%)
+I/O cells:      9
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        20          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3IX        18          100.0
+                                GSR         1          100.0
+                                 IB         8          100.0
+                               LUT4        39          100.0
+                                 OB         1          100.0
+                              PFUMX        16          100.0
+                              TOTAL       104

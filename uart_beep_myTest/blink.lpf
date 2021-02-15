@@ -1,0 +1,10 @@
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+LOCATE COMP "uart_rxd" SITE "C8" ;
+LOCATE COMP "sys_clk" SITE "C1" ;
+LOCATE COMP "sys_rst_n" SITE "L14" ;
+LOCATE COMP "led" SITE "N13" ;
+LOCATE COMP "blink" SITE "M12" ;
+LOCATE COMP "beep" SITE "P8" ;
+LOCATE COMP "uart_txd" SITE "B8" ;
+

@@ -1,0 +1,54 @@
+Results of NGD DRC are available in music_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'sys_clk' has no load.
+WARNING - synthesis: input pad net 'sys_clk' has no legal load.
+WARNING - synthesis: logical net 'sys_rst_n' has no load.
+WARNING - synthesis: input pad net 'sys_rst_n' has no legal load.
+WARNING - synthesis: logical net 'en' has no load.
+WARNING - synthesis: input pad net 'en' has no legal load.
+WARNING - synthesis: logical net 'music_note[7]' has no load.
+WARNING - synthesis: input pad net 'music_note[7]' has no legal load.
+WARNING - synthesis: logical net 'music_note[6]' has no load.
+WARNING - synthesis: input pad net 'music_note[6]' has no legal load.
+WARNING - synthesis: logical net 'music_note[5]' has no load.
+WARNING - synthesis: input pad net 'music_note[5]' has no legal load.
+WARNING - synthesis: logical net 'music_note[4]' has no load.
+WARNING - synthesis: input pad net 'music_note[4]' has no legal load.
+WARNING - synthesis: logical net 'music_note[3]' has no load.
+WARNING - synthesis: input pad net 'music_note[3]' has no legal load.
+WARNING - synthesis: logical net 'music_note[2]' has no load.
+WARNING - synthesis: input pad net 'music_note[2]' has no legal load.
+WARNING - synthesis: logical net 'music_note[1]' has no load.
+WARNING - synthesis: input pad net 'music_note[1]' has no legal load.
+WARNING - synthesis: logical net 'music_note[0]' has no load.
+WARNING - synthesis: input pad net 'music_note[0]' has no legal load.
+WARNING - synthesis: logical net 'music_time[7]' has no load.
+WARNING - synthesis: input pad net 'music_time[7]' has no legal load.
+WARNING - synthesis: logical net 'music_time[6]' has no load.
+WARNING - synthesis: input pad net 'music_time[6]' has no legal load.
+WARNING - synthesis: logical net 'music_time[5]' has no load.
+WARNING - synthesis: input pad net 'music_time[5]' has no legal load.
+WARNING - synthesis: logical net 'music_time[4]' has no load.
+WARNING - synthesis: input pad net 'music_time[4]' has no legal load.
+WARNING - synthesis: logical net 'music_time[3]' has no load.
+WARNING - synthesis: input pad net 'music_time[3]' has no legal load.
+WARNING - synthesis: logical net 'music_time[2]' has no load.
+WARNING - synthesis: input pad net 'music_time[2]' has no legal load.
+WARNING - synthesis: logical net 'music_time[1]' has no load.
+WARNING - synthesis: input pad net 'music_time[1]' has no legal load.
+WARNING - synthesis: logical net 'music_time[0]' has no load.
+WARNING - synthesis: input pad net 'music_time[0]' has no legal load.
+WARNING - synthesis: DRC complete with 38 warnings.
+
+Design Results:
+      6 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file blink_impl1.ngd.

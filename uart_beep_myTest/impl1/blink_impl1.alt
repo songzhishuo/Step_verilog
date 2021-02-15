@@ -1,0 +1,17 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Mon Feb 15 16:32:01 2021 *
+NOTE DESIGN NAME: Beeper *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS clk_in : M7 : in *
+NOTE PINS tone[0] : N9 : in *
+NOTE PINS tone[1] : N8 : in *
+NOTE PINS tone[2] : P9 : in *
+NOTE PINS tone[3] : M8 : in *
+NOTE PINS tone[4] : P8 : in *
+NOTE PINS tone_en : M9 : in *
+NOTE PINS rst_n_in : B2 : in *
+NOTE PINS piano_out : P7 : out *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

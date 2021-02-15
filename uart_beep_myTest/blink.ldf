@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="blink" device="LCMXO2-4000HC-4MG132C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="Beeper"/>
+        <Source name="main.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="uart_recv.v" type="Verilog" type_short="Verilog">
+            <Options top_module="uart_recv"/>
+        </Source>
+        <Source name="uart_loop.v" type="Verilog" type_short="Verilog">
+            <Options top_module="uart_loop"/>
+        </Source>
+        <Source name="uart_send.v" type="Verilog" type_short="Verilog">
+            <Options top_module="uart_send"/>
+        </Source>
+        <Source name="clock.v" type="Verilog" type_short="Verilog">
+            <Options top_module="divide"/>
+        </Source>
+        <Source name="beep.v" type="Verilog" type_short="Verilog">
+            <Options top_module="Beeper"/>
+        </Source>
+        <Source name="blink.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="blink1.sty"/>
+</BaliProject>

@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "blink_impl1.log"
+-o "blink_impl1.csv"
+-pr "blink_impl1.prf"

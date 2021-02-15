@@ -1,0 +1,197 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Mon Feb 15 14:56:20 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     Top_Module
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 1000.000000 -name clk0 [get_nets sys_clk_c]
+            1057 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 989.080ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             delay_cnt_i0_i3  (from sys_clk_c +)
+   Destination:    FD1P3AX    D              delay_cnt_i0_i15  (to sys_clk_c +)
+
+   Delay:                  10.760ns  (41.3% logic, 58.7% route), 13 logic levels.
+
+ Constraint Details:
+
+     10.760ns data_path delay_cnt_i0_i3 to delay_cnt_i0_i15 meets
+    1000.000ns delay constraint less
+      0.160ns L_S requirement (totaling 999.840ns) by 989.080ns
+
+ Path Details: delay_cnt_i0_i3 to delay_cnt_i0_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              delay_cnt_i0_i3 (from sys_clk_c)
+Route         3   e 1.315                                  delay_cnt[3]
+LUT4        ---     0.493              C to Z              i2_3_lut_rep_35
+Route         2   e 1.141                                  n3642
+LUT4        ---     0.493              C to Z              i2_3_lut_rep_25
+Route        16   e 1.815                                  n3632
+LUT4        ---     0.493              A to Z              i200_2_lut_rep_19_3_lut
+Route         1   e 0.941                                  n3626
+A1_TO_FCO   ---     0.827           B[2] to COUT           add_350_1
+Route         1   e 0.020                                  n3330
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_3
+Route         1   e 0.020                                  n3331
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_5
+Route         1   e 0.020                                  n3332
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_7
+Route         1   e 0.020                                  n3333
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_9
+Route         1   e 0.020                                  n3334
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_11
+Route         1   e 0.020                                  n3335
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_13
+Route         1   e 0.020                                  n3336
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_15
+Route         1   e 0.020                                  n3337
+FCI_TO_F    ---     0.598            CIN to S[2]           add_350_17
+Route         1   e 0.941                                  n152
+                  --------
+                   10.760  (41.3% logic, 58.7% route), 13 logic levels.
+
+
+Passed:  The following path meets requirements by 989.080ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             delay_cnt_i0_i4  (from sys_clk_c +)
+   Destination:    FD1P3AX    D              delay_cnt_i0_i15  (to sys_clk_c +)
+
+   Delay:                  10.760ns  (41.3% logic, 58.7% route), 13 logic levels.
+
+ Constraint Details:
+
+     10.760ns data_path delay_cnt_i0_i4 to delay_cnt_i0_i15 meets
+    1000.000ns delay constraint less
+      0.160ns L_S requirement (totaling 999.840ns) by 989.080ns
+
+ Path Details: delay_cnt_i0_i4 to delay_cnt_i0_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              delay_cnt_i0_i4 (from sys_clk_c)
+Route         3   e 1.315                                  delay_cnt[4]
+LUT4        ---     0.493              B to Z              i2_3_lut_rep_35
+Route         2   e 1.141                                  n3642
+LUT4        ---     0.493              C to Z              i2_3_lut_rep_25
+Route        16   e 1.815                                  n3632
+LUT4        ---     0.493              A to Z              i200_2_lut_rep_19_3_lut
+Route         1   e 0.941                                  n3626
+A1_TO_FCO   ---     0.827           B[2] to COUT           add_350_1
+Route         1   e 0.020                                  n3330
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_3
+Route         1   e 0.020                                  n3331
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_5
+Route         1   e 0.020                                  n3332
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_7
+Route         1   e 0.020                                  n3333
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_9
+Route         1   e 0.020                                  n3334
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_11
+Route         1   e 0.020                                  n3335
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_13
+Route         1   e 0.020                                  n3336
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_15
+Route         1   e 0.020                                  n3337
+FCI_TO_F    ---     0.598            CIN to S[2]           add_350_17
+Route         1   e 0.941                                  n152
+                  --------
+                   10.760  (41.3% logic, 58.7% route), 13 logic levels.
+
+
+Passed:  The following path meets requirements by 989.080ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             delay_cnt_i0_i5  (from sys_clk_c +)
+   Destination:    FD1P3AX    D              delay_cnt_i0_i15  (to sys_clk_c +)
+
+   Delay:                  10.760ns  (41.3% logic, 58.7% route), 13 logic levels.
+
+ Constraint Details:
+
+     10.760ns data_path delay_cnt_i0_i5 to delay_cnt_i0_i15 meets
+    1000.000ns delay constraint less
+      0.160ns L_S requirement (totaling 999.840ns) by 989.080ns
+
+ Path Details: delay_cnt_i0_i5 to delay_cnt_i0_i15
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              delay_cnt_i0_i5 (from sys_clk_c)
+Route         3   e 1.315                                  delay_cnt[5]
+LUT4        ---     0.493              A to Z              i2_3_lut_rep_35
+Route         2   e 1.141                                  n3642
+LUT4        ---     0.493              C to Z              i2_3_lut_rep_25
+Route        16   e 1.815                                  n3632
+LUT4        ---     0.493              A to Z              i200_2_lut_rep_19_3_lut
+Route         1   e 0.941                                  n3626
+A1_TO_FCO   ---     0.827           B[2] to COUT           add_350_1
+Route         1   e 0.020                                  n3330
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_3
+Route         1   e 0.020                                  n3331
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_5
+Route         1   e 0.020                                  n3332
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_7
+Route         1   e 0.020                                  n3333
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_9
+Route         1   e 0.020                                  n3334
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_11
+Route         1   e 0.020                                  n3335
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_13
+Route         1   e 0.020                                  n3336
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_350_15
+Route         1   e 0.020                                  n3337
+FCI_TO_F    ---     0.598            CIN to S[2]           add_350_17
+Route         1   e 0.941                                  n152
+                  --------
+                   10.760  (41.3% logic, 58.7% route), 13 logic levels.
+
+Report: 10.920 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk0 [get_nets sys_clk_c]               |  1000.000 ns|    10.920 ns|    13  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover  6596 paths, 521 nets, and 1295 connections (98.9% coverage)
+
+
+Peak memory: 66777088 bytes, TRCE: 2215936 bytes, DLYMAN: 167936 bytes
+CPU_TIME_REPORT: 0 secs 

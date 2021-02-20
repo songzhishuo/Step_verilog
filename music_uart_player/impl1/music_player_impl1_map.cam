@@ -1,96 +1,96 @@
 [ START MERGED ]
-n36629 uart_tx_busy
-u_uart_recv/n36623 u_uart_recv/rx_flag
-u_uart_recv/n34500 u_uart_recv/uart_data_7__N_7348
+u_uart_recv/n1913 u_uart_recv/rx_flag
+u_uart_recv/n2938 u_uart_recv/uart_data_7__N_198
+u_uart_send/n4945 uart_tx_busy
 [ END MERGED ]
 [ START CLIPPED ]
 VCC_net
-u_uart_recv/clk_cnt_17080_add_4_1/S0
-u_uart_recv/clk_cnt_17080_add_4_1/CI
-u_uart_recv/clk_cnt_17080_add_4_17/S1
-u_uart_recv/clk_cnt_17080_add_4_17/CO
-sub_17025_add_2_3/S1
-sub_17025_add_2_3/S0
-divide_1ms/add_39350_28/S0
-divide_1ms/add_39350_28/CO
-divide_1ms/add_39350_8/S1
-divide_1ms/add_39350_8/S0
-divide_1ms/add_39350_10/S1
-divide_1ms/add_39350_10/S0
-divide_1ms/add_39350_12/S1
-divide_1ms/add_39350_12/S0
-divide_1ms/add_39350_14/S1
-divide_1ms/add_39350_14/S0
-divide_1ms/add_39350_16/S1
-divide_1ms/add_39350_16/S0
-divide_1ms/add_39350_2/S1
-divide_1ms/add_39350_2/S0
-divide_1ms/add_39350_2/CI
-divide_1ms/cnt_p_17084_add_4_1/S0
-divide_1ms/cnt_p_17084_add_4_1/CI
-divide_1ms/cnt_p_17084_add_4_33/S1
-divide_1ms/cnt_p_17084_add_4_33/CO
-divide_1ms/add_39350_18/S1
-divide_1ms/add_39350_18/S0
-divide_1ms/add_39350_20/S1
-divide_1ms/add_39350_20/S0
-divide_1ms/add_39350_4/S1
-divide_1ms/add_39350_4/S0
-divide_1ms/add_39350_6/S1
-divide_1ms/add_39350_6/S0
-divide_1ms/add_39350_22/S1
-divide_1ms/add_39350_22/S0
-divide_1ms/add_39350_24/S1
-divide_1ms/add_39350_24/S0
-divide_1ms/add_39350_26/S1
-divide_1ms/add_39350_26/S0
-add_17_9/CO
-u_uart_send/clk_cnt_17082_add_4_17/S1
-u_uart_send/clk_cnt_17082_add_4_17/CO
-u_uart_send/clk_cnt_17082_add_4_1/S0
-u_uart_send/clk_cnt_17082_add_4_1/CI
-sub_17025_add_2_5/S1
-sub_17025_add_2_5/S0
-sub_17025_add_2_7/S1
-sub_17025_add_2_7/S0
-sub_17025_add_2_9/S1
-sub_17025_add_2_9/S0
-add_31_1/S0
-add_31_1/CI
-sub_17025_add_2_11/S1
-sub_17025_add_2_11/S0
-sub_17025_add_2_13/S1
-sub_17025_add_2_13/S0
-m_beep/time_cnt_17083_add_4_1/S0
-m_beep/time_cnt_17083_add_4_1/CI
-m_beep/add_17022_19/CO
-m_beep/time_cnt_17083_add_4_19/S1
-m_beep/time_cnt_17083_add_4_19/CO
-m_beep/add_17022_1/S0
-m_beep/add_17022_1/CI
-add_13_9/S1
-add_13_9/CO
-add_17_1/S0
-add_17_1/CI
-sub_17025_add_2_cout/S1
-sub_17025_add_2_cout/CO
-add_31_17/S1
-add_31_17/CO
-sub_17025_add_2_1/S1
-sub_17025_add_2_1/S0
-sub_17025_add_2_1/CI
-add_13_1/S0
-add_13_1/CI
+m_beep/time_cnt_905_add_4_1/S0
+m_beep/time_cnt_905_add_4_1/CI
+m_beep/add_814_19/CO
+m_beep/time_cnt_905_add_4_19/S1
+m_beep/time_cnt_905_add_4_19/CO
+m_beep/add_814_1/S0
+m_beep/add_814_1/CI
+divide_1ms/add_3355_26/S1
+divide_1ms/add_3355_26/S0
+divide_1ms/add_3355_28/S0
+divide_1ms/add_3355_28/CO
+divide_1ms/cnt_p_904_add_4_1/S0
+divide_1ms/cnt_p_904_add_4_1/CI
+divide_1ms/add_3355_2/S1
+divide_1ms/add_3355_2/S0
+divide_1ms/add_3355_2/CI
+divide_1ms/add_3355_4/S1
+divide_1ms/add_3355_4/S0
+divide_1ms/add_3355_6/S1
+divide_1ms/add_3355_6/S0
+divide_1ms/add_3355_8/S1
+divide_1ms/add_3355_8/S0
+divide_1ms/add_3355_10/S1
+divide_1ms/add_3355_10/S0
+divide_1ms/add_3355_12/S1
+divide_1ms/add_3355_12/S0
+divide_1ms/add_3355_14/S1
+divide_1ms/add_3355_14/S0
+divide_1ms/cnt_p_904_add_4_33/S1
+divide_1ms/cnt_p_904_add_4_33/CO
+divide_1ms/add_3355_16/S1
+divide_1ms/add_3355_16/S0
+divide_1ms/add_3355_18/S1
+divide_1ms/add_3355_18/S0
+divide_1ms/add_3355_20/S1
+divide_1ms/add_3355_20/S0
+divide_1ms/add_3355_22/S1
+divide_1ms/add_3355_22/S0
+divide_1ms/add_3355_24/S1
+divide_1ms/add_3355_24/S0
+u_uart_send/clk_cnt_907_add_4_17/S1
+u_uart_send/clk_cnt_907_add_4_17/CO
+u_uart_send/clk_cnt_907_add_4_1/S0
+u_uart_send/clk_cnt_907_add_4_1/CI
+u_uart_recv/clk_cnt_909_add_4_1/S0
+u_uart_recv/clk_cnt_909_add_4_1/CI
+u_uart_recv/clk_cnt_909_add_4_17/S1
+u_uart_recv/clk_cnt_909_add_4_17/CO
+add_109_1/S0
+add_109_1/CI
+sub_817_add_2_7/S1
+sub_817_add_2_7/S0
+sub_817_add_2_1/S1
+sub_817_add_2_1/S0
+sub_817_add_2_1/CI
+sub_817_add_2_9/S1
+sub_817_add_2_9/S0
+sub_817_add_2_11/S1
+sub_817_add_2_11/S0
+sub_817_add_2_3/S1
+sub_817_add_2_3/S0
+sub_817_add_2_13/S1
+sub_817_add_2_13/S0
+add_141_17/S1
+add_141_17/CO
+add_109_9/S1
+add_109_9/CO
+add_127_1/S0
+add_127_1/CI
+sub_817_add_2_15/S0
+sub_817_add_2_15/CO
+add_127_9/CO
+add_141_1/S0
+add_141_1/CI
+sub_817_add_2_5/S1
+sub_817_add_2_5/S0
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Sat Feb 20 23:59:52 2021
+# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Sun Feb 21 00:23:49 2021
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF ;
-LOCATE COMP "sys_clk" SITE "C1" ;
 LOCATE COMP "uart_rxd" SITE "C8" ;
 LOCATE COMP "switch_1" SITE "M7" ;
 LOCATE COMP "sys_rst_n" SITE "L14" ;
+LOCATE COMP "sys_clk" SITE "C1" ;
 LOCATE COMP "blink" SITE "N13" ;
 LOCATE COMP "beep" SITE "P8" ;
 LOCATE COMP "uart_txd" SITE "B8" ;

@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Feb 20 23:59:48 2021
+Sun Feb 21 00:23:47 2021
 
 
 Command Line:  synthesis -f music_player_impl1_lattice.synproj -gui 
@@ -81,6 +81,10 @@ Analyzing Verilog file C:/lscc/diamond/3.8_x64/ispfpga/userware/NT/SYNTHESIS_HEA
 Compile design.
 Compile Design Begin
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/top.v. VERI-1482
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(308): literal value truncated to fit in 1 bits. VERI-1208
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(310): literal value truncated to fit in 1 bits. VERI-1208
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(312): literal value truncated to fit in 1 bits. VERI-1208
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(314): literal value truncated to fit in 1 bits. VERI-1208
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/uart_send.v. VERI-1482
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/uart_recv.v. VERI-1482
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/uart_loop.v. VERI-1482
@@ -95,9 +99,6 @@ INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/uart_loop.v(2
 INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/beep.v(18): compiling module Beeper. VERI-1018
 INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/clock.v(1): compiling module divide. VERI-1018
 WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(145): expression size 8 truncated to fit in target size 5. VERI-1209
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(294): expression size 9 truncated to fit in target size 5. VERI-1209
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(54): net note[100][8] does not have a driver. VDB-1002
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(55): net music_time[100][15] does not have a driver. VDB-1002
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -105,128 +106,50 @@ Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'..
 Loading device for application map from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.8_x64/ispfpga.
 Package Status:                     Final          Version 1.44.
 Top-level module name = top.
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(54): Register \i475/note_0_0 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(54): Register \i475/note_0_1 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(54): net \i475/note_96_0 does not have a driver. VDB-1002
 ######## Missing driver on net blink. Patching with GND.
-######## Missing driver on net note[100][4]. Patching with GND.
-######## Missing driver on net note[100][3]. Patching with GND.
-######## Missing driver on net note[100][2]. Patching with GND.
-######## Missing driver on net note[100][1]. Patching with GND.
-######## Missing driver on net note[100][0]. Patching with GND.
-######## Missing driver on net note[99][4]. Patching with GND.
-######## Missing driver on net note[99][3]. Patching with GND.
-######## Missing driver on net note[99][2]. Patching with GND.
-######## Missing driver on net note[99][1]. Patching with GND.
-######## Missing driver on net note[99][0]. Patching with GND.
-######## Missing driver on net note[98][4]. Patching with GND.
-######## Missing driver on net note[98][3]. Patching with GND.
-######## Missing driver on net note[98][2]. Patching with GND.
-######## Missing driver on net note[98][1]. Patching with GND.
-######## Missing driver on net note[98][0]. Patching with GND.
-######## Missing driver on net note[97][4]. Patching with GND.
-######## Missing driver on net note[97][3]. Patching with GND.
-######## Missing driver on net note[97][2]. Patching with GND.
-######## Missing driver on net note[97][1]. Patching with GND.
-######## Missing driver on net note[97][0]. Patching with GND.
-######## Missing driver on net note[96][4]. Patching with GND.
-######## Missing driver on net note[96][3]. Patching with GND.
-######## Missing driver on net note[96][2]. Patching with GND.
-######## Missing driver on net note[96][1]. Patching with GND.
-######## Missing driver on net note[96][0]. Patching with GND.
-######## Missing driver on net music_time[100][15]. Patching with GND.
-######## Missing driver on net music_time[100][14]. Patching with GND.
-######## Missing driver on net music_time[100][13]. Patching with GND.
-######## Missing driver on net music_time[100][12]. Patching with GND.
-######## Missing driver on net music_time[100][11]. Patching with GND.
-######## Missing driver on net music_time[100][10]. Patching with GND.
-######## Missing driver on net music_time[100][9]. Patching with GND.
-######## Missing driver on net music_time[100][8]. Patching with GND.
-######## Missing driver on net music_time[100][7]. Patching with GND.
-######## Missing driver on net music_time[100][6]. Patching with GND.
-######## Missing driver on net music_time[100][5]. Patching with GND.
-######## Missing driver on net music_time[100][4]. Patching with GND.
-######## Missing driver on net music_time[100][3]. Patching with GND.
-######## Missing driver on net music_time[100][2]. Patching with GND.
-######## Missing driver on net music_time[100][1]. Patching with GND.
-######## Missing driver on net music_time[100][0]. Patching with GND.
-######## Missing driver on net music_time[99][15]. Patching with GND.
-######## Missing driver on net music_time[99][14]. Patching with GND.
-######## Missing driver on net music_time[99][13]. Patching with GND.
-######## Missing driver on net music_time[99][12]. Patching with GND.
-######## Missing driver on net music_time[99][11]. Patching with GND.
-######## Missing driver on net music_time[99][10]. Patching with GND.
-######## Missing driver on net music_time[99][9]. Patching with GND.
-######## Missing driver on net music_time[99][8]. Patching with GND.
-######## Missing driver on net music_time[99][7]. Patching with GND.
-######## Missing driver on net music_time[99][6]. Patching with GND.
-######## Missing driver on net music_time[99][5]. Patching with GND.
-######## Missing driver on net music_time[99][4]. Patching with GND.
-######## Missing driver on net music_time[99][3]. Patching with GND.
-######## Missing driver on net music_time[99][2]. Patching with GND.
-######## Missing driver on net music_time[99][1]. Patching with GND.
-######## Missing driver on net music_time[99][0]. Patching with GND.
-######## Missing driver on net music_time[98][15]. Patching with GND.
-######## Missing driver on net music_time[98][14]. Patching with GND.
-######## Missing driver on net music_time[98][13]. Patching with GND.
-######## Missing driver on net music_time[98][12]. Patching with GND.
-######## Missing driver on net music_time[98][11]. Patching with GND.
-######## Missing driver on net music_time[98][10]. Patching with GND.
-######## Missing driver on net music_time[98][9]. Patching with GND.
-######## Missing driver on net music_time[98][8]. Patching with GND.
-######## Missing driver on net music_time[98][7]. Patching with GND.
-######## Missing driver on net music_time[98][6]. Patching with GND.
-######## Missing driver on net music_time[98][5]. Patching with GND.
-######## Missing driver on net music_time[98][4]. Patching with GND.
-######## Missing driver on net music_time[98][3]. Patching with GND.
-######## Missing driver on net music_time[98][2]. Patching with GND.
-######## Missing driver on net music_time[98][1]. Patching with GND.
-######## Missing driver on net music_time[98][0]. Patching with GND.
-######## Missing driver on net music_time[97][15]. Patching with GND.
-######## Missing driver on net music_time[97][14]. Patching with GND.
-######## Missing driver on net music_time[97][13]. Patching with GND.
-######## Missing driver on net music_time[97][12]. Patching with GND.
-######## Missing driver on net music_time[97][11]. Patching with GND.
-######## Missing driver on net music_time[97][10]. Patching with GND.
-######## Missing driver on net music_time[97][9]. Patching with GND.
-######## Missing driver on net music_time[97][8]. Patching with GND.
-######## Missing driver on net music_time[97][7]. Patching with GND.
-######## Missing driver on net music_time[97][6]. Patching with GND.
-######## Missing driver on net music_time[97][5]. Patching with GND.
-######## Missing driver on net music_time[97][4]. Patching with GND.
-######## Missing driver on net music_time[97][3]. Patching with GND.
-######## Missing driver on net music_time[97][2]. Patching with GND.
-######## Missing driver on net music_time[97][1]. Patching with GND.
-######## Missing driver on net music_time[97][0]. Patching with GND.
-######## Missing driver on net music_time[96][15]. Patching with GND.
-######## Missing driver on net music_time[96][14]. Patching with GND.
-######## Missing driver on net music_time[96][13]. Patching with GND.
-######## Missing driver on net music_time[96][12]. Patching with GND.
-######## Missing driver on net music_time[96][11]. Patching with GND.
-######## Missing driver on net music_time[96][10]. Patching with GND.
-######## Missing driver on net music_time[96][9]. Patching with GND.
-######## Missing driver on net music_time[96][8]. Patching with GND.
-######## Missing driver on net music_time[96][7]. Patching with GND.
-######## Missing driver on net music_time[96][6]. Patching with GND.
-######## Missing driver on net music_time[96][5]. Patching with GND.
-######## Missing driver on net music_time[96][4]. Patching with GND.
-######## Missing driver on net music_time[96][3]. Patching with GND.
-######## Missing driver on net music_time[96][2]. Patching with GND.
-######## Missing driver on net music_time[96][1]. Patching with GND.
-######## Missing driver on net music_time[96][0]. Patching with GND.
-######## Missing driver on net music_time[88][15]. Patching with GND.
-######## Missing driver on net music_time[88][14]. Patching with GND.
-######## Missing driver on net music_time[88][13]. Patching with GND.
-######## Missing driver on net music_time[88][12]. Patching with GND.
-######## Missing driver on net music_time[88][11]. Patching with GND.
-######## Missing driver on net music_time[88][10]. Patching with GND.
-######## Missing driver on net music_time[88][9]. Patching with GND.
-######## Missing driver on net music_time[88][8]. Patching with GND.
-######## Missing driver on net music_time[88][7]. Patching with GND.
-######## Missing driver on net music_time[88][6]. Patching with GND.
-######## Missing driver on net music_time[88][5]. Patching with GND.
-######## Missing driver on net music_time[88][4]. Patching with GND.
-######## Missing driver on net music_time[88][3]. Patching with GND.
-######## Missing driver on net music_time[88][2]. Patching with GND.
-######## Missing driver on net music_time[88][1]. Patching with GND.
-######## Missing driver on net music_time[88][0]. Patching with GND.
+######## Missing driver on net \i475/note_96_0. Patching with GND.
+######## Missing driver on net \i475/note_96_1. Patching with GND.
+######## Missing driver on net \i475/note_96_2. Patching with GND.
+######## Missing driver on net \i475/note_96_3. Patching with GND.
+######## Missing driver on net \i475/note_96_4. Patching with GND.
+######## Missing driver on net \i475/note_96_5. Patching with GND.
+######## Missing driver on net \i475/note_96_6. Patching with GND.
+######## Missing driver on net \i475/note_96_7. Patching with GND.
+######## Missing driver on net \i475/note_97_0. Patching with GND.
+######## Missing driver on net \i475/note_97_1. Patching with GND.
+######## Missing driver on net \i475/note_97_2. Patching with GND.
+######## Missing driver on net \i475/note_97_3. Patching with GND.
+######## Missing driver on net \i475/note_97_4. Patching with GND.
+######## Missing driver on net \i475/note_97_5. Patching with GND.
+######## Missing driver on net \i475/note_97_6. Patching with GND.
+######## Missing driver on net \i475/note_97_7. Patching with GND.
+######## Missing driver on net \i475/note_98_0. Patching with GND.
+######## Missing driver on net \i475/note_98_1. Patching with GND.
+######## Missing driver on net \i475/note_98_2. Patching with GND.
+######## Missing driver on net \i475/note_98_3. Patching with GND.
+######## Missing driver on net \i475/note_98_4. Patching with GND.
+######## Missing driver on net \i475/note_98_5. Patching with GND.
+######## Missing driver on net \i475/note_98_6. Patching with GND.
+######## Missing driver on net \i475/note_98_7. Patching with GND.
+######## Missing driver on net \i475/note_99_0. Patching with GND.
+######## Missing driver on net \i475/note_99_1. Patching with GND.
+######## Missing driver on net \i475/note_99_2. Patching with GND.
+######## Missing driver on net \i475/note_99_3. Patching with GND.
+######## Missing driver on net \i475/note_99_4. Patching with GND.
+######## Missing driver on net \i475/note_99_5. Patching with GND.
+######## Missing driver on net \i475/note_99_6. Patching with GND.
+######## Missing driver on net \i475/note_99_7. Patching with GND.
+######## Missing driver on net \i475/note_100_0. Patching with GND.
+######## Missing driver on net \i475/note_100_1. Patching with GND.
+######## Missing driver on net \i475/note_100_2. Patching with GND.
+######## Missing driver on net \i475/note_100_3. Patching with GND.
+######## Missing driver on net \i475/note_100_4. Patching with GND.
+######## Missing driver on net \i475/note_100_5. Patching with GND.
+######## Missing driver on net \i475/note_100_6. Patching with GND.
+######## Missing driver on net \i475/note_100_7. Patching with GND.
 INFO - synthesis: Extracted state machine for register '\u_uart_recv/rx_cnt' with one-hot encoding
 State machine has 16 reachable states with original encodings of:
 
@@ -368,10 +291,10 @@ original encoding -> new encoding (one-hot encoding)
 
 
 
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(333): Register music_time[61][9]_13389 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(333): Register music_time[61][7]_13391 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(350): Register music_delay_i0_i14 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(350): Register music_delay_i0_i7 is stuck at One. VDB-5014
 GSR instance connected to net sys_rst_n_c.
-Duplicate register/latch removal. music_delay_i0_i3 is a one-to-one match with music_delay_i0_i6.
+Duplicate register/latch removal. music_delay_i0_i8 is a one-to-one match with music_delay_i0_i5.
 Applying 1.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -384,19 +307,20 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file music_player_impl1.ngd.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 203 of 4635 (4 % )
+Number of register bits => 205 of 4635 (4 % )
 CCU2D => 96
 FD1P3AX => 27
-FD1P3IX => 63
-FD1P3JX => 3
+FD1P3IX => 64
+FD1P3JX => 4
 FD1S3AX => 20
 FD1S3IX => 90
 GSR => 1
 IB => 4
-LUT4 => 188
+LUT4 => 169
 OB => 3
 PDPW8KC => 1
-PFUMX => 11
+PFUMX => 3
+ROM128X1A => 4
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -407,32 +331,32 @@ TSALL => 1
 Clock Nets
 Number of Clocks: 2
   Net : sys_clk_c, loads : 160
-  Net : divide_1ms/clk_p, loads : 45
+  Net : divide_1ms/clk_p, loads : 47
 Clock Enable Nets
-Number of Clock Enables: 19
+Number of Clock Enables: 21
 Top 10 highest fanout Clock Enables:
-  Net : clk_p_enable_35, loads : 16
-  Net : u_uart_send/sys_clk_c_enable_50, loads : 16
-  Net : u_uart_recv/sys_clk_c_enable_49, loads : 16
+  Net : clk_p_enable_40, loads : 16
+  Net : u_uart_recv/sys_clk_c_enable_48, loads : 16
+  Net : u_uart_send/sys_clk_c_enable_47, loads : 16
   Net : sys_rst_n_c, loads : 10
   Net : clk_p_enable_38, loads : 9
-  Net : clk_p_enable_18, loads : 8
-  Net : u_uart_recv/sys_clk_c_enable_10, loads : 7
-  Net : sys_clk_c_enable_48, loads : 5
-  Net : clk_p_enable_30, loads : 3
-  Net : clk_p_enable_32, loads : 2
+  Net : clk_p_enable_36, loads : 9
+  Net : u_uart_recv/sys_clk_c_enable_49, loads : 6
+  Net : clk_p_enable_1, loads : 6
+  Net : sys_clk_c_enable_46, loads : 4
+  Net : clk_p_enable_29, loads : 3
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : divide_1ms/n34497, loads : 32
-  Net : u_uart_recv/n36623, loads : 24
-  Net : music_cnt_2, loads : 22
-  Net : music_cnt_0, loads : 20
-  Net : music_cnt_1, loads : 19
-  Net : m_beep/n15125, loads : 18
-  Net : n34498, loads : 16
-  Net : clk_p_enable_35, loads : 16
-  Net : u_uart_loop/n36629, loads : 16
-  Net : u_uart_send/sys_clk_c_enable_50, loads : 16
+  Net : divide_1ms/n2941, loads : 32
+  Net : u_uart_recv/n1913, loads : 24
+  Net : m_beep/n1378, loads : 18
+  Net : u_uart_send/n4945, loads : 17
+  Net : cnt_run_1, loads : 16
+  Net : clk_p_enable_40, loads : 16
+  Net : n2946, loads : 16
+  Net : u_uart_recv/n2937, loads : 16
+  Net : u_uart_recv/sys_clk_c_enable_48, loads : 16
+  Net : u_uart_send/n2944, loads : 16
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -442,10 +366,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 1000.000000 -name  |             |             |
-clk1 [get_nets sys_clk_c]               |    1.000 MHz|   98.164 MHz|     6  
+clk1 [get_nets clk_p]                   |    1.000 MHz|   92.653 MHz|     6  
                                         |             |             |
 create_clock -period 1000.000000 -name  |             |             |
-clk0 [get_nets clk_p]                   |    1.000 MHz|   72.553 MHz|     8  
+clk0 [get_nets sys_clk_c]               |    1.000 MHz|   96.805 MHz|     6  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -453,8 +377,8 @@ clk0 [get_nets clk_p]                   |    1.000 MHz|   72.553 MHz|     8
 All constraints were met.
 
 
-Peak Memory Usage: 84.648  MB
+Peak Memory Usage: 66.500  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 3.516  secs
+Elapsed CPU time for LSE flow : 0.984  secs
 --------------------------------------------------------------

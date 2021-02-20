@@ -160,142 +160,159 @@ always @(posedge clk_1ms or negedge sys_rst_n) begin
 				// 	state <= RUN;
 				// end
 				state_back <= IDLE;
+                //    Òôµ÷          | ÅÄ×Ó
+                // __ __ __ __ | __ __ __ __ 
 
-				note[0] = 8'd6;	music_time[0] = 16'd200;	//200 100
-				note[1] = 8'd7;	music_time[1] = 16'd200;	//200 100
-				note[2] = 8'd8;	music_time[2] = 16'd200;	//200 100
-				note[3] = 8'd9;	music_time[3] = 16'd200;	//200 100
+                //ÅÄ×Ó
+                //  1. 1/4ÅÄ 200ms
+                //  2. 1/2ÅÄ 400ms
+                //  3. 1  ÅÄ 1s
+                //  4. 2  ÅÄ 2s
+                //  5. 4  ÅÄ 4s 
+				note[0] = {5'd6,3'd1};	//music_time[0] = 16'd200;	//200 100
+				note[1] = {5'd7,3'd1};	//music_time[1] = 16'd200;	//200 100
+				note[2] = {5'd8,3'd1};	//music_time[2] = 16'd200;	//200 100
+				note[3] = {5'd9,3'd1};	//music_time[3] = 16'd200;	//200 100
 
-				note[4] = 8'd10;	music_time[4] = 16'd200;	//200 100
-				note[5] = 8'd0;		music_time[5] = 16'd200;	//200 100
-				note[6] = 8'd13;	music_time[6] = 16'd200;	//200 100
-				note[7] = 8'd12;	music_time[7] = 16'd200;	//200 100
+				note[4] = {5'd10,3'd1};        //music_time[4] = 16'd200;	//200 100
+				note[5] = {5'd0,3'd1};	        //music_time[5] = 16'd200;	//200 100
+				note[6] = {5'd13,3'd1};        //music_time[6] = 16'd200;	//200 100
+				note[7] = {5'd12,3'd1};        //music_time[7] = 16'd200;	//200 100
 
-				note[8] = 8'd10;	music_time[8] = 16'd200;	//200 100
-				note[9] = 8'd0;		music_time[9] = 16'd200;	//200 100
-				note[10] = 8'd13;	music_time[10] = 16'd200;	//200 100
-				note[11] = 8'd0;	music_time[11] = 16'd200;	//200 100	
+				note[8] = {5'd10,3'd1};	        //music_time[8] = 16'd200;	//200 100
+				note[9] = {5'd0,3'd1};	        //music_time[9] = 16'd200;	//200 100
+				note[10] = {5'd13,3'd1};        //music_time[10] = 16'd200;	//200 100
+				note[11] = {5'd0,3'd1};	        //music_time[11] = 16'd200;	//200 100	
 
-				note[12] = 8'd10;	music_time[12] = 16'd200;	//200 100
-				note[13] = 8'd9;	music_time[13] = 16'd200;	//200 100
-				note[14] = 8'd8;	music_time[14] = 16'd200;	//200 100
-				note[15] = 8'd14;	music_time[15] = 16'd200;	//200 100
+				note[12] = {5'd10,3'd1};               //music_time[12] = 16'd200;	//200 100
+				note[13] = {5'd9,3'd1};                //music_time[13] = 16'd200;	//200 100
+				note[14] = {5'd8,3'd1};                //music_time[14] = 16'd200;	//200 100
+				note[15] = {5'd14,3'd1};               //music_time[15] = 16'd200;	//200 100
 
-				note[16] = 8'd6;	music_time[16] = 16'd200;	//200 100
-				note[17] = 8'd7;	music_time[17] = 16'd200;	//200 100
-				note[18] = 8'd8;	music_time[18] = 16'd200;	//200 100
-				note[19] = 8'd9;	music_time[19] = 16'd200;	//200 100
+				note[16] = {5'd6,3'd1};                //music_time[16] = 16'd200;	//200 100
+				note[17] = {5'd7,3'd1};                //music_time[17] = 16'd200;	//200 100
+				note[18] = {5'd8,3'd1};                //music_time[18] = 16'd200;	//200 100
+				note[19] = {5'd9,3'd1};                //music_time[19] = 16'd200;	//200 100
 				
-				note[20] = 8'd10;	music_time[20] = 16'd200;	//200 100
-				note[21] = 8'd0;	music_time[21] = 16'd200;	//200 100
-				note[22] = 8'd9;	music_time[22] = 16'd200;	//200 100
-				note[23] = 8'd8;	music_time[23] = 16'd200;	//200 100
+				note[20] = {5'd10,3'd1};               //music_time[20] = 16'd200;	//200 100
+				note[21] = {5'd0,3'd1};                //music_time[21] = 16'd200;	//200 100
+				note[22] = {5'd9,3'd1};                //music_time[22] = 16'd200;	//200 100
+				note[23] = {5'd8,3'd1};                //music_time[23] = 16'd200;	//200 100
 
-				note[24] = 8'd7;	music_time[24] = 16'd200;	//200 100
-				note[25] = 8'd6;	music_time[25] = 16'd200;	//200 100
-				note[26] = 8'd7;	music_time[26] = 16'd200;	//200 100
-				note[27] = 8'd8;	music_time[27] = 16'd200;	//200 100
+				note[24] = {5'd7,3'd1};                //music_time[24] = 16'd200;	//200 100
+				note[25] = {5'd6,3'd1};                //music_time[25] = 16'd200;	//200 100
+				note[26] = {5'd7,3'd1};                //music_time[26] = 16'd200;	//200 100
+				note[27] = {5'd8,3'd1};                //music_time[27] = 16'd200;	//200 100
 
-				note[28] = 8'd7;	music_time[28] = 16'd200;	//200 100
-				note[29] = 8'd6;	music_time[29] = 16'd200;	//200 100
-				note[30] = 8'd12;	music_time[30] = 16'd200;	//200 100
-				note[31] = 8'd7;	music_time[31] = 16'd200;	//200 100
+				note[28] = {5'd7,3'd1};                //music_time[28] = 16'd200;	//200 100
+				note[29] = {5'd6,3'd1};                //music_time[29] = 16'd200;	//200 100
+				note[30] = {5'd12,3'd1};	            //music_time[30] = 16'd200;	//200 100
+				note[31] = {5'd7,3'd1};                //music_time[31] = 16'd200;	//200 100
 
 				//µÚ¶þ¶Î
-				note[32] = 8'd6;	music_time[32] = 16'd200;	//200 100
-				note[33] = 8'd7;	music_time[33] = 16'd200;	//200 100
-				note[34] = 8'd8;	music_time[34] = 16'd200;	//200 100
-				note[35] = 8'd9;	music_time[35] = 16'd200;	//200 100
+				note[32] = {5'd6,3'd1};                //music_time[32] = 16'd200;	//200 100
+				note[33] = {5'd7,3'd1};                //music_time[33] = 16'd200;	//200 100
+				note[34] = {5'd8,3'd1};                //music_time[34] = 16'd200;	//200 100
+				note[35] = {5'd9,3'd1};                //music_time[35] = 16'd200;	//200 100
 
-				note[36] = 8'd10;	music_time[36] = 16'd200;	//200 100
-				note[37] = 8'd0;	music_time[37] = 16'd200;	//200 100
-				note[38] = 8'd13;	music_time[38] = 16'd200;	//200 100
-				note[39] = 8'd12;	music_time[39] = 16'd200;	//200 100
+				note[36] = {5'd10,3'd1};               //music_time[36] = 16'd200;	//200 100
+				note[37] = {5'd0,3'd1};                //music_time[37] = 16'd200;	//200 100
+				note[38] = {5'd13,3'd1};               //music_time[38] = 16'd200;	//200 100
+				note[39] = {5'd12,3'd1};               //music_time[39] = 16'd200;	//200 100
 
-				note[40] = 8'd10;	music_time[40] = 16'd200;	//200 100
-				note[41] = 8'd0;	music_time[41] = 16'd200;	//200 100
-				note[42] = 8'd13;	music_time[42] = 16'd200;	//200 100
-				note[43] = 8'd0;	music_time[43] = 16'd200;	//200 100	
+				note[40] = {5'd10,3'd1};               //music_time[40] = 16'd200;	//200 100
+				note[41] = {5'd0,3'd1};                //music_time[41] = 16'd200;	//200 100
+				note[42] = {5'd13,3'd1};               //music_time[42] = 16'd200;	//200 100
+				note[43] = {5'd0,3'd1};                //music_time[43] = 16'd200;	//200 100	
 
-				note[44] = 8'd10;	music_time[44] = 16'd200;	//200 100
-				note[45] = 8'd9;	music_time[45] = 16'd200;	//200 100
-				note[46] = 8'd8;	music_time[46] = 16'd200;	//200 100
-				note[47] = 8'd14;	music_time[47] = 16'd200;	//200 100
+				note[44] = {5'd10,3'd1};               //music_time[44] = 16'd200;	//200 100
+				note[45] = {5'd9,3'd1};                //music_time[45] = 16'd200;	//200 100
+				note[46] = {5'd8,3'd1};                //music_time[46] = 16'd200;	//200 100
+				note[47] = {5'd14,3'd1};               //music_time[47] = 16'd200;	//200 100
 
-				note[48] = 8'd6;	music_time[48] = 16'd200;	//200 100
-				note[49] = 8'd7;	music_time[49] = 16'd200;	//200 100
-				note[50] = 8'd8;	music_time[50] = 16'd200;	//200 100
-				note[51] = 8'd9;	music_time[51] = 16'd200;	//200 100
+				note[48] = {5'd6,3'd1};                //music_time[48] = 16'd200;	//200 100
+				note[49] = {5'd7,3'd1};                //music_time[49] = 16'd200;	//200 100
+				note[50] = {5'd8,3'd1};                //music_time[50] = 16'd200;	//200 100
+				note[51] = {5'd9,3'd1};                //music_time[51] = 16'd200;	//200 100
 				
-				note[52] = 8'd10;	music_time[52] = 16'd200;	//200 100
-				note[53] = 8'd0;	music_time[53] = 16'd200;	//200 100
-				note[54] = 8'd9;	music_time[54] = 16'd200;	//200 100
-				note[55] = 8'd8;	music_time[55] = 16'd200;	//200 100
+				note[52] = {5'd10,3'd1};               //music_time[52] = 16'd200;	//200 100
+				note[53] = {5'd0,3'd1};                //music_time[53] = 16'd200;	//200 100
+				note[54] = {5'd9,3'd1};                //music_time[54] = 16'd200;	//200 100
+				note[55] = {5'd8,3'd1};                //music_time[55] = 16'd200;	//200 100
 
-				note[56] = 8'd7;	music_time[56] = 16'd200;	//200 100
-				note[57] = 8'd0;	music_time[57] = 16'd200;	//200 100
-				note[58] = 8'd8;	music_time[58] = 16'd200;	//200 100
-				note[59] = 8'd0;	music_time[59] = 16'd200;	//200 100
+				note[56] = {5'd7,3'd1};                //music_time[56] = 16'd200;	//200 100
+				note[57] = {5'd0,3'd1};                //music_time[57] = 16'd200;	//200 100
+				note[58] = {5'd8,3'd1};                //music_time[58] = 16'd200;	//200 100
+				note[59] = {5'd0,3'd1};                //music_time[59] = 16'd200;	//200 100
 
-				note[60] = 8'd2;	music_time[60] = 16'd200;	//200 100
-				note[61] = 8'd0;	music_time[61] = 16'd200;	//200 100
-				note[62] = 8'd10;	music_time[62] = 16'd200;	//200 100
-				note[63] = 8'd0;	music_time[63] = 16'd200;	//200 100
+				note[60] = {5'd2,3'd1};                //music_time[60] = 16'd200;	//200 100
+				note[61] = {5'd0,3'd1};                //music_time[61] = 16'd200;	//200 100
+				note[62] = {5'd10,3'd1};               //music_time[62] = 16'd200;	//200 100
+				note[63] = {5'd0,3'd1};                //music_time[63] = 16'd200;	//200 100
 
-				///HIGH C		12£¬13£¬10£¬9
-				note[64] = 8'd12;	music_time[64] = 16'd200;	//200 100
-				note[65] = 8'd13;	music_time[65] = 16'd200;	//200 100
-				note[66] = 8'd10;	music_time[66] = 16'd200;	//200 100
-				note[67] = 8'd9;	music_time[67] = 16'd200;	//200 100
-				//10£¬0£¬9£¬10
-				note[68] = 8'd10;	music_time[68] = 16'd200;	//200 100
-				note[69] = 8'd0;	music_time[69] = 16'd200;	//200 100
-				note[70] = 8'd9;	music_time[70] = 16'd200;	//200 100
-				note[71] = 8'd10;	music_time[71] = 16'd200;	//200 100
-				//12£¬13£¬10£¬9
-				note[72] = 8'd12;	music_time[72] = 16'd200;	//200 100
-				note[73] = 8'd13;	music_time[73] = 16'd200;	//200 100
-				note[74] = 8'd10;	music_time[74] = 16'd200;	//200 100
-				note[75] = 8'd9;	music_time[75] = 16'd200;	//200 100
-				//10£¬0£¬9£¬10
-				note[76] = 8'd10;	music_time[76] = 16'd200;	//200 100
-				note[77] = 8'd0;	music_time[77] = 16'd200;	//200 100
-				note[78] = 8'd9;	music_time[78] = 16'd200;	//200 100
-				note[79] = 8'd10;	music_time[79] = 16'd200;	//200 100
+				///HIGH C		1               //13£¬10£¬9
+				note[64] = {5'd12,3'd1};               //music_time[64] = 16'd200;	//200 100
+				note[65] = {5'd13,3'd1};               //music_time[65] = 16'd200;	//200 100
+				note[66] = {5'd10,3'd1};               //music_time[66] = 16'd200;	//200 100
+				note[67] = {5'd9,3'd1};                //music_time[67] = 16'd200;	//200 100
+				//10£¬0£¬9 10
+				note[68] = {5'd10,3'd1};               //music_time[68] = 16'd200;	//200 100
+				note[69] = {5'd0,3'd1};                //music_time[69] = 16'd200;	//200 100
+				note[70] = {5'd9,3'd1};                //music_time[70] = 16'd200;	//200 100
+				note[71] = {5'd10,3'd1};               //music_time[71] = 16'd200;	//200 100
+				//12£¬13£¬15£¬9
+				note[72] = {5'd12,3'd1};               //music_time[72] = 16'd200;	//200 100
+				note[73] = {5'd13,3'd1};               //music_time[73] = 16'd200;	//200 100
+				note[74] = {5'd10,3'd1};               //music_time[74] = 16'd200;	//200 100
+				note[75] = {5'd9,3'd1};                //music_time[75] = 16'd200;	//200 100
+				//10£¬0£¬9 10
+				note[76] = {5'd10,3'd1};               //music_time[76] = 16'd200;	//200 100
+				note[77] = {5'd0,3'd1};                //music_time[77] = 16'd200;	//200 100
+				note[78] = {5'd9,3'd1};                //music_time[78] = 16'd200;	//200 100
+				note[79] = {5'd10,3'd1};               //music_time[79] = 16'd200;	//200 100
 				//9,8,7,5
-				note[80] = 8'd9;	music_time[80] = 16'd200;	//200 100
-				note[81] = 8'd8;	music_time[81] = 16'd200;	//200 100
-				note[82] = 8'd7;	music_time[82] = 16'd200;	//200 100
-				note[83] = 8'd5;	music_time[83] = 16'd200;	//200 100
+				note[80] = {5'd9,3'd1};                //music_time[80] = 16'd200;	//200 100
+				note[81] = {5'd8,3'd1};                //music_time[81] = 16'd200;	//200 100
+				note[82] = {5'd7,3'd1};                //music_time[82] = 16'd200;	//200 100
+				note[83] = {5'd5,3'd1};                //music_time[83] = 16'd200;	//200 100
 
 				//6,0,5,6
-				note[84] = 8'd6;	music_time[84] = 16'd200;	//200 100
-				note[85] = 8'd0;	music_time[85] = 16'd200;	//200 100
-				note[86] = 8'd5;	music_time[86] = 16'd200;	//200 100
-				note[87] = 8'd6;	music_time[87] = 16'd200;	//200 100	
+				note[84] = {5'd6,3'd1};                //music_time[84] = 16'd200;	//200 100
+				note[85] = {5'd0,3'd1};                //music_time[85] = 16'd200;	//200 100
+				note[86] = {5'd5,3'd1};                //music_time[86] = 16'd200;	//200 100
+				note[87] = {5'd6,3'd1};                //music_time[87] = 16'd200;	//200 100	
 
 				//7,8,9,10
-				note[88] = 8'd7;	music_time[87] = 16'd200;	//200 100
-				note[89] = 8'd8;	music_time[89] = 16'd200;	//200 100
-				note[90] = 8'd9;	music_time[90] = 16'd200;	//200 100
-				note[91] = 8'd10;	music_time[91] = 16'd200;	//200 100
+				note[88] = {5'd7,3'd1};                //music_time[87] = 16'd200;	//200 100
+				note[89] = {5'd8,3'd1};                //music_time[89] = 16'd200;	//200 100
+				note[90] = {5'd9,3'd1};                //music_time[90] = 16'd200;	//200 100
+				note[91] = {5'd10,3'd1};               //music_time[91] = 16'd200;	//200 100
 
-				//	6,0,10,12						
-				note[92] = 8'd6;	music_time[92] = 16'd200;	//200 100
-				note[93] = 8'd0;	music_time[93] = 16'd200;	//200 100
-				note[94] = 8'd10;	music_time[94] = 16'd200;	//200 100
-				note[95] = 8'd12;	music_time[95] = 16'd200;	//200 100
+				//	6,0,10,2	                //				
+				note[92] = {5'd6,3'd1};                //music_time[92] = 16'd200;	//200 100
+				note[93] = {5'd0,3'd1};                //music_time[93] = 16'd200;	//200 100
+				note[94] = {5'd10,3'd1};               //music_time[94] = 16'd200;	//200 100
+				note[95] = {5'd12,3'd1};               //music_time[95] = 16'd200;	//200 100
                 state <= RUN;
 
 			end
 			RUN:begin
 				case (cnt_run)
 					7'd0:begin	
-                        music_note <= note[music_cnt]; 
+                        music_note <= note[music_cnt][7:3]; 
                         cnt_run<=cnt_run+1'b1;
                         end							
 					7'd1:begin	
-						music_delay <= music_time[music_cnt]; 
+                        if(note[music_cnt][2:0] == 1'd1)
+						    music_delay <= 16'd200; 
+                        else if(note[music_cnt][3:0] == 1'd2)
+                            music_delay <= 16'd500; 
+                        else if(note[music_cnt][3:0] == 1'd3)    
+                            music_delay <= 16'd1000;
+                        else if(note[music_cnt][3:0] == 1'd4)    
+                            music_delay <= 16'd2000;
+                        else if(note[music_cnt][3:0] == 1'd5)    
+                            music_delay <= 16'd4000;   
 						state <= DELAY; state_back<=RUN; 
 						cnt_run<=cnt_run+1'b1;
 						end

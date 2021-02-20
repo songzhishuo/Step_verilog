@@ -1,61 +1,54 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  203 of 4635 (4.380%)
+Register bits:  205 of 4635 (4.423%)
 I/O cells:      7
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D        96          100.0
                             FD1P3AX        27          100.0
-                            FD1P3IX        63          100.0
-                            FD1P3JX         3          100.0
+                            FD1P3IX        64          100.0
+                            FD1P3JX         4          100.0
                             FD1S3AX        20          100.0
                             FD1S3IX        90          100.0
                                 GSR         1          100.0
                                  IB         4          100.0
-                               LUT4       188          100.0
+                               LUT4       169          100.0
                                  OB         3          100.0
                             PDPW8KC         1          100.0
-                              PFUMX        11          100.0
+                              PFUMX         3          100.0
+                          ROM128X1A         4          100.0
 SUB MODULES
                              Beeper         1
                              divide         1
                           uart_loop         1
 uart_recv(CLK_FREQ=12000000,UART_BPS=115200)         1
 uart_send(CLK_FREQ=12000000,UART_BPS=115200)         1
-                              TOTAL       512
+                              TOTAL       491
 ----------------------------------------------------------------------
-Report for cell Beeper.v1
-Instance Path : m_beep
+Report for cell uart_recv(CLK_FREQ=12000000,UART_BPS=115200).v1
+Instance Path : u_uart_recv
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        20           20.8
-                            FD1S3AX         1            5.0
-                            FD1S3IX        18           20.0
-                               LUT4         7            3.7
-                            PDPW8KC         1          100.0
-                              TOTAL        47
+                              CCU2D         9            9.4
+                            FD1P3IX        23           35.9
+                            FD1P3JX         1           25.0
+                            FD1S3AX         4           20.0
+                            FD1S3IX        24           26.7
+                               LUT4        41           24.3
+                              TOTAL       102
 ----------------------------------------------------------------------
 Report for cell uart_send(CLK_FREQ=12000000,UART_BPS=115200).v1
 Instance Path : u_uart_send
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D         9            9.4
-                            FD1P3IX        15           23.8
-                            FD1P3JX         2           66.7
+                            FD1P3IX        15           23.4
+                            FD1P3JX         2           50.0
                             FD1S3AX        11           55.0
                             FD1S3IX        16           17.8
-                               LUT4        37           19.7
-                              PFUMX         1            9.1
-                              TOTAL        91
-----------------------------------------------------------------------
-Report for cell uart_loop.v1
-Instance Path : u_uart_loop
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3AX         9           33.3
-                            FD1S3AX         3           15.0
-                               LUT4         2            1.1
-                              TOTAL        14
+                               LUT4        38           22.5
+                              PFUMX         1           33.3
+                              TOTAL        92
 ----------------------------------------------------------------------
 Report for cell divide.v1
 Instance Path : divide_1ms
@@ -64,17 +57,24 @@ Instance Path : divide_1ms
                               CCU2D        31           32.3
                             FD1S3AX         1            5.0
                             FD1S3IX        32           35.6
-                               LUT4        13            6.9
+                               LUT4        13            7.7
                               TOTAL        77
 ----------------------------------------------------------------------
-Report for cell uart_recv(CLK_FREQ=12000000,UART_BPS=115200).v1
-Instance Path : u_uart_recv
+Report for cell Beeper.v1
+Instance Path : m_beep
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D         9            9.4
-                            FD1P3IX        23           36.5
-                            FD1P3JX         1           33.3
-                            FD1S3AX         4           20.0
-                            FD1S3IX        24           26.7
-                               LUT4        40           21.3
-                              TOTAL       101
+                              CCU2D        20           20.8
+                            FD1S3AX         1            5.0
+                            FD1S3IX        18           20.0
+                               LUT4         7            4.1
+                            PDPW8KC         1          100.0
+                              TOTAL        47
+----------------------------------------------------------------------
+Report for cell uart_loop.v1
+Instance Path : u_uart_loop
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         9           33.3
+                            FD1S3AX         3           15.0
+                              TOTAL        12

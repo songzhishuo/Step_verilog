@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "C:/Users/Argon/Desktop/Verilog/music_uart_player"  

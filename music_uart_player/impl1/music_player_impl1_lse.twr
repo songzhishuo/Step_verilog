@@ -1,0 +1,155 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat Feb 20 20:36:27 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     uart_loopback_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 1000.000000 -name clk0 [get_nets sys_clk_c]
+            1197 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 989.625ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \u_uart_recv/clk_cnt_232__i13  (from sys_clk_c +)
+   Destination:    FD1P3IX    SP             \u_uart_recv/rxdata__i7  (to sys_clk_c +)
+
+   Delay:                  10.090ns  (28.8% logic, 71.2% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.090ns data_path \u_uart_recv/clk_cnt_232__i13 to \u_uart_recv/rxdata__i7 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 989.625ns
+
+ Path Details: \u_uart_recv/clk_cnt_232__i13 to \u_uart_recv/rxdata__i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \u_uart_recv/clk_cnt_232__i13 (from sys_clk_c)
+Route         2   e 1.198                                  \u_uart_recv/clk_cnt[13]
+LUT4        ---     0.493              C to Z              \u_uart_recv/i5_3_lut
+Route         1   e 0.941                                  \u_uart_recv/n14
+LUT4        ---     0.493              C to Z              \u_uart_recv/i8_4_lut
+Route         2   e 1.141                                  \u_uart_recv/n770
+LUT4        ---     0.493              B to Z              \u_uart_recv/i2_4_lut
+Route         2   e 1.141                                  \u_uart_recv/n1652
+LUT4        ---     0.493              B to Z              \u_uart_recv/i4_4_lut_rep_13
+Route         3   e 1.258                                  \u_uart_recv/n1792
+LUT4        ---     0.493              D to Z              \u_uart_recv/i1423_3_lut_rep_11_3_lut_4_lut
+Route         7   e 1.502                                  \u_uart_recv/sys_clk_c_enable_40
+                  --------
+                   10.090  (28.8% logic, 71.2% route), 6 logic levels.
+
+
+Passed:  The following path meets requirements by 989.625ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \u_uart_recv/clk_cnt_232__i13  (from sys_clk_c +)
+   Destination:    FD1P3IX    SP             \u_uart_recv/rxdata__i6  (to sys_clk_c +)
+
+   Delay:                  10.090ns  (28.8% logic, 71.2% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.090ns data_path \u_uart_recv/clk_cnt_232__i13 to \u_uart_recv/rxdata__i6 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 989.625ns
+
+ Path Details: \u_uart_recv/clk_cnt_232__i13 to \u_uart_recv/rxdata__i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \u_uart_recv/clk_cnt_232__i13 (from sys_clk_c)
+Route         2   e 1.198                                  \u_uart_recv/clk_cnt[13]
+LUT4        ---     0.493              C to Z              \u_uart_recv/i5_3_lut
+Route         1   e 0.941                                  \u_uart_recv/n14
+LUT4        ---     0.493              C to Z              \u_uart_recv/i8_4_lut
+Route         2   e 1.141                                  \u_uart_recv/n770
+LUT4        ---     0.493              B to Z              \u_uart_recv/i2_4_lut
+Route         2   e 1.141                                  \u_uart_recv/n1652
+LUT4        ---     0.493              B to Z              \u_uart_recv/i4_4_lut_rep_13
+Route         3   e 1.258                                  \u_uart_recv/n1792
+LUT4        ---     0.493              D to Z              \u_uart_recv/i1423_3_lut_rep_11_3_lut_4_lut
+Route         7   e 1.502                                  \u_uart_recv/sys_clk_c_enable_40
+                  --------
+                   10.090  (28.8% logic, 71.2% route), 6 logic levels.
+
+
+Passed:  The following path meets requirements by 989.625ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \u_uart_recv/clk_cnt_232__i13  (from sys_clk_c +)
+   Destination:    FD1P3IX    SP             \u_uart_recv/rxdata__i5  (to sys_clk_c +)
+
+   Delay:                  10.090ns  (28.8% logic, 71.2% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.090ns data_path \u_uart_recv/clk_cnt_232__i13 to \u_uart_recv/rxdata__i5 meets
+    1000.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 999.715ns) by 989.625ns
+
+ Path Details: \u_uart_recv/clk_cnt_232__i13 to \u_uart_recv/rxdata__i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \u_uart_recv/clk_cnt_232__i13 (from sys_clk_c)
+Route         2   e 1.198                                  \u_uart_recv/clk_cnt[13]
+LUT4        ---     0.493              C to Z              \u_uart_recv/i5_3_lut
+Route         1   e 0.941                                  \u_uart_recv/n14
+LUT4        ---     0.493              C to Z              \u_uart_recv/i8_4_lut
+Route         2   e 1.141                                  \u_uart_recv/n770
+LUT4        ---     0.493              B to Z              \u_uart_recv/i2_4_lut
+Route         2   e 1.141                                  \u_uart_recv/n1652
+LUT4        ---     0.493              B to Z              \u_uart_recv/i4_4_lut_rep_13
+Route         3   e 1.258                                  \u_uart_recv/n1792
+LUT4        ---     0.493              D to Z              \u_uart_recv/i1423_3_lut_rep_11_3_lut_4_lut
+Route         7   e 1.502                                  \u_uart_recv/sys_clk_c_enable_40
+                  --------
+                   10.090  (28.8% logic, 71.2% route), 6 logic levels.
+
+Report: 10.375 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk0 [get_nets sys_clk_c]               |  1000.000 ns|    10.375 ns|     6  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover  3164 paths, 348 nets, and 870 connections (99.0% coverage)
+
+
+Peak memory: 63508480 bytes, TRCE: 2211840 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

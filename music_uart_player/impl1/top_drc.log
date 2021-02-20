@@ -7,10 +7,12 @@ Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'..
 
 Running DRC...
 
-DRC complete with no errors or warnings
+WARNING - synthesis: logical net 'switch_2' has no load.
+WARNING - synthesis: input pad net 'switch_2' has no legal load.
+WARNING - synthesis: DRC complete with 2 warnings.
 
 Design Results:
-    489 blocks expanded
+    264 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file music_player_impl1.ngd.

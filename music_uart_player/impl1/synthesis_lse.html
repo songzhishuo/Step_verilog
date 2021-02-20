@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Feb 21 00:23:47 2021
+Sun Feb 21 01:49:20 2021
 
 
 Command Line:  synthesis -f music_player_impl1_lattice.synproj -gui 
@@ -79,6 +79,7 @@ Verilog design file = C:/Users/Argon/Desktop/Verilog/music_uart_player/uart_recv
 Verilog design file = C:/Users/Argon/Desktop/Verilog/music_uart_player/uart_loop.v
 Verilog design file = C:/Users/Argon/Desktop/Verilog/music_uart_player/beep.v
 Verilog design file = C:/Users/Argon/Desktop/Verilog/music_uart_player/clock.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/music_uart_player/music_player.v
 NGD file = music_player_impl1.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -90,15 +91,12 @@ Analyzing Verilog file C:/lscc/diamond/3.8_x64/ispfpga/userware/NT/SYNTHESIS_HEA
 Compile design.
 Compile Design Begin
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/top.v. VERI-1482
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(308): literal value truncated to fit in 1 bits. VERI-1208
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(310): literal value truncated to fit in 1 bits. VERI-1208
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(312): literal value truncated to fit in 1 bits. VERI-1208
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(314): literal value truncated to fit in 1 bits. VERI-1208
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/uart_send.v. VERI-1482
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/uart_recv.v. VERI-1482
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/uart_loop.v. VERI-1482
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/beep.v. VERI-1482
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/clock.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/music_player.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.8_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): top
 INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(1): compiling module top. VERI-1018
@@ -106,8 +104,12 @@ INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/uart_recv.v(2
 INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/uart_send.v(23): compiling module uart_send(CLK_FREQ=12000000,UART_BPS=115200). VERI-1018
 INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/uart_loop.v(23): compiling module uart_loop. VERI-1018
 INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/beep.v(18): compiling module Beeper. VERI-1018
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(99): actual bit length 8 differs from formal bit length 5 for port tone. VERI-1330
 INFO - synthesis: c:/users/argon/desktop/verilog/music_uart_player/clock.v(1): compiling module divide. VERI-1018
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(145): expression size 8 truncated to fit in target size 5. VERI-1209
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(143): if-condition does not match any sensitivity list edge. VERI-1167
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(144): blink should be on the sensitivity list. VERI-1221
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(144): assignment under multiple single edges is not supported for synthesis. VERI-1466
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(42): net music_tone[4] does not have a driver. VDB-1002
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -115,119 +117,12 @@ Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'..
 Loading device for application map from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.8_x64/ispfpga.
 Package Status:                     Final          Version 1.44.
 Top-level module name = top.
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(54): Register \i475/note_0_0 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(54): Register \i475/note_0_1 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(54): net \i475/note_96_0 does not have a driver. VDB-1002
-######## Missing driver on net blink. Patching with GND.
-######## Missing driver on net \i475/note_96_0. Patching with GND.
-######## Missing driver on net \i475/note_96_1. Patching with GND.
-######## Missing driver on net \i475/note_96_2. Patching with GND.
-######## Missing driver on net \i475/note_96_3. Patching with GND.
-######## Missing driver on net \i475/note_96_4. Patching with GND.
-######## Missing driver on net \i475/note_96_5. Patching with GND.
-######## Missing driver on net \i475/note_96_6. Patching with GND.
-######## Missing driver on net \i475/note_96_7. Patching with GND.
-######## Missing driver on net \i475/note_97_0. Patching with GND.
-######## Missing driver on net \i475/note_97_1. Patching with GND.
-######## Missing driver on net \i475/note_97_2. Patching with GND.
-######## Missing driver on net \i475/note_97_3. Patching with GND.
-######## Missing driver on net \i475/note_97_4. Patching with GND.
-######## Missing driver on net \i475/note_97_5. Patching with GND.
-######## Missing driver on net \i475/note_97_6. Patching with GND.
-######## Missing driver on net \i475/note_97_7. Patching with GND.
-######## Missing driver on net \i475/note_98_0. Patching with GND.
-######## Missing driver on net \i475/note_98_1. Patching with GND.
-######## Missing driver on net \i475/note_98_2. Patching with GND.
-######## Missing driver on net \i475/note_98_3. Patching with GND.
-######## Missing driver on net \i475/note_98_4. Patching with GND.
-######## Missing driver on net \i475/note_98_5. Patching with GND.
-######## Missing driver on net \i475/note_98_6. Patching with GND.
-######## Missing driver on net \i475/note_98_7. Patching with GND.
-######## Missing driver on net \i475/note_99_0. Patching with GND.
-######## Missing driver on net \i475/note_99_1. Patching with GND.
-######## Missing driver on net \i475/note_99_2. Patching with GND.
-######## Missing driver on net \i475/note_99_3. Patching with GND.
-######## Missing driver on net \i475/note_99_4. Patching with GND.
-######## Missing driver on net \i475/note_99_5. Patching with GND.
-######## Missing driver on net \i475/note_99_6. Patching with GND.
-######## Missing driver on net \i475/note_99_7. Patching with GND.
-######## Missing driver on net \i475/note_100_0. Patching with GND.
-######## Missing driver on net \i475/note_100_1. Patching with GND.
-######## Missing driver on net \i475/note_100_2. Patching with GND.
-######## Missing driver on net \i475/note_100_3. Patching with GND.
-######## Missing driver on net \i475/note_100_4. Patching with GND.
-######## Missing driver on net \i475/note_100_5. Patching with GND.
-######## Missing driver on net \i475/note_100_6. Patching with GND.
-######## Missing driver on net \i475/note_100_7. Patching with GND.
-INFO - synthesis: Extracted state machine for register '\u_uart_recv/rx_cnt' with one-hot encoding
-State machine has 16 reachable states with original encodings of:
-
- 0000 
-
- 0001 
-
- 0010 
-
- 0011 
-
- 0100 
-
- 0101 
-
- 0110 
-
- 0111 
-
- 1000 
-
- 1001 
-
- 1010 
-
- 1011 
-
- 1100 
-
- 1101 
-
- 1110 
-
- 1111 
-
-original encoding -> new encoding (one-hot encoding)
-
- 0000 -> 0000000000000001
-
- 0001 -> 0000000000000010
-
- 0010 -> 0000000000000100
-
- 0011 -> 0000000000001000
-
- 0100 -> 0000000000010000
-
- 0101 -> 0000000000100000
-
- 0110 -> 0000000001000000
-
- 0111 -> 0000000010000000
-
- 1000 -> 0000000100000000
-
- 1001 -> 0000001000000000
-
- 1010 -> 0000010000000000
-
- 1011 -> 0000100000000000
-
- 1100 -> 0001000000000000
-
- 1101 -> 0010000000000000
-
- 1110 -> 0100000000000000
-
- 1111 -> 1000000000000000
-
+WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(109): Removing unused instance divide_1ms. VDB-5034
+######## Missing driver on net music_tone[4]. Patching with GND.
+######## Missing driver on net music_tone[3]. Patching with GND.
+######## Missing driver on net music_tone[2]. Patching with GND.
+######## Missing driver on net music_tone[1]. Patching with GND.
+######## Missing driver on net music_tone[0]. Patching with GND.
 INFO - synthesis: Extracted state machine for register '\u_uart_send/tx_cnt' with one-hot encoding
 State machine has 16 reachable states with original encodings of:
 
@@ -297,13 +192,79 @@ original encoding -> new encoding (one-hot encoding)
 
  1111 -> 1000000000000000
 
+INFO - synthesis: Extracted state machine for register '\u_uart_recv/rx_cnt' with one-hot encoding
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
 
 
 
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(350): Register music_delay_i0_i14 is stuck at Zero. VDB-5013
-WARNING - synthesis: c:/users/argon/desktop/verilog/music_uart_player/top.v(350): Register music_delay_i0_i7 is stuck at One. VDB-5014
+
 GSR instance connected to net sys_rst_n_c.
-Duplicate register/latch removal. music_delay_i0_i8 is a one-to-one match with music_delay_i0_i5.
 Applying 1.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -312,24 +273,26 @@ Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00a/data/xo2alib.ngl'..
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'switch_2' has no load.
+WARNING - synthesis: input pad net 'switch_2' has no legal load.
+WARNING - synthesis: DRC complete with 2 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file music_player_impl1.ngd.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 205 of 4635 (4 % )
-CCU2D => 96
-FD1P3AX => 27
-FD1P3IX => 64
-FD1P3JX => 4
-FD1S3AX => 20
-FD1S3IX => 90
+Number of register bits => 128 of 4635 (2 % )
+CCU2D => 38
+FD1P3AX => 9
+FD1P3IX => 38
+FD1P3JX => 3
+FD1S1A => 1
+FD1S3AX => 19
+FD1S3IX => 58
 GSR => 1
 IB => 4
-LUT4 => 169
+LUT4 => 86
 OB => 3
-PDPW8KC => 1
-PFUMX => 3
-ROM128X1A => 4
+PFUMX => 1
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -339,33 +302,29 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : sys_clk_c, loads : 160
-  Net : divide_1ms/clk_p, loads : 47
+  Net : sys_clk_c, loads : 127
+  Net : sys_clk_c_enable_13, loads : 2
 Clock Enable Nets
-Number of Clock Enables: 21
-Top 10 highest fanout Clock Enables:
-  Net : clk_p_enable_40, loads : 16
-  Net : u_uart_recv/sys_clk_c_enable_48, loads : 16
-  Net : u_uart_send/sys_clk_c_enable_47, loads : 16
-  Net : sys_rst_n_c, loads : 10
-  Net : clk_p_enable_38, loads : 9
-  Net : clk_p_enable_36, loads : 9
-  Net : u_uart_recv/sys_clk_c_enable_49, loads : 6
-  Net : clk_p_enable_1, loads : 6
-  Net : sys_clk_c_enable_46, loads : 4
-  Net : clk_p_enable_29, loads : 3
+Number of Clock Enables: 7
+Top 7 highest fanout Clock Enables:
+  Net : u_uart_recv/sys_clk_c_enable_37, loads : 16
+  Net : u_uart_send/sys_clk_c_enable_50, loads : 16
+  Net : u_uart_recv/sys_clk_c_enable_35, loads : 7
+  Net : u_uart_recv/sys_clk_c_enable_2, loads : 1
+  Net : sys_clk_c_enable_1, loads : 1
+  Net : u_uart_send/sys_clk_c_enable_38, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : divide_1ms/n2941, loads : 32
-  Net : u_uart_recv/n1913, loads : 24
-  Net : m_beep/n1378, loads : 18
-  Net : u_uart_send/n4945, loads : 17
-  Net : cnt_run_1, loads : 16
-  Net : clk_p_enable_40, loads : 16
-  Net : n2946, loads : 16
-  Net : u_uart_recv/n2937, loads : 16
-  Net : u_uart_recv/sys_clk_c_enable_48, loads : 16
-  Net : u_uart_send/n2944, loads : 16
+  Net : u_uart_recv/n420, loads : 24
+  Net : m_beep/n254, loads : 18
+  Net : u_uart_loop/n1713, loads : 16
+  Net : u_uart_send/sys_clk_c_enable_50, loads : 16
+  Net : u_uart_recv/n776, loads : 16
+  Net : u_uart_recv/sys_clk_c_enable_37, loads : 16
+  Net : u_uart_loop/n777, loads : 15
+  Net : u_uart_recv/n169, loads : 10
+  Net : u_uart_send/n15, loads : 9
+  Net : u_uart_recv/uart_rxd_d1, loads : 9
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -375,10 +334,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 1000.000000 -name  |             |             |
-clk1 [get_nets clk_p]                   |    1.000 MHz|   92.653 MHz|     6  
+clk1 [get_nets sys_clk_c_enable_13]     |    1.000 MHz|  309.023 MHz|     2  
                                         |             |             |
 create_clock -period 1000.000000 -name  |             |             |
-clk0 [get_nets sys_clk_c]               |    1.000 MHz|   96.805 MHz|     6  
+clk0 [get_nets sys_clk_c]               |    1.000 MHz|   96.386 MHz|     6  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -386,10 +345,10 @@ clk0 [get_nets sys_clk_c]               |    1.000 MHz|   96.805 MHz|     6
 All constraints were met.
 
 
-Peak Memory Usage: 66.500  MB
+Peak Memory Usage: 60.391  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.984  secs
+Elapsed CPU time for LSE flow : 0.578  secs
 --------------------------------------------------------------
 
 

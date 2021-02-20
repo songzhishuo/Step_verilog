@@ -15,25 +15,25 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-4000HCCSBGA132
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.8.0.115.3
-Mapped on:  02/21/21  00:23:49
+Mapped on:  02/21/21  01:49:20
 
 Design Summary
 --------------
 
-   Number of registers:    205 out of  4635 (4%)
-      PFU registers:          205 out of  4320 (5%)
+   Number of registers:    128 out of  4635 (3%)
+      PFU registers:          128 out of  4320 (3%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:       201 out of  2160 (9%)
-      SLICEs as Logic/ROM:    201 out of  2160 (9%)
+   Number of SLICEs:        81 out of  2160 (4%)
+      SLICEs as Logic/ROM:     81 out of  2160 (4%)
       SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:         96 out of  2160 (4%)
-   Number of LUT4s:        395 out of  4320 (9%)
-      Number used as logic LUTs:        203
+      SLICEs as Carry:         38 out of  2160 (2%)
+   Number of LUT4s:        159 out of  4320 (4%)
+      Number used as logic LUTs:         83
       Number used as distributed RAM:     0
-      Number used as ripple logic:      192
+      Number used as ripple logic:       76
       Number used as shift registers:     0
    Number of PIO sites used: 7 + 4(JTAG) out of 105 (10%)
-   Number of block RAMs:  1 out of 10 (10%)
+   Number of block RAMs:  0 out of 10 (0%)
    Number of GSRs:  1 out of 1 (100%)
    EFB used :       No
    JTAG used :      No
@@ -58,90 +58,60 @@ Design Summary
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  2
-     Net divide_1ms/clk_p: 31 loads, 31 rising, 0 falling (Driver:
-     divide_1ms/clk_p_35 )
+     Net sys_clk_c_enable_13: 1 loads, 1 rising, 0 falling (Driver:
+     recv_done_flag_I_0_2_lut_rep_16 )
 
                                     Page 1
 
 
 
 
-Design:  top                                           Date:  02/21/21  00:23:49
+Design:  top                                           Date:  02/21/21  01:49:20
 
 Design Summary (cont)
 ---------------------
-     Net sys_clk_c: 90 loads, 90 rising, 0 falling (Driver: PIO sys_clk )
-   Number of Clock Enables:  21
-     Net clk_p_enable_1: 1 loads, 1 LSLICEs
-     Net clk_p_enable_29: 2 loads, 2 LSLICEs
-     Net clk_p_enable_28: 2 loads, 2 LSLICEs
-     Net sys_rst_n_c: 4 loads, 3 LSLICEs
-     Net clk_p_enable_40: 9 loads, 9 LSLICEs
-     Net clk_p_enable_36: 1 loads, 1 LSLICEs
-     Net clk_p_enable_15: 1 loads, 1 LSLICEs
-     Net clk_p_enable_16: 1 loads, 1 LSLICEs
-     Net clk_p_enable_17: 1 loads, 1 LSLICEs
-     Net clk_p_enable_18: 1 loads, 1 LSLICEs
-     Net clk_p_enable_19: 1 loads, 1 LSLICEs
-     Net clk_p_enable_20: 1 loads, 1 LSLICEs
-     Net sys_clk_c_enable_46: 4 loads, 4 LSLICEs
-     Net clk_p_enable_38: 5 loads, 5 LSLICEs
-     Net sys_clk_c_enable_50: 1 loads, 1 LSLICEs
-     Net clk_p_enable_32: 1 loads, 1 LSLICEs
-     Net u_uart_recv/sys_clk_c_enable_49: 4 loads, 4 LSLICEs
-     Net u_uart_recv/sys_clk_c_enable_8: 2 loads, 2 LSLICEs
-     Net u_uart_recv/sys_clk_c_enable_48: 8 loads, 8 LSLICEs
-     Net u_uart_send/sys_clk_c_enable_47: 8 loads, 8 LSLICEs
-     Net u_uart_send/sys_clk_c_enable_39: 1 loads, 1 LSLICEs
-   Number of LSRs:  10
-     Net n2946: 9 loads, 9 LSLICEs
-     Net n2961: 5 loads, 5 LSLICEs
-     Net n4696: 1 loads, 1 LSLICEs
+     Net sys_clk_c: 69 loads, 69 rising, 0 falling (Driver: PIO sys_clk )
+   Number of Clock Enables:  7
+     Net sys_clk_c_enable_13: 4 loads, 4 LSLICEs
+     Net sys_clk_c_enable_1: 1 loads, 1 LSLICEs
+     Net u_uart_send/sys_clk_c_enable_50: 8 loads, 8 LSLICEs
+     Net u_uart_send/sys_clk_c_enable_38: 1 loads, 1 LSLICEs
+     Net u_uart_recv/sys_clk_c_enable_2: 1 loads, 1 LSLICEs
+     Net u_uart_recv/sys_clk_c_enable_37: 8 loads, 8 LSLICEs
+     Net u_uart_recv/sys_clk_c_enable_35: 4 loads, 4 LSLICEs
+   Number of LSRs:  6
      Net uart_tx_busy: 9 loads, 9 LSLICEs
-     Net u_uart_recv/n2937: 9 loads, 9 LSLICEs
-     Net u_uart_recv/rx_flag: 14 loads, 14 LSLICEs
-     Net u_uart_recv/uart_data_7__N_198: 4 loads, 4 LSLICEs
-     Net u_uart_send/n2944: 9 loads, 9 LSLICEs
-     Net divide_1ms/n2941: 17 loads, 17 LSLICEs
-     Net m_beep/n1378: 10 loads, 10 LSLICEs
+     Net m_beep/n254: 10 loads, 10 LSLICEs
+     Net n777: 9 loads, 9 LSLICEs
+     Net u_uart_recv/rx_flag: 13 loads, 13 LSLICEs
+     Net u_uart_recv/uart_data_7__N_73: 4 loads, 4 LSLICEs
+     Net u_uart_recv/n776: 9 loads, 9 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net music_cnt_2: 32 loads
-     Net music_cnt_1: 31 loads
-     Net music_cnt_5: 30 loads
-     Net music_cnt_3: 25 loads
-     Net music_cnt_6: 22 loads
-     Net divide_1ms/n2941: 17 loads
-     Net u_uart_recv/rx_flag: 17 loads
-     Net cnt_run_1: 16 loads
+     Net u_uart_recv/rx_flag: 16 loads
      Net uart_tx_busy: 13 loads
-     Net recv_done_d0: 11 loads
+     Net m_beep/n254: 10 loads
+     Net u_uart_recv/n169: 10 loads
+     Net n777: 9 loads
+     Net u_uart_recv/n170: 9 loads
+     Net u_uart_recv/n173: 9 loads
+     Net u_uart_recv/n776: 9 loads
+     Net u_uart_recv/uart_rxd_d1: 9 loads
+     Net u_uart_send/n15: 9 loads
 
 
 
 
-   Number of warnings:  1
+   Number of warnings:  2
    Number of errors:    0
      
-
-
-
-
-                                    Page 2
-
-
-
-
-Design:  top                                           Date:  02/21/21  00:23:49
 
 Design Errors/Warnings
 ----------------------
 
-WARNING - map: The reset of EBR 'm_beep/tone_4__I_0' cannot be controlled. The
-     local reset is not connected to any control signal and set to GND. The
-     global reset is disabled via GSR property. To control the EBR reset, either
-     connect the local reset to a control signal or force the GSR property to be
-     enabled.
+WARNING - map: input pad net 'switch_2' has no legal load.
+WARNING - map: IO buffer missing for top level port switch_2...logic will be
+     discarded.
 
 IO (PIO) Attributes
 -------------------
@@ -150,14 +120,6 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
-| uart_rxd            | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| switch_1            | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| sys_rst_n           | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| sys_clk             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
 | blink               | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | beep                | OUTPUT    | LVCMOS25  |            |
@@ -165,149 +127,78 @@ IO (PIO) Attributes
 | uart_txd            | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 
+                                    Page 2
+
+
+
+
+Design:  top                                           Date:  02/21/21  01:49:20
+
+IO (PIO) Attributes (cont)
+--------------------------
+| sys_clk             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sys_rst_n           | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| switch_1            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| uart_rxd            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
 Removed logic
 -------------
 
-Signal u_uart_send/n4945 was merged into signal uart_tx_busy
-Signal u_uart_recv/n2938 was merged into signal u_uart_recv/uart_data_7__N_198
-Signal u_uart_recv/n1913 was merged into signal u_uart_recv/rx_flag
+Block i1433 undriven or does not drive anything - clipped.
+Signal n1713 was merged into signal uart_tx_busy
+Signal u_uart_recv/n773 was merged into signal u_uart_recv/uart_data_7__N_73
+Signal u_uart_recv/n420 was merged into signal u_uart_recv/rx_flag
+Signal GND_net undriven or does not drive anything - clipped.
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal m_beep/time_cnt_905_add_4_1/S0 undriven or does not drive anything -
+Signal u_uart_recv/clk_cnt_222_add_4_17/S1 undriven or does not drive anything -
      clipped.
-Signal m_beep/time_cnt_905_add_4_1/CI undriven or does not drive anything -
+Signal u_uart_recv/clk_cnt_222_add_4_17/CO undriven or does not drive anything -
      clipped.
-Signal m_beep/add_814_19/CO undriven or does not drive anything - clipped.
-Signal m_beep/time_cnt_905_add_4_19/S1 undriven or does not drive anything -
+Signal u_uart_recv/clk_cnt_222_add_4_1/S0 undriven or does not drive anything -
      clipped.
-Signal m_beep/time_cnt_905_add_4_19/CO undriven or does not drive anything -
+Signal u_uart_recv/clk_cnt_222_add_4_1/CI undriven or does not drive anything -
      clipped.
-Signal m_beep/add_814_1/S0 undriven or does not drive anything - clipped.
-Signal m_beep/add_814_1/CI undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_26/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_26/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_28/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_28/CO undriven or does not drive anything - clipped.
-Signal divide_1ms/cnt_p_904_add_4_1/S0 undriven or does not drive anything -
+Signal u_uart_send/clk_cnt_224_add_4_17/S1 undriven or does not drive anything -
      clipped.
-Signal divide_1ms/cnt_p_904_add_4_1/CI undriven or does not drive anything -
+Signal u_uart_send/clk_cnt_224_add_4_17/CO undriven or does not drive anything -
      clipped.
-Signal divide_1ms/add_3355_2/S1 undriven or does not drive anything - clipped.
+Signal u_uart_send/clk_cnt_224_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_uart_send/clk_cnt_224_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal m_beep/add_192_19/CO undriven or does not drive anything - clipped.
+Signal m_beep/time_cnt_225_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal m_beep/time_cnt_225_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal m_beep/add_192_1/S0 undriven or does not drive anything - clipped.
+Signal m_beep/add_192_1/CI undriven or does not drive anything - clipped.
+Signal m_beep/time_cnt_225_add_4_19/S1 undriven or does not drive anything -
+     clipped.
+Signal m_beep/time_cnt_225_add_4_19/CO undriven or does not drive anything -
+     clipped.
+Block u_uart_loop/tx_busy_I_0_1_lut_rep_17 was optimized away.
+Block u_uart_recv/i541_1_lut was optimized away.
+Block u_uart_recv/i227_1_lut was optimized away.
+Block i1 was optimized away.
+
+Memory Usage
+------------
+
+
+     
+
 
                                     Page 3
 
 
 
 
-Design:  top                                           Date:  02/21/21  00:23:49
-
-Removed logic (cont)
---------------------
-Signal divide_1ms/add_3355_2/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_2/CI undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_4/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_4/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_6/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_6/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_8/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_8/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_10/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_10/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_12/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_12/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_14/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_14/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/cnt_p_904_add_4_33/S1 undriven or does not drive anything -
-     clipped.
-Signal divide_1ms/cnt_p_904_add_4_33/CO undriven or does not drive anything -
-     clipped.
-Signal divide_1ms/add_3355_16/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_16/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_18/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_18/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_20/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_20/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_22/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_22/S0 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_24/S1 undriven or does not drive anything - clipped.
-Signal divide_1ms/add_3355_24/S0 undriven or does not drive anything - clipped.
-Signal u_uart_send/clk_cnt_907_add_4_17/S1 undriven or does not drive anything -
-     clipped.
-Signal u_uart_send/clk_cnt_907_add_4_17/CO undriven or does not drive anything -
-     clipped.
-Signal u_uart_send/clk_cnt_907_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal u_uart_send/clk_cnt_907_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal u_uart_recv/clk_cnt_909_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal u_uart_recv/clk_cnt_909_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal u_uart_recv/clk_cnt_909_add_4_17/S1 undriven or does not drive anything -
-     clipped.
-Signal u_uart_recv/clk_cnt_909_add_4_17/CO undriven or does not drive anything -
-     clipped.
-Signal add_109_1/S0 undriven or does not drive anything - clipped.
-Signal add_109_1/CI undriven or does not drive anything - clipped.
-Signal sub_817_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_817_add_2_9/S1 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_3/S1 undriven or does not drive anything - clipped.
-
-                                    Page 4
-
-
-
-
-Design:  top                                           Date:  02/21/21  00:23:49
-
-Removed logic (cont)
---------------------
-Signal sub_817_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_13/S0 undriven or does not drive anything - clipped.
-Signal add_141_17/S1 undriven or does not drive anything - clipped.
-Signal add_141_17/CO undriven or does not drive anything - clipped.
-Signal add_109_9/S1 undriven or does not drive anything - clipped.
-Signal add_109_9/CO undriven or does not drive anything - clipped.
-Signal add_127_1/S0 undriven or does not drive anything - clipped.
-Signal add_127_1/CI undriven or does not drive anything - clipped.
-Signal sub_817_add_2_15/S0 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_15/CO undriven or does not drive anything - clipped.
-Signal add_127_9/CO undriven or does not drive anything - clipped.
-Signal add_141_1/S0 undriven or does not drive anything - clipped.
-Signal add_141_1/CI undriven or does not drive anything - clipped.
-Signal sub_817_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_817_add_2_5/S0 undriven or does not drive anything - clipped.
-Block u_uart_send/i2015_1_lut_rep_50 was optimized away.
-Block u_uart_recv/i1903_1_lut was optimized away.
-Block u_uart_recv/i946_1_lut was optimized away.
-Block i2 was optimized away.
-
-Memory Usage
-------------
-
-/m_beep:
-    EBRs: 1
-    RAM SLICEs: 0
-    Logic SLICEs: 22
-    PFU Registers: 19
-    -Contains EBR tone_4__I_0:  TYPE= PDPW8KC,  Width= 16,  Depth_R= 32,
-         REGMODE= NOREG,  RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR=
-         DISABLED
-
-     
-
-ASIC Components
----------------
-
-Instance Name: m_beep/tone_4__I_0
-         Type: PDPW8KC
+Design:  top                                           Date:  02/21/21  01:49:20
 
 GSR Usage
 ---------
@@ -324,62 +215,16 @@ GSR Component:
         
 
      Components with disabled GSR Property
-
-                                    Page 5
-
-
-
-
-Design:  top                                           Date:  02/21/21  00:23:49
-
-GSR Usage (cont)
-----------------
 -------------------------------------
 
      These components have the GSR property set to DISABLED. The components will
      not respond to the reset signal 'sys_rst_n_c' via the GSR component.
 
      Type and number of components of the type: 
-   Register = 35 
-   PDPW8KC = 1
+   Register = 1 
 
      Type and instance name of component: 
-   Register : state_back_i0_i0
-   Register : cnt_delay_i0_i4
-   Register : cnt_delay_i0_i5
-   Register : cnt_delay_i0_i6
-   Register : cnt_delay_i0_i7
-   Register : cnt_delay_i0_i8
-   Register : cnt_delay_i0_i9
-   Register : cnt_delay_i0_i10
-   Register : cnt_delay_i0_i11
-   Register : cnt_delay_i0_i12
-   Register : cnt_delay_i0_i13
-   Register : cnt_delay_i0_i14
-   Register : cnt_delay_i0_i15
-   Register : music_delay_i0_i2
-   Register : music_delay_i0_i3
-   Register : music_cnt_i0_i1
-   Register : music_cnt_i0_i2
-   Register : music_cnt_i0_i3
-   Register : music_cnt_i0_i4
-   Register : music_delay_i0_i8
-   Register : music_cnt_i0_i5
-   Register : music_cnt_i0_i6
-   Register : music_delay_i0_i4
-   Register : music_cnt_i0_i7
-   Register : music_cnt_i0_i8
-   Register : cnt_delay_i0_i0
-   Register : cnt_delay_i0_i1
-   Register : music_cnt_i0_i0
-   Register : cnt_delay_i0_i2
-   Register : music_note_i0_i4
-   Register : cnt_delay_i0_i3
-   Register : music_note_i0_i3
-   Register : music_note_i0_i2
-   Register : music_note_i0_i1
-   Register : music_note_i0_i0
-   PDPW8KC : m_beep/tone_4__I_0
+   Register : blink_I_0_19
 
      Components with synchronous local reset also reset by asynchronous GSR
 ----------------------------------------------------------------------
@@ -390,82 +235,62 @@ GSR Usage (cont)
      component.
 
      Type and number of components of the type: 
+   Register = 99 
 
-                                    Page 6
+     Type and instance name of component: 
+   Register : m_beep/time_cnt_225__i0
+   Register : m_beep/time_cnt_225__i17
+   Register : m_beep/time_cnt_225__i16
+   Register : m_beep/time_cnt_225__i15
+   Register : m_beep/time_cnt_225__i14
+   Register : m_beep/time_cnt_225__i13
+   Register : m_beep/time_cnt_225__i12
+   Register : m_beep/time_cnt_225__i11
+   Register : m_beep/time_cnt_225__i10
+   Register : m_beep/time_cnt_225__i9
+   Register : m_beep/time_cnt_225__i8
+   Register : m_beep/time_cnt_225__i7
+   Register : m_beep/time_cnt_225__i6
+   Register : m_beep/time_cnt_225__i5
+   Register : m_beep/time_cnt_225__i4
+   Register : m_beep/time_cnt_225__i3
+   Register : m_beep/time_cnt_225__i2
+   Register : m_beep/time_cnt_225__i1
+   Register : u_uart_send/tx_cnt_FSM_i2
+   Register : u_uart_send/tx_cnt_FSM_i1
+
+                                    Page 4
 
 
 
 
-Design:  top                                           Date:  02/21/21  00:23:49
+Design:  top                                           Date:  02/21/21  01:49:20
 
 GSR Usage (cont)
 ----------------
-   Register = 131 
-
-     Type and instance name of component: 
-   Register : u_uart_recv/clk_cnt_909__i14
-   Register : u_uart_recv/clk_cnt_909__i13
-   Register : u_uart_recv/clk_cnt_909__i12
-   Register : u_uart_recv/clk_cnt_909__i11
-   Register : u_uart_recv/rxdata__i7
-   Register : u_uart_recv/rxdata__i6
-   Register : u_uart_recv/rxdata__i5
-   Register : u_uart_recv/rxdata__i4
-   Register : u_uart_recv/rxdata__i3
-   Register : u_uart_recv/rxdata__i2
-   Register : u_uart_recv/rxdata__i1
-   Register : u_uart_recv/rx_cnt_FSM_i14
-   Register : u_uart_recv/rx_cnt_FSM_i13
-   Register : u_uart_recv/rx_cnt_FSM_i12
-   Register : u_uart_recv/rx_cnt_FSM_i11
-   Register : u_uart_recv/rx_cnt_FSM_i10
-   Register : u_uart_recv/rx_cnt_FSM_i9
-   Register : u_uart_recv/rx_cnt_FSM_i8
-   Register : u_uart_recv/rx_cnt_FSM_i7
-   Register : u_uart_recv/rx_cnt_FSM_i6
-   Register : u_uart_recv/rx_cnt_FSM_i5
-   Register : u_uart_recv/rx_cnt_FSM_i4
-   Register : u_uart_recv/rx_cnt_FSM_i3
-   Register : u_uart_recv/rx_cnt_FSM_i2
-   Register : u_uart_recv/rx_cnt_FSM_i1
-   Register : u_uart_recv/clk_cnt_909__i10
-   Register : u_uart_recv/clk_cnt_909__i9
-   Register : u_uart_recv/clk_cnt_909__i8
-   Register : u_uart_recv/clk_cnt_909__i7
-   Register : u_uart_recv/clk_cnt_909__i6
-   Register : u_uart_recv/clk_cnt_909__i5
-   Register : u_uart_recv/clk_cnt_909__i4
-   Register : u_uart_recv/clk_cnt_909__i3
-   Register : u_uart_recv/clk_cnt_909__i2
-   Register : u_uart_recv/rx_cnt_FSM_i15
-   Register : u_uart_recv/clk_cnt_909__i1
-   Register : u_uart_recv/clk_cnt_909__i0
-   Register : u_uart_recv/uart_data__i7
-   Register : u_uart_recv/uart_data__i6
-   Register : u_uart_recv/uart_data__i5
-   Register : u_uart_recv/uart_data__i4
-   Register : u_uart_recv/uart_data__i3
-   Register : u_uart_recv/uart_data__i2
-   Register : u_uart_recv/uart_data__i1
-   Register : u_uart_recv/rx_cnt_FSM_i0
-   Register : u_uart_recv/uart_data__i0
-   Register : u_uart_recv/clk_cnt_909__i15
-   Register : u_uart_recv/rxdata__i0
-   Register : u_uart_send/clk_cnt_907__i15
+   Register : u_uart_send/tx_cnt_FSM_i0
+   Register : u_uart_send/clk_cnt_224__i14
+   Register : u_uart_send/clk_cnt_224__i13
+   Register : u_uart_send/clk_cnt_224__i12
+   Register : u_uart_send/clk_cnt_224__i11
+   Register : u_uart_send/clk_cnt_224__i10
+   Register : u_uart_send/clk_cnt_224__i9
+   Register : u_uart_send/clk_cnt_224__i8
+   Register : u_uart_send/clk_cnt_224__i7
+   Register : u_uart_send/clk_cnt_224__i6
+   Register : u_uart_send/clk_cnt_224__i5
+   Register : u_uart_send/clk_cnt_224__i4
+   Register : u_uart_send/clk_cnt_224__i3
+   Register : u_uart_send/clk_cnt_224__i2
+   Register : u_uart_send/clk_cnt_224__i1
+   Register : u_uart_send/clk_cnt_224__i0
    Register : u_uart_send/tx_cnt_FSM_i15
+   Register : u_uart_send/clk_cnt_224__i15
+   Register : u_uart_send/uart_txd_47
+   Register : u_uart_send/tx_cnt_FSM_i3
    Register : u_uart_send/tx_cnt_FSM_i14
    Register : u_uart_send/tx_cnt_FSM_i13
    Register : u_uart_send/tx_cnt_FSM_i12
-
-                                    Page 7
-
-
-
-
-Design:  top                                           Date:  02/21/21  00:23:49
-
-GSR Usage (cont)
-----------------
    Register : u_uart_send/tx_cnt_FSM_i11
    Register : u_uart_send/tx_cnt_FSM_i10
    Register : u_uart_send/tx_cnt_FSM_i9
@@ -474,93 +299,71 @@ GSR Usage (cont)
    Register : u_uart_send/tx_cnt_FSM_i6
    Register : u_uart_send/tx_cnt_FSM_i5
    Register : u_uart_send/tx_cnt_FSM_i4
-   Register : u_uart_send/tx_cnt_FSM_i3
-   Register : u_uart_send/tx_cnt_FSM_i2
-   Register : u_uart_send/tx_cnt_FSM_i1
-   Register : u_uart_send/uart_txd_47
-   Register : u_uart_send/clk_cnt_907__i14
-   Register : u_uart_send/clk_cnt_907__i13
-   Register : u_uart_send/clk_cnt_907__i12
-   Register : u_uart_send/clk_cnt_907__i11
-   Register : u_uart_send/clk_cnt_907__i10
-   Register : u_uart_send/clk_cnt_907__i9
-   Register : u_uart_send/clk_cnt_907__i8
-   Register : u_uart_send/clk_cnt_907__i7
-   Register : u_uart_send/clk_cnt_907__i6
-   Register : u_uart_send/clk_cnt_907__i5
-   Register : u_uart_send/clk_cnt_907__i4
-   Register : u_uart_send/clk_cnt_907__i3
-   Register : u_uart_send/clk_cnt_907__i2
-   Register : u_uart_send/clk_cnt_907__i1
-   Register : u_uart_send/clk_cnt_907__i0
-   Register : u_uart_send/tx_cnt_FSM_i0
-   Register : divide_1ms/cnt_p_904__i31
-   Register : divide_1ms/cnt_p_904__i30
-   Register : divide_1ms/cnt_p_904__i29
-   Register : divide_1ms/cnt_p_904__i28
-   Register : divide_1ms/cnt_p_904__i27
-   Register : divide_1ms/cnt_p_904__i26
-   Register : divide_1ms/cnt_p_904__i25
-   Register : divide_1ms/cnt_p_904__i24
-   Register : divide_1ms/cnt_p_904__i23
-   Register : divide_1ms/cnt_p_904__i22
-   Register : divide_1ms/cnt_p_904__i21
-   Register : divide_1ms/cnt_p_904__i20
-   Register : divide_1ms/cnt_p_904__i19
-   Register : divide_1ms/cnt_p_904__i18
-   Register : divide_1ms/cnt_p_904__i17
-   Register : divide_1ms/cnt_p_904__i0
-   Register : divide_1ms/cnt_p_904__i16
-   Register : divide_1ms/cnt_p_904__i15
-   Register : divide_1ms/cnt_p_904__i14
-   Register : divide_1ms/cnt_p_904__i13
-   Register : divide_1ms/cnt_p_904__i12
-   Register : divide_1ms/cnt_p_904__i11
-   Register : divide_1ms/cnt_p_904__i10
-   Register : divide_1ms/cnt_p_904__i9
-   Register : divide_1ms/cnt_p_904__i8
-   Register : divide_1ms/cnt_p_904__i7
-   Register : divide_1ms/cnt_p_904__i6
-   Register : divide_1ms/cnt_p_904__i5
+   Register : u_uart_recv/rxdata__i0
+   Register : u_uart_recv/clk_cnt_222__i14
+   Register : u_uart_recv/clk_cnt_222__i13
+   Register : u_uart_recv/clk_cnt_222__i12
+   Register : u_uart_recv/clk_cnt_222__i11
+   Register : u_uart_recv/clk_cnt_222__i10
+   Register : u_uart_recv/clk_cnt_222__i9
+   Register : u_uart_recv/clk_cnt_222__i8
+   Register : u_uart_recv/clk_cnt_222__i7
+   Register : u_uart_recv/clk_cnt_222__i6
+   Register : u_uart_recv/clk_cnt_222__i5
+   Register : u_uart_recv/clk_cnt_222__i4
+   Register : u_uart_recv/clk_cnt_222__i3
+   Register : u_uart_recv/clk_cnt_222__i2
+   Register : u_uart_recv/clk_cnt_222__i1
+   Register : u_uart_recv/clk_cnt_222__i0
+   Register : u_uart_recv/rx_cnt_FSM_i15
+   Register : u_uart_recv/rx_cnt_FSM_i14
+   Register : u_uart_recv/rx_cnt_FSM_i13
+   Register : u_uart_recv/rx_cnt_FSM_i12
+   Register : u_uart_recv/rx_cnt_FSM_i11
+   Register : u_uart_recv/rx_cnt_FSM_i10
+   Register : u_uart_recv/rx_cnt_FSM_i9
+   Register : u_uart_recv/rx_cnt_FSM_i8
+   Register : u_uart_recv/rx_cnt_FSM_i7
 
-                                    Page 8
+                                    Page 5
 
 
 
 
-Design:  top                                           Date:  02/21/21  00:23:49
+Design:  top                                           Date:  02/21/21  01:49:20
 
 GSR Usage (cont)
 ----------------
-   Register : divide_1ms/cnt_p_904__i4
-   Register : divide_1ms/cnt_p_904__i3
-   Register : divide_1ms/cnt_p_904__i2
-   Register : divide_1ms/cnt_p_904__i1
-   Register : m_beep/time_cnt_905__i0
-   Register : m_beep/time_cnt_905__i17
-   Register : m_beep/time_cnt_905__i16
-   Register : m_beep/time_cnt_905__i15
-   Register : m_beep/time_cnt_905__i14
-   Register : m_beep/time_cnt_905__i13
-   Register : m_beep/time_cnt_905__i12
-   Register : m_beep/time_cnt_905__i11
-   Register : m_beep/time_cnt_905__i10
-   Register : m_beep/time_cnt_905__i9
-   Register : m_beep/time_cnt_905__i8
-   Register : m_beep/time_cnt_905__i7
-   Register : m_beep/time_cnt_905__i6
-   Register : m_beep/time_cnt_905__i5
-   Register : m_beep/time_cnt_905__i4
-   Register : m_beep/time_cnt_905__i3
-   Register : m_beep/time_cnt_905__i2
-   Register : m_beep/time_cnt_905__i1
+   Register : u_uart_recv/rx_cnt_FSM_i6
+   Register : u_uart_recv/rx_cnt_FSM_i5
+   Register : u_uart_recv/rx_cnt_FSM_i4
+   Register : u_uart_recv/rx_cnt_FSM_i3
+   Register : u_uart_recv/rx_cnt_FSM_i2
+   Register : u_uart_recv/rx_cnt_FSM_i1
+   Register : u_uart_recv/rxdata__i7
+   Register : u_uart_recv/rxdata__i6
+   Register : u_uart_recv/rxdata__i5
+   Register : u_uart_recv/rxdata__i4
+   Register : u_uart_recv/rxdata__i3
+   Register : u_uart_recv/rxdata__i2
+   Register : u_uart_recv/rxdata__i1
+   Register : u_uart_recv/uart_data__i7
+   Register : u_uart_recv/uart_data__i6
+   Register : u_uart_recv/uart_data__i5
+   Register : u_uart_recv/uart_data__i4
+   Register : u_uart_recv/uart_data__i3
+   Register : u_uart_recv/uart_data__i2
+   Register : u_uart_recv/uart_data__i1
+   Register : u_uart_recv/clk_cnt_222__i15
+   Register : u_uart_recv/rx_cnt_FSM_i0
+   Register : u_uart_recv/uart_data__i0
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 51 MB
+   Peak Memory Usage: 50 MB
         
 
 
@@ -588,8 +391,7 @@ Run Time and Memory Usage
 
 
 
-
-                                    Page 9
+                                    Page 6
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

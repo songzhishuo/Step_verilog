@@ -3,60 +3,49 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     201.00        100.0
-                                  LUT4	     203.00        100.0
+                                  SLIC	      81.00        100.0
+                                  LUT4	      83.00        100.0
                                  IOBUF	          7        100.0
-                                PFUREG	        205        100.0
-                                RIPPLE	         96        100.0
-                                   EBR	          1        100.0
+                                PFUREG	        128        100.0
+                                RIPPLE	         38        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                                divide	          1        16.3
-uart_send(CLK_FREQ=12000000,UART_BPS=115200)	          1        13.7
-uart_recv(CLK_FREQ=12000000,UART_BPS=115200)	          1        17.6
-                             uart_loop	          1         1.6
-                                Beeper	          1        11.3
----------------------------------------------------
-Report for cell uart_recv(CLK_FREQ=12000000,UART_BPS=115200)
-   Instance path: top/u_uart_recv
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      35.42        17.6
-                                  LUT4	      39.00        19.2
-                                PFUREG	         52        25.4
-                                RIPPLE	          9         9.4
----------------------------------------------------
-Report for cell uart_send(CLK_FREQ=12000000,UART_BPS=115200)
-   Instance path: top/u_uart_send
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      27.58        13.7
-                                  LUT4	      37.00        18.2
-                                PFUREG	         44        21.5
-                                RIPPLE	          9         9.4
----------------------------------------------------
-Report for cell divide
-   Instance path: top/divide_1ms
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      32.75        16.3
-                                  LUT4	      13.00         6.4
-                                PFUREG	         33        16.1
-                                RIPPLE	         31        32.3
+uart_send(CLK_FREQ=12000000,UART_BPS=115200)	          1        31.7
+                             uart_loop	          1         4.3
+uart_recv(CLK_FREQ=12000000,UART_BPS=115200)	          1        42.3
+                                Beeper	          1        19.0
 ---------------------------------------------------
 Report for cell Beeper
    Instance path: top/m_beep
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      22.75        11.3
-                                  LUT4	       7.00         3.4
-                                PFUREG	         19         9.3
-                                RIPPLE	         20        20.8
-                                   EBR	          1        100.0
+                                  SLIC	      15.42        19.0
+                                  LUT4	       7.00         8.4
+                                PFUREG	         19        14.8
+                                RIPPLE	         20        52.6
+---------------------------------------------------
+Report for cell uart_send(CLK_FREQ=12000000,UART_BPS=115200)
+   Instance path: top/u_uart_send
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      25.67        31.7
+                                  LUT4	      32.00        38.6
+                                PFUREG	         44        34.4
+                                RIPPLE	          9        23.7
+---------------------------------------------------
+Report for cell uart_recv(CLK_FREQ=12000000,UART_BPS=115200)
+   Instance path: top/u_uart_recv
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      34.25        42.3
+                                  LUT4	      38.00        45.8
+                                PFUREG	         52        40.6
+                                RIPPLE	          9        23.7
 ---------------------------------------------------
 Report for cell uart_loop
    Instance path: top/u_uart_loop
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       3.17         1.6
-                                PFUREG	         12         5.9
+                                  SLIC	       3.50         4.3
+                                  LUT4	       1.00         1.2
+                                PFUREG	         12         9.4

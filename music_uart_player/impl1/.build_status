@@ -6,36 +6,37 @@
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
             <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1613838235"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1613843366"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1613838229">
-            <Task name="Map" build_result="2" update_result="0" update_time="1613838229"/>
-            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="Map" build_result="2" build_time="1613843361">
+            <Task name="Map" build_result="2" update_result="0" update_time="1613843361"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1613843089"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1613838232">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1613838232"/>
+        <Milestone name="PAR" build_result="2" build_time="1613843364">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1613843364"/>
             <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1613838228">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1613838228"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1613838235"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1613843360">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1613843360"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1613843366"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="0" update_result="2" update_time="1613836618"/>
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1613842796"/>
             <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
             <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/music_player_impl1_map.vdb" last_build_time="1613838229" last_build_size="115592"/>
-        <Report name="music_player_impl1.bgn" last_build_time="1613838235" last_build_size="4615"/>
-        <Report name="music_player_impl1.jed" last_build_time="1613838235" last_build_size="849242"/>
-        <Report name="music_player_impl1.lsedata" last_build_time="1613838227" last_build_size="629256"/>
-        <Report name="music_player_impl1.ncd" last_build_time="1613838232" last_build_size="380868"/>
-        <Report name="music_player_impl1.ngd" last_build_time="1613838228" last_build_size="301902"/>
-        <Report name="music_player_impl1_map.ncd" last_build_time="1613838229" last_build_size="273595"/>
+        <Report name=".vdbs/music_player_impl1_map.vdb" last_build_time="1613843361" last_build_size="75919"/>
+        <Report name="music_player_impl1.bgn" last_build_time="1613843366" last_build_size="4066"/>
+        <Report name="music_player_impl1.jed" last_build_time="1613843366" last_build_size="849209"/>
+        <Report name="music_player_impl1.lsedata" last_build_time="1613843360" last_build_size="315002"/>
+        <Report name="music_player_impl1.ncd" last_build_time="1613843364" last_build_size="171323"/>
+        <Report name="music_player_impl1.ngd" last_build_time="1613843360" last_build_size="156669"/>
+        <Report name="music_player_impl1.tw1" last_build_time="1613843089" last_build_size="22096"/>
+        <Report name="music_player_impl1_map.ncd" last_build_time="1613843361" last_build_size="122720"/>
     </Strategy>
 </BuildStatus>

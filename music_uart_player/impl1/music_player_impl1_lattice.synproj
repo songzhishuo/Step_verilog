@@ -37,6 +37,7 @@
 "C:/Users/Argon/Desktop/Verilog/music_uart_player/uart_loop.v"
 "C:/Users/Argon/Desktop/Verilog/music_uart_player/beep.v"
 "C:/Users/Argon/Desktop/Verilog/music_uart_player/clock.v"
+"C:/Users/Argon/Desktop/Verilog/music_uart_player/music_player.v"
 -top top
 
 

@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Feb 21 00:23:49 2021
+Sun Feb 21 01:49:21 2021
 
 C:/lscc/diamond/3.8_x64/ispfpga\bin\nt64\par -f music_player_impl1.p2t
 music_player_impl1_map.ncd music_player_impl1.dir music_player_impl1.prf -gui

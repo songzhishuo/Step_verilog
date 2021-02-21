@@ -93,6 +93,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.serial = serial.Serial()     #初始化串口
         self.lE_com.setText("COM2")
         self.cB_baud.setCurrentText("115200")
+        self.sB_Temp_threshold.setValue(40)
+
+
         self.cnt = 0                        #数据发送计数器        
         self.connect_flag = False           #串口连接成功标志
         self.temp_threshold_val = self.sB_Temp_threshold.value()   #温度报警阈值   

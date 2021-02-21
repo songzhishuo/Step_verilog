@@ -1,7 +1,7 @@
 /**
     注意：
     1.在串口播放时候 播放完成会发送一个 uart_recv_data == 8'd22 可以在外部判断是否播放完
-    2.设备本地播放时候在暂停时候无法保证声音消失，所以需要在外部对music_tone 设置 8'd22 进行消音处理
+    2.设备本地播放时候在暂停时候无法保证声音消失，所以需要在外部对music_tone 设置 8'd22 进行消音处理（已废除此条）
 
 ***/
  
@@ -49,6 +49,7 @@ wire recv_done_flag;
 reg recv_done_d0;
 reg recv_done_d1;
 
+reg uart_music_mode;
 
 //捕获recv_done上升沿，得到一个时钟周期的脉冲信号
 assign recv_done_flag = (~recv_done_d1) & recv_done_d0;
@@ -73,18 +74,33 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n) begin
         state <= IDLE;
         cnt_run <= 8'd0;
+        uart_music_mode <= 1'b0;
 //        music_time <= 8'd0;
 //        music_note <= 5'd0;
     end
     else if(recv_done_flag == 1'b1) begin
         music_tone <= uart_recv_data;
+        if(uart_recv_data == 8'd22) begin       //接收到结尾停止音乐播放
+            uart_music_mode <= 1'b0;            //将模式切换为空白等待 等待本地音乐
+        end
+        else begin
+            uart_music_mode <= 1'b1;           
+        end
+
+
         //led_debug <= uart_recv_data[7:3];
 		//blink <= ~blink;
         //if(uart_recv_data == 8'd22)				//播放完成
 
     end
-	else begin                    //正常播放
-		if (music_stop == 1'b0) begin
+	else begin                                      //正常播放
+		if (music_stop == 1'b0)  begin
+            if(uart_music_mode == 1'b0) begin   //本地播放模式        
+                music_tone <= 8'd22;
+            end
+            else begin                          //串口播放模式
+                
+            end
 		end
 		else begin
 			case (state)

@@ -11,6 +11,8 @@ module top(
 
     output          beep,               //蜂鸣器接口
 
+    output          test_IO,            //IO测试 功能：串口收到数据拉低  接收完成 拉高
+
     output          blink
     );
    
@@ -78,7 +80,8 @@ music_play  m_music_play(
 
     .uart_done          (uart_recv_done),     //串口接收数据标志
     .uart_recv_data     (uart_recv_data),     //串口数据
-    .music_stop           (switch_2),             //测试本地播放
+    .music_stop         (switch_2),             //测试本地播放
+    .uart_data_busy     (test_IO),
     //.blink              (blink),
     .music_tone         (music_tone)        //输出音调
 

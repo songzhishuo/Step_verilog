@@ -2,6 +2,7 @@
     注意：
     1.在串口播放时候 播放完成会发送一个 uart_recv_data == 8'd22 可以在外部判断是否播放完
     2.设备本地播放时候在暂停时候无法保证声音消失，所以需要在外部对music_tone 设置 8'd22 进行消音处理（已废除此条）
+    3.模块内部实现了串口音频数据的检测，如果串口收到音频数据 xxx 会拉低 否则会为高电平
 
 ***/
  
@@ -12,10 +13,12 @@ module  music_play(
     input               clk_1ms,            //1ms时钟输入
 	input 			    music_stop,
 
-    
+        
+
     input               uart_done,     //串口接收数据标志
     input   [7:0]       uart_recv_data,     //串口数据
-
+    
+    output      reg     uart_data_busy,     //串口收到数据拉低 ,接收完成 拉高
 	//output 	reg	        blink,
     output  reg  [6:0]  led_debug,
 
@@ -75,6 +78,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         state <= IDLE;
         cnt_run <= 8'd0;
         uart_music_mode <= 1'b0;
+        uart_data_busy <= 1'b1;
 //        music_time <= 8'd0;
 //        music_note <= 5'd0;
     end
@@ -82,9 +86,11 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         music_tone <= uart_recv_data;
         if(uart_recv_data == 8'd22) begin       //接收到结尾停止音乐播放
             uart_music_mode <= 1'b0;            //将模式切换为空白等待 等待本地音乐
+            uart_data_busy <= 1'b1;             //清零
         end
         else begin
             uart_music_mode <= 1'b1;           
+            uart_data_busy <= 1'b0;             //接收到串口数据
         end
 
 

@@ -1,38 +1,100 @@
 [ START MERGED ]
-n1713 uart_tx_busy
-u_uart_recv/n420 u_uart_recv/rx_flag
-u_uart_recv/n773 u_uart_recv/uart_data_7__N_73
+n4198 uart_tx_busy
+u_uart_recv/n1996 u_uart_recv/uart_data_7__N_67
+u_uart_recv/n916 u_uart_recv/rx_flag
 [ END MERGED ]
 [ START CLIPPED ]
 GND_net
 VCC_net
-u_uart_recv/clk_cnt_222_add_4_17/S1
-u_uart_recv/clk_cnt_222_add_4_17/CO
-u_uart_recv/clk_cnt_222_add_4_1/S0
-u_uart_recv/clk_cnt_222_add_4_1/CI
-u_uart_send/clk_cnt_224_add_4_17/S1
-u_uart_send/clk_cnt_224_add_4_17/CO
-u_uart_send/clk_cnt_224_add_4_1/S0
-u_uart_send/clk_cnt_224_add_4_1/CI
-m_beep/add_192_19/CO
-m_beep/time_cnt_225_add_4_1/S0
-m_beep/time_cnt_225_add_4_1/CI
-m_beep/add_192_1/S0
-m_beep/add_192_1/CI
-m_beep/time_cnt_225_add_4_19/S1
-m_beep/time_cnt_225_add_4_19/CO
+m_beep/add_334_1/S0
+m_beep/add_334_1/CI
+m_beep/add_334_19/CO
+m_beep/time_cnt_483_add_4_1/S0
+m_beep/time_cnt_483_add_4_1/CI
+m_beep/time_cnt_483_add_4_19/S1
+m_beep/time_cnt_483_add_4_19/CO
+divide_1ms/cnt_p_484_add_4_33/S1
+divide_1ms/cnt_p_484_add_4_33/CO
+divide_1ms/add_2943_2/S1
+divide_1ms/add_2943_2/S0
+divide_1ms/add_2943_2/CI
+divide_1ms/add_2943_4/S1
+divide_1ms/add_2943_4/S0
+divide_1ms/add_2943_6/S1
+divide_1ms/add_2943_6/S0
+divide_1ms/add_2943_8/S1
+divide_1ms/add_2943_8/S0
+divide_1ms/add_2943_10/S1
+divide_1ms/add_2943_10/S0
+divide_1ms/add_2943_12/S1
+divide_1ms/add_2943_12/S0
+divide_1ms/add_2943_14/S1
+divide_1ms/add_2943_14/S0
+divide_1ms/add_2943_16/S1
+divide_1ms/add_2943_16/S0
+divide_1ms/add_2943_18/S1
+divide_1ms/add_2943_18/S0
+divide_1ms/add_2943_20/S1
+divide_1ms/add_2943_20/S0
+divide_1ms/add_2943_22/S1
+divide_1ms/add_2943_22/S0
+divide_1ms/add_2943_24/S1
+divide_1ms/add_2943_24/S0
+divide_1ms/add_2943_26/S1
+divide_1ms/add_2943_26/S0
+divide_1ms/add_2943_28/S0
+divide_1ms/add_2943_28/CO
+divide_1ms/cnt_p_484_add_4_1/S0
+divide_1ms/cnt_p_484_add_4_1/CI
+u_uart_recv/clk_cnt_480_add_4_1/S0
+u_uart_recv/clk_cnt_480_add_4_1/CI
+u_uart_recv/clk_cnt_480_add_4_17/S1
+u_uart_recv/clk_cnt_480_add_4_17/CO
+m_music_play/add_111_9/S1
+m_music_play/add_111_9/CO
+m_music_play/add_143_17/S1
+m_music_play/add_143_17/CO
+m_music_play/sub_339_add_2_1/S1
+m_music_play/sub_339_add_2_1/S0
+m_music_play/sub_339_add_2_1/CI
+m_music_play/sub_339_add_2_3/S1
+m_music_play/sub_339_add_2_3/S0
+m_music_play/sub_339_add_2_5/S1
+m_music_play/sub_339_add_2_5/S0
+m_music_play/sub_339_add_2_7/S1
+m_music_play/sub_339_add_2_7/S0
+m_music_play/sub_339_add_2_9/S1
+m_music_play/sub_339_add_2_9/S0
+m_music_play/add_129_1/S0
+m_music_play/add_129_1/CI
+m_music_play/sub_339_add_2_11/S1
+m_music_play/sub_339_add_2_11/S0
+m_music_play/sub_339_add_2_13/S1
+m_music_play/sub_339_add_2_13/S0
+m_music_play/sub_339_add_2_15/S0
+m_music_play/sub_339_add_2_15/CO
+m_music_play/add_129_9/CO
+m_music_play/add_143_1/S0
+m_music_play/add_143_1/CI
+m_music_play/add_111_1/S0
+m_music_play/add_111_1/CI
+u_uart_send/clk_cnt_482_add_4_17/S1
+u_uart_send/clk_cnt_482_add_4_17/CO
+u_uart_send/clk_cnt_482_add_4_1/S0
+u_uart_send/clk_cnt_482_add_4_1/CI
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Sun Feb 21 01:49:21 2021
+# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Sun Feb 21 11:50:15 2021
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF ;
+LOCATE COMP "uart_rxd" SITE "C8" ;
+LOCATE COMP "switch_2" SITE "M8" ;
+LOCATE COMP "switch_1" SITE "M7" ;
+LOCATE COMP "sys_rst_n" SITE "L14" ;
+LOCATE COMP "sys_clk" SITE "C1" ;
 LOCATE COMP "blink" SITE "N13" ;
 LOCATE COMP "beep" SITE "P8" ;
 LOCATE COMP "uart_txd" SITE "B8" ;
-LOCATE COMP "sys_clk" SITE "C1" ;
-LOCATE COMP "sys_rst_n" SITE "L14" ;
-LOCATE COMP "switch_1" SITE "M7" ;
-LOCATE COMP "uart_rxd" SITE "C8" ;
 SCHEMATIC END ;
 [ END DESIGN PREFS ]

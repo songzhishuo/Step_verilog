@@ -14,7 +14,7 @@ Performance Grade:      4
 PACKAGE:          CSBGA132
 Package Status:                     Final          Version 1.44
 
-Sun Feb 21 01:49:23 2021
+Sun Feb 21 11:50:17 2021
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+-----------+-----------+--------------------------------------+
@@ -23,6 +23,7 @@ Pinout by Port Name:
 | beep      | P8/2     | LVCMOS25_OUT | PB21A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | blink     | N13/1    | LVCMOS25_OUT | PR19A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | switch_1  | M7/2     | LVCMOS25_IN  | PB20A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
+| switch_2  | M8/2     | LVCMOS25_IN  | PB21B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | sys_clk   | C1/5     | LVCMOS25_IN  | PL4A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | sys_rst_n | L14/1    | LVCMOS25_IN  | PR16A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | uart_rxd  | C8/0     | LVCMOS25_IN  | PT20C |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
@@ -126,7 +127,7 @@ Vccio by Bank:
 | M4/2     |     unused, PULL:DOWN |            |              | PB9A  | MCLK/CCLK      |           |           |
 | M5/2     |     unused, PULL:DOWN |            |              | PB10B |                |           |           |
 | M7/2     | switch_1              | LOCATED    | LVCMOS25_IN  | PB20A | PCLKT2_1       |           |           |
-| M8/2     |     unused, PULL:DOWN |            |              | PB21B |                |           |           |
+| M8/2     | switch_2              | LOCATED    | LVCMOS25_IN  | PB21B |                |           |           |
 | M9/2     |     unused, PULL:DOWN |            |              | PB24A |                |           |           |
 | M10/2    |     unused, PULL:DOWN |            |              | PB27A |                |           |           |
 | M11/2    |     unused, PULL:DOWN |            |              | PB29A |                |           |           |
@@ -351,6 +352,7 @@ to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste):
 LOCATE  COMP  "beep"  SITE  "P8";
 LOCATE  COMP  "blink"  SITE  "N13";
 LOCATE  COMP  "switch_1"  SITE  "M7";
+LOCATE  COMP  "switch_2"  SITE  "M8";
 LOCATE  COMP  "sys_clk"  SITE  "C1";
 LOCATE  COMP  "sys_rst_n"  SITE  "L14";
 LOCATE  COMP  "uart_rxd"  SITE  "C8";
@@ -366,7 +368,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Feb 21 01:49:23 2021
+Sun Feb 21 11:50:17 2021
 
 
 

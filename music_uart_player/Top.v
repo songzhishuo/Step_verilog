@@ -11,7 +11,7 @@ module top(
 
     output          beep,               //蜂鸣器接口
 
-    output   reg    blink
+    output       blink
     );
  
 //parameter define
@@ -19,7 +19,7 @@ parameter  CLK_FREQ = 12000000;         //定义系统时钟频率
 parameter  UART_BPS = 115200;           //定义串口波特率
 
 localparam [31:0] div_1ms	= 23'd12_000;
-
+ 
 
 
 //wire define   
@@ -107,42 +107,42 @@ divide divide_1ms(
 	.clkout	(clk_1ms),
 	.div	(div_1ms)
 );
+ 
+music_play  m_music_play(
+    .sys_clk    (sys_clk),            //外部50M时钟
+    .sys_rst_n  (sys_rst_n),          //外部复位信号，低有效
 
-// music_play  m_music_play(
-//     .sys_clk    (sys_clk),            //外部50M时钟
-//     .sys_rst_n  (sys_rst_n),          //外部复位信号，低有效
+    .clk_1ms    (clk_1ms),            //1ms时钟输入
 
-//     .clk_1ms    (clk_1ms),            //1ms时钟输入
-
-//     .uart_done     (uart_recv_done),     //串口接收数据标志
-//     .uart_recv_data     (uart_recv_data),     //串口数据
-//     .switch_2           (switch_2),             //测试本地播放
-//     //.blink              (blink),
-//     .music_tone         (music_tone)        //输出音调
-//     );
-
-
-wire recv_done_flag;
-reg recv_done_d0;
-reg recv_done_d1;
+    .uart_done     (uart_recv_done),     //串口接收数据标志
+    .uart_recv_data     (uart_recv_data),     //串口数据
+    .switch_2           (switch_2),             //测试本地播放
+    .blink              (blink),
+    .music_tone         (music_tone)        //输出音调
+    );
 
 
-//捕获recv_done上升沿，得到一个时钟周期的脉冲信号
-assign recv_done_flag = (~recv_done_d1) & recv_done_d0;
+// wire recv_done_flag;
+// reg recv_done_d0;
+// reg recv_done_d1;
+
+
+// //捕获recv_done上升沿，得到一个时钟周期的脉冲信号
+// assign recv_done_flag = (~recv_done_d1) & recv_done_d0;
                                                  
-//对发送使能信号recv_done延迟两个时钟周期
-always @(posedge sys_clk or negedge sys_rst_n) begin         
-    if (!sys_rst_n) begin
-        recv_done_d0 <= 1'b0;                                  
-        recv_done_d1 <= 1'b0;
-    end                                                      
-    else begin                                               
-        recv_done_d0 <= uart_recv_done;                               
-        recv_done_d1 <= recv_done_d0;                            
-    end
-    if (recv_done_flag == 1'b1)
-        blink <= ~blink;
-end
+// //对发送使能信号recv_done延迟两个时钟周期
+// always @(posedge sys_clk or negedge sys_rst_n) begin         
+//     if (!sys_rst_n) begin
+//         recv_done_d0 <= 1'b0;                                  
+//         recv_done_d1 <= 1'b0;
+//     end                                                      
+//     else begin                                               
+//         recv_done_d0 <= uart_recv_done;                               
+//         recv_done_d1 <= recv_done_d0;                            
+//     end
+//     if (recv_done_flag == 1'b1)
+//         blink <= ~blink;
+//end
 
 
 

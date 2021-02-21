@@ -1,69 +1,94 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  128 of 4635 (2.762%)
-I/O cells:      7
+Register bits:  206 of 4635 (4.444%)
+I/O cells:      8
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        38          100.0
-                            FD1P3AX         9          100.0
-                            FD1P3IX        38          100.0
+                              CCU2D        96          100.0
+                            FD1P3AX        30          100.0
+                            FD1P3IX        63          100.0
                             FD1P3JX         3          100.0
-                             FD1S1A         1          100.0
-                            FD1S3AX        19          100.0
-                            FD1S3IX        58          100.0
+                            FD1S3AX        20          100.0
+                            FD1S3IX        90          100.0
                                 GSR         1          100.0
-                                 IB         4          100.0
-                               LUT4        86          100.0
+                                 IB         5          100.0
+                               LUT4       207          100.0
                                  OB         3          100.0
-                              PFUMX         1          100.0
-                        VERIFIC_PWR         1          100.0
+                              PFUMX        20          100.0
+                          ROM128X1A         4          100.0
 SUB MODULES
                              Beeper         1
+                             divide         1
+                         music_play         1
                           uart_loop         1
 uart_recv(CLK_FREQ=12000000,UART_BPS=115200)         1
 uart_send(CLK_FREQ=12000000,UART_BPS=115200)         1
-                              TOTAL       266
-----------------------------------------------------------------------
-Report for cell Beeper.v1
-Instance Path : m_beep
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        20           52.6
-                            FD1S3AX         1            5.3
-                            FD1S3IX        18           31.0
-                               LUT4         7            8.1
-                              TOTAL        46
+                              TOTAL       548
 ----------------------------------------------------------------------
 Report for cell uart_send(CLK_FREQ=12000000,UART_BPS=115200).v1
 Instance Path : u_uart_send
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D         9           23.7
-                            FD1P3IX        15           39.5
+                              CCU2D         9            9.4
+                            FD1P3IX        15           23.8
                             FD1P3JX         2           66.7
-                            FD1S3AX        11           57.9
-                            FD1S3IX        16           27.6
-                               LUT4        32           37.2
-                              PFUMX         1          100.0
-                              TOTAL        86
+                            FD1S3AX        11           55.0
+                            FD1S3IX        16           17.8
+                               LUT4        37           17.9
+                              PFUMX         1            5.0
+                              TOTAL        91
+----------------------------------------------------------------------
+Report for cell music_play.v1
+Instance Path : m_music_play
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        27           28.1
+                            FD1P3AX        21           70.0
+                            FD1P3IX        25           39.7
+                            FD1S3AX         2           10.0
+                               LUT4        76           36.7
+                              PFUMX         3           15.0
+                          ROM128X1A         3           75.0
+                              TOTAL       157
 ----------------------------------------------------------------------
 Report for cell uart_recv(CLK_FREQ=12000000,UART_BPS=115200).v1
 Instance Path : u_uart_recv
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D         9           23.7
-                            FD1P3IX        23           60.5
+                              CCU2D         9            9.4
+                            FD1P3IX        23           36.5
                             FD1P3JX         1           33.3
-                            FD1S3AX         4           21.1
-                            FD1S3IX        24           41.4
-                               LUT4        40           46.5
+                            FD1S3AX         4           20.0
+                            FD1S3IX        24           26.7
+                               LUT4        40           19.3
                               TOTAL       101
+----------------------------------------------------------------------
+Report for cell divide.v1
+Instance Path : divide_1ms
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        31           32.3
+                            FD1S3AX         1            5.0
+                            FD1S3IX        32           35.6
+                               LUT4        13            6.3
+                              TOTAL        77
 ----------------------------------------------------------------------
 Report for cell uart_loop.v1
 Instance Path : u_uart_loop
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3AX         9          100.0
-                            FD1S3AX         3           15.8
-                               LUT4         2            2.3
-                              TOTAL        14
+                            FD1P3AX         9           30.0
+                            FD1S3AX         1            5.0
+                               LUT4         1            0.5
+                              TOTAL        11
+----------------------------------------------------------------------
+Report for cell Beeper.v1
+Instance Path : m_beep
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        20           20.8
+                            FD1S3AX         1            5.0
+                            FD1S3IX        18           20.0
+                               LUT4        39           18.8
+                              PFUMX        16           80.0
+                              TOTAL        94

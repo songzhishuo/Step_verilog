@@ -3,49 +3,68 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      81.00        100.0
-                                  LUT4	      83.00        100.0
-                                 IOBUF	          7        100.0
-                                PFUREG	        128        100.0
-                                RIPPLE	         38        100.0
+                                  SLIC	     220.00        100.0
+                                  LUT4	     240.00        100.0
+                                 IOBUF	          8        100.0
+                                PFUREG	        206        100.0
+                                RIPPLE	         96        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-uart_send(CLK_FREQ=12000000,UART_BPS=115200)	          1        31.7
-                             uart_loop	          1         4.3
-uart_recv(CLK_FREQ=12000000,UART_BPS=115200)	          1        42.3
-                                Beeper	          1        19.0
----------------------------------------------------
-Report for cell Beeper
-   Instance path: top/m_beep
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      15.42        19.0
-                                  LUT4	       7.00         8.4
-                                PFUREG	         19        14.8
-                                RIPPLE	         20        52.6
+                            music_play	          1        37.2
+                                divide	          1        13.7
+                                Beeper	          1        17.7
+uart_send(CLK_FREQ=12000000,UART_BPS=115200)	          1        12.6
+uart_recv(CLK_FREQ=12000000,UART_BPS=115200)	          1        15.8
+                             uart_loop	          1         1.2
 ---------------------------------------------------
 Report for cell uart_send(CLK_FREQ=12000000,UART_BPS=115200)
    Instance path: top/u_uart_send
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      25.67        31.7
-                                  LUT4	      32.00        38.6
-                                PFUREG	         44        34.4
-                                RIPPLE	          9        23.7
+                                  SLIC	      27.67        12.6
+                                  LUT4	      37.00        15.4
+                                PFUREG	         44        21.4
+                                RIPPLE	          9         9.4
+---------------------------------------------------
+Report for cell music_play
+   Instance path: top/m_music_play
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      81.83        37.2
+                                  LUT4	     100.00        41.7
+                                PFUREG	         48        23.3
+                                RIPPLE	         27        28.1
 ---------------------------------------------------
 Report for cell uart_recv(CLK_FREQ=12000000,UART_BPS=115200)
    Instance path: top/u_uart_recv
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      34.25        42.3
-                                  LUT4	      38.00        45.8
-                                PFUREG	         52        40.6
-                                RIPPLE	          9        23.7
+                                  SLIC	      34.83        15.8
+                                  LUT4	      38.00        15.8
+                                PFUREG	         52        25.2
+                                RIPPLE	          9         9.4
+---------------------------------------------------
+Report for cell divide
+   Instance path: top/divide_1ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      30.17        13.7
+                                  LUT4	      13.00         5.4
+                                PFUREG	         33        16.0
+                                RIPPLE	         31        32.3
 ---------------------------------------------------
 Report for cell uart_loop
    Instance path: top/u_uart_loop
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       3.50         4.3
-                                  LUT4	       1.00         1.2
-                                PFUREG	         12         9.4
+                                  SLIC	       2.67         1.2
+                                PFUREG	         10         4.9
+---------------------------------------------------
+Report for cell Beeper
+   Instance path: top/m_beep
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.83        17.7
+                                  LUT4	      39.00        16.3
+                                PFUREG	         19         9.2
+                                RIPPLE	         20        20.8

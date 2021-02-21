@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Feb 21 01:49:20 2021
+Sun Feb 21 11:50:13 2021
 
 
 Command Line:  synthesis -f music_player_impl1_lattice.synproj -gui 
@@ -37,7 +37,7 @@ Using performance grade 4.
                                                           
 
 Optimization goal = Balanced
-Top-level module name = top.
+The -top option is not used.
 Target frequency = 1.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -79,6 +79,7 @@ NGD file = music_player_impl1.ngd
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
+    <postMsg mid="35001200" type="Warning" dynamic="1" navigation="0" arg0="top"  />
 Technology check ok...
 
 Analyzing Verilog file C:/lscc/diamond/3.8_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
@@ -91,6 +92,10 @@ Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/uart_loo
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/beep.v. VERI-1482
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/clock.v. VERI-1482
 Analyzing Verilog file c:/users/argon/desktop/verilog/music_uart_player/music_player.v. VERI-1482
+    <postMsg mid="35901208" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(236): " arg1="1" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="236"  />
+    <postMsg mid="35901208" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(238): " arg1="1" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="238"  />
+    <postMsg mid="35901208" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(240): " arg1="1" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="240"  />
+    <postMsg mid="35901208" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(242): " arg1="1" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="242"  />
 Analyzing Verilog file C:/lscc/diamond/3.8_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): top
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/top.v(1): " arg1="top" arg2="c:/users/argon/desktop/verilog/music_uart_player/top.v" arg3="1"  />
@@ -100,10 +105,7 @@ Top module name (Verilog): top
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/beep.v(18): " arg1="Beeper" arg2="c:/users/argon/desktop/verilog/music_uart_player/beep.v" arg3="18"  />
     <postMsg mid="35901330" type="Warning" dynamic="4" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/top.v(99): " arg1="8" arg2="5" arg3="tone" arg4="c:/users/argon/desktop/verilog/music_uart_player/top.v" arg5="99"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/clock.v(1): " arg1="divide" arg2="c:/users/argon/desktop/verilog/music_uart_player/clock.v" arg3="1"  />
-    <postMsg mid="35901167" type="Warning" dynamic="1" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/top.v(143): " arg1="c:/users/argon/desktop/verilog/music_uart_player/top.v" arg2="143"  />
-    <postMsg mid="35901221" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/top.v(144): " arg1="blink" arg2="c:/users/argon/desktop/verilog/music_uart_player/top.v" arg3="144"  />
-    <postMsg mid="35901466" type="Warning" dynamic="1" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/top.v(144): " arg1="c:/users/argon/desktop/verilog/music_uart_player/top.v" arg2="144"  />
-    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/top.v(42): " arg1="music_tone[4]" arg2="c:/users/argon/desktop/verilog/music_uart_player/top.v" arg3="42"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(1): " arg1="music_play" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="1"  />
 Last elaborated design is top()
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -112,81 +114,49 @@ Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'..
 Loading device for application map from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.8_x64/ispfpga.
 Package Status:                     Final          Version 1.44.
 Top-level module name = top.
-    <postMsg mid="35935034" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/top.v(109): " arg1="divide_1ms" arg2="c:/users/argon/desktop/verilog/music_uart_player/top.v" arg3="109"  />
-######## Missing driver on net music_tone[4]. Patching with GND.
-######## Missing driver on net music_tone[3]. Patching with GND.
-######## Missing driver on net music_tone[2]. Patching with GND.
-######## Missing driver on net music_tone[1]. Patching with GND.
-######## Missing driver on net music_tone[0]. Patching with GND.
-    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_uart_send/tx_cnt" arg1="one-hot"  />
-State machine has 16 reachable states with original encodings of:
-
- 0000 
-
- 0001 
-
- 0010 
-
- 0011 
-
- 0100 
-
- 0101 
-
- 0110 
-
- 0111 
-
- 1000 
-
- 1001 
-
- 1010 
-
- 1011 
-
- 1100 
-
- 1101 
-
- 1110 
-
- 1111 
-
-original encoding -> new encoding (one-hot encoding)
-
- 0000 -> 0000000000000001
-
- 0001 -> 0000000000000010
-
- 0010 -> 0000000000000100
-
- 0011 -> 0000000000001000
-
- 0100 -> 0000000000010000
-
- 0101 -> 0000000000100000
-
- 0110 -> 0000000001000000
-
- 0111 -> 0000000010000000
-
- 1000 -> 0000000100000000
-
- 1001 -> 0000001000000000
-
- 1010 -> 0000010000000000
-
- 1011 -> 0000100000000000
-
- 1100 -> 0001000000000000
-
- 1101 -> 0010000000000000
-
- 1110 -> 0100000000000000
-
- 1111 -> 1000000000000000
-
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(24): " arg1="\i586/note_96_0" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="24"  />
+######## Missing driver on net \m_music_play/\i586/note_96_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_96_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_96_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_96_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_96_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_96_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_96_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_96_7. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_97_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_97_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_97_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_97_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_97_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_97_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_97_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_97_7. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_98_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_98_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_98_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_98_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_98_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_98_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_98_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_98_7. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_99_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_99_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_99_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_99_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_99_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_99_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_99_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_99_7. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_100_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_100_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_100_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_100_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_100_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_100_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_100_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i586/note_100_7. Patching with GND.
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(24): " arg1="\m_music_play/\i586/note_0_0" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="24"  />
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(24): " arg1="\m_music_play/\i586/note_0_1" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="24"  />
     <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_uart_recv/rx_cnt" arg1="one-hot"  />
 State machine has 16 reachable states with original encodings of:
 
@@ -256,10 +226,82 @@ original encoding -> new encoding (one-hot encoding)
 
  1111 -> 1000000000000000
 
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\u_uart_send/tx_cnt" arg1="one-hot"  />
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
 
 
 
+
+Found mux-orfb->fb :%s\m_music_play/state_i1_i5c_uart_player/music_player.v(278): " arg1="\m_music_play/music_delay_i0_i15" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="278"  />
+    <postMsg mid="35935014" type="Warning" dynamic="2" navigation="2" arg0="c:/users/argon/desktop/verilog/music_uart_player/music_player.v(278): " arg1="\m_music_play/music_delay_i0_i6" arg2="c:/users/argon/desktop/verilog/music_uart_player/music_player.v" arg3="278"  />
 GSR instance connected to net sys_rst_n_c.
+Duplicate register/latch removal. \m_music_play/music_delay_i0_i8 is a one-to-one match with \m_music_play/music_delay_i0_i5.
 Applying 1.000000 MHz constraint to all clocks
 
     <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
@@ -272,30 +314,28 @@ Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'..
 
 Running DRC...
 
-    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="switch_2" arg2="switch_2"  />
-    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="switch_2"  />
-    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="2"  />
+DRC complete with no errors or warnings
 
 Design Results:
-    264 blocks expanded
+    545 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file music_player_impl1.ngd.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 128 of 4635 (2 % )
-CCU2D => 38
-FD1P3AX => 9
-FD1P3IX => 38
+Number of register bits => 206 of 4635 (4 % )
+CCU2D => 96
+FD1P3AX => 30
+FD1P3IX => 63
 FD1P3JX => 3
-FD1S1A => 1
-FD1S3AX => 19
-FD1S3IX => 58
+FD1S3AX => 20
+FD1S3IX => 90
 GSR => 1
-IB => 4
-LUT4 => 86
+IB => 5
+LUT4 => 207
 OB => 3
-PFUMX => 1
+PFUMX => 20
+ROM128X1A => 4
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -305,29 +345,33 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : sys_clk_c, loads : 127
-  Net : sys_clk_c_enable_13, loads : 2
+  Net : sys_clk_c, loads : 160
+  Net : divide_1ms/clk_p, loads : 47
 Clock Enable Nets
-Number of Clock Enables: 7
-Top 7 highest fanout Clock Enables:
-  Net : u_uart_recv/sys_clk_c_enable_37, loads : 16
-  Net : u_uart_send/sys_clk_c_enable_50, loads : 16
-  Net : u_uart_recv/sys_clk_c_enable_35, loads : 7
-  Net : u_uart_recv/sys_clk_c_enable_2, loads : 1
-  Net : sys_clk_c_enable_1, loads : 1
-  Net : u_uart_send/sys_clk_c_enable_38, loads : 1
+Number of Clock Enables: 23
+Top 10 highest fanout Clock Enables:
+  Net : m_music_play/clk_p_enable_44, loads : 16
+  Net : u_uart_recv/sys_clk_c_enable_46, loads : 16
+  Net : u_uart_send/sys_clk_c_enable_48, loads : 16
+  Net : m_music_play/clk_p_enable_41, loads : 9
+  Net : m_music_play/clk_p_enable_38, loads : 8
+  Net : m_music_play/sys_clk_c_enable_29, loads : 8
+  Net : u_uart_recv/sys_clk_c_enable_7, loads : 6
+  Net : m_music_play/clk_p_enable_5, loads : 4
+  Net : m_music_play/clk_p_enable_45, loads : 4
+  Net : m_music_play/clk_p_enable_23, loads : 4
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : u_uart_recv/n420, loads : 24
-  Net : m_beep/n254, loads : 18
-  Net : u_uart_loop/n1713, loads : 16
-  Net : u_uart_send/sys_clk_c_enable_50, loads : 16
-  Net : u_uart_recv/n776, loads : 16
-  Net : u_uart_recv/sys_clk_c_enable_37, loads : 16
-  Net : u_uart_loop/n777, loads : 15
-  Net : u_uart_recv/n169, loads : 10
-  Net : u_uart_send/n15, loads : 9
-  Net : u_uart_recv/uart_rxd_d1, loads : 9
+  Net : divide_1ms/n2004, loads : 32
+  Net : m_music_play/music_tone_3, loads : 30
+  Net : m_music_play/music_tone_2, loads : 30
+  Net : m_music_play/music_tone_1, loads : 29
+  Net : m_music_play/music_tone_4, loads : 28
+  Net : u_uart_recv/n916, loads : 24
+  Net : m_music_play/music_tone_0, loads : 22
+  Net : m_beep/n326, loads : 18
+  Net : u_uart_loop/n4198, loads : 16
+  Net : u_uart_send/n1999, loads : 16
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -337,10 +381,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 1000.000000 -name  |             |             |
-clk1 [get_nets sys_clk_c_enable_13]     |    1.000 MHz|  309.023 MHz|     2  
+clk1 [get_nets clk_p]                   |    1.000 MHz|   83.375 MHz|     7  
                                         |             |             |
 create_clock -period 1000.000000 -name  |             |             |
-clk0 [get_nets sys_clk_c]               |    1.000 MHz|   96.386 MHz|     6  
+clk0 [get_nets sys_clk_c]               |    1.000 MHz|   96.805 MHz|     6  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -348,10 +392,10 @@ clk0 [get_nets sys_clk_c]               |    1.000 MHz|   96.386 MHz|     6
 All constraints were met.
 
 
-Peak Memory Usage: 60.391  MB
+Peak Memory Usage: 69.055  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.578  secs
+Elapsed CPU time for LSE flow : 1.344  secs
 --------------------------------------------------------------
 
 map -a "MachXO2" -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial   "music_player_impl1.ngd" -o "music_player_impl1_map.ncd" -pr "music_player_impl1.prf" -mp "music_player_impl1.mrp" -lpf "C:/Users/Argon/Desktop/Verilog/music_uart_player/impl1/music_player_impl1.lpf" -lpf "C:/Users/Argon/Desktop/Verilog/music_uart_player/music_player.lpf" -c 0            
@@ -380,29 +424,27 @@ Package Status:                     Final          Version 1.44.
 
 Running general design DRC...
 
-    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="switch_2"  />
 Removing unused logic...
 
 Optimizing...
 
-    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="switch_2"  />
 
 
 
 Design Summary:
-   Number of registers:    128 out of  4635 (3%)
-      PFU registers:          128 out of  4320 (3%)
+   Number of registers:    206 out of  4635 (4%)
+      PFU registers:          206 out of  4320 (5%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:        81 out of  2160 (4%)
-      SLICEs as Logic/ROM:     81 out of  2160 (4%)
+   Number of SLICEs:       220 out of  2160 (10%)
+      SLICEs as Logic/ROM:    220 out of  2160 (10%)
       SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:         38 out of  2160 (2%)
-   Number of LUT4s:        159 out of  4320 (4%)
-      Number used as logic LUTs:         83
+      SLICEs as Carry:         96 out of  2160 (4%)
+   Number of LUT4s:        432 out of  4320 (10%)
+      Number used as logic LUTs:        240
       Number used as distributed RAM:     0
-      Number used as ripple logic:       76
+      Number used as ripple logic:      192
       Number used as shift registers:     0
-   Number of PIO sites used: 7 + 4(JTAG) out of 105 (10%)
+   Number of PIO sites used: 8 + 4(JTAG) out of 105 (11%)
    Number of block RAMs:  0 out of 10 (0%)
    Number of GSRs:  1 out of 1 (100%)
    EFB used :       No
@@ -426,45 +468,64 @@ Design Summary:
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
    Number of clocks:  2
-     Net sys_clk_c_enable_13: 1 loads, 1 rising, 0 falling (Driver: recv_done_flag_I_0_2_lut_rep_16 )
-     Net sys_clk_c: 69 loads, 69 rising, 0 falling (Driver: PIO sys_clk )
-   Number of Clock Enables:  7
-     Net sys_clk_c_enable_13: 4 loads, 4 LSLICEs
-     Net sys_clk_c_enable_1: 1 loads, 1 LSLICEs
-     Net u_uart_send/sys_clk_c_enable_50: 8 loads, 8 LSLICEs
-     Net u_uart_send/sys_clk_c_enable_38: 1 loads, 1 LSLICEs
-     Net u_uart_recv/sys_clk_c_enable_2: 1 loads, 1 LSLICEs
-     Net u_uart_recv/sys_clk_c_enable_37: 8 loads, 8 LSLICEs
-     Net u_uart_recv/sys_clk_c_enable_35: 4 loads, 4 LSLICEs
-   Number of LSRs:  6
+     Net sys_clk_c: 89 loads, 89 rising, 0 falling (Driver: PIO sys_clk )
+     Net divide_1ms/clk_p: 32 loads, 32 rising, 0 falling (Driver: divide_1ms/clk_p_35 )
+   Number of Clock Enables:  23
+     Net sys_rst_n_c: 1 loads, 1 LSLICEs
+     Net u_uart_send/sys_clk_c_enable_48: 8 loads, 8 LSLICEs
+     Net u_uart_send/sys_clk_c_enable_47: 1 loads, 1 LSLICEs
+     Net sys_clk_c_enable_29: 4 loads, 4 LSLICEs
+     Net m_music_play/clk_p_enable_44: 9 loads, 9 LSLICEs
+     Net m_music_play/clk_p_enable_38: 2 loads, 2 LSLICEs
+     Net m_music_play/clk_p_enable_5: 1 loads, 1 LSLICEs
+     Net sys_clk_c_enable_49: 1 loads, 1 LSLICEs
+     Net m_music_play/clk_p_enable_45: 2 loads, 2 LSLICEs
+     Net m_music_play/clk_p_enable_34: 1 loads, 1 LSLICEs
+     Net m_music_play/clk_p_enable_23: 2 loads, 2 LSLICEs
+     Net m_music_play/clk_p_enable_36: 1 loads, 1 LSLICEs
+     Net m_music_play/clk_p_enable_24: 1 loads, 1 LSLICEs
+     Net m_music_play/clk_p_enable_41: 5 loads, 5 LSLICEs
+     Net m_music_play/clk_p_enable_19: 2 loads, 2 LSLICEs
+     Net m_music_play/clk_p_enable_17: 1 loads, 1 LSLICEs
+     Net m_music_play/clk_p_enable_35: 1 loads, 1 LSLICEs
+     Net m_music_play/clk_p_enable_32: 1 loads, 1 LSLICEs
+     Net m_music_play/clk_p_enable_33: 1 loads, 1 LSLICEs
+     Net m_music_play/clk_p_enable_37: 1 loads, 1 LSLICEs
+     Net u_uart_recv/sys_clk_c_enable_50: 2 loads, 2 LSLICEs
+     Net u_uart_recv/sys_clk_c_enable_46: 8 loads, 8 LSLICEs
+     Net u_uart_recv/sys_clk_c_enable_7: 3 loads, 3 LSLICEs
+   Number of LSRs:  9
      Net uart_tx_busy: 9 loads, 9 LSLICEs
-     Net m_beep/n254: 10 loads, 10 LSLICEs
-     Net n777: 9 loads, 9 LSLICEs
+     Net u_uart_send/n1999: 9 loads, 9 LSLICEs
+     Net m_music_play/n2006: 9 loads, 9 LSLICEs
+     Net m_music_play/n2021: 5 loads, 5 LSLICEs
      Net u_uart_recv/rx_flag: 13 loads, 13 LSLICEs
-     Net u_uart_recv/uart_data_7__N_73: 4 loads, 4 LSLICEs
-     Net u_uart_recv/n776: 9 loads, 9 LSLICEs
+     Net u_uart_recv/uart_data_7__N_67: 4 loads, 4 LSLICEs
+     Net u_uart_recv/n2002: 9 loads, 9 LSLICEs
+     Net divide_1ms/n2004: 17 loads, 17 LSLICEs
+     Net m_beep/n326: 10 loads, 10 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net u_uart_recv/rx_flag: 16 loads
-     Net uart_tx_busy: 13 loads
-     Net m_beep/n254: 10 loads
-     Net u_uart_recv/n169: 10 loads
-     Net n777: 9 loads
-     Net u_uart_recv/n170: 9 loads
-     Net u_uart_recv/n173: 9 loads
-     Net u_uart_recv/n776: 9 loads
-     Net u_uart_recv/uart_rxd_d1: 9 loads
-     Net u_uart_send/n15: 9 loads
+     Net music_cnt_1: 33 loads
+     Net music_cnt_2: 33 loads
+     Net music_tone_2: 31 loads
+     Net music_tone_3: 31 loads
+     Net music_cnt_5: 30 loads
+     Net music_tone_1: 30 loads
+     Net music_tone_4: 29 loads
+     Net music_cnt_3: 27 loads
+     Net music_cnt_6: 23 loads
+     Net music_tone_0: 23 loads
  
 
-   Number of warnings:  2
+   Number of warnings:  0
    Number of errors:    0
 
 
 
 Total CPU Time: 0 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 50 MB
+Peak Memory Usage: 51 MB
 
 Dumping design to file music_player_impl1_map.ncd.
 
@@ -479,7 +540,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "music_player_impl1_map.ncd"
-Sun Feb 21 01:49:21 2021
+Sun Feb 21 11:50:15 2021
 
 PAR: Place And Route Diamond (64-bit) 3.8.0.115.3.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF music_player_impl1_map.ncd music_player_impl1.dir/5_1.ncd music_player_impl1.prf
@@ -503,42 +564,44 @@ License checked out.
 Ignore Preference Error(s):  True
 Device utilization summary:
 
-   PIO (prelim)    7+4(JTAG)/280     4% used
-                   7+4(JTAG)/105     10% bonded
+   PIO (prelim)    8+4(JTAG)/280     4% used
+                   8+4(JTAG)/105     11% bonded
 
-   SLICE             81/2160          3% used
+   SLICE            220/2160         10% used
 
    GSR                1/1           100% used
 
 
-Number of Signals: 317
-Number of Connections: 677
+Number of Signals: 650
+Number of Connections: 1651
 
 Pin Constraint Summary:
-   7 out of 7 pins locked (100% locked).
+   8 out of 8 pins locked (100% locked).
 
-The following 1 signal is selected to use the primary clock routing resources:
-    sys_clk_c (driver: sys_clk, clk load #: 69)
+The following 2 signals are selected to use the primary clock routing resources:
+    sys_clk_c (driver: sys_clk, clk load #: 89)
+    divide_1ms/clk_p (driver: divide_1ms/SLICE_61, clk load #: 32)
 
     <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="sys_clk_c" arg1="Primary" arg2="sys_clk" arg3="C1" arg4="Primary"  />
 
-The following 2 signals are selected to use the secondary clock routing resources:
-    u_uart_recv/rx_flag (driver: u_uart_recv/SLICE_50, clk load #: 0, sr load #: 13, ce load #: 0)
-    m_beep/n254 (driver: SLICE_83, clk load #: 0, sr load #: 10, ce load #: 0)
+The following 3 signals are selected to use the secondary clock routing resources:
+    divide_1ms/n2004 (driver: divide_1ms/SLICE_228, clk load #: 0, sr load #: 17, ce load #: 0)
+    u_uart_recv/rx_flag (driver: u_uart_recv/SLICE_125, clk load #: 0, sr load #: 13, ce load #: 0)
+    m_beep/n326 (driver: SLICE_150, clk load #: 0, sr load #: 10, ce load #: 0)
 
 Signal sys_rst_n_c is selected as Global Set/Reset.
 Starting Placer Phase 0.
-.........
+.............
 Finished Placer Phase 0.  REAL time: 0 secs 
 
 Starting Placer Phase 1.
-....................
-Placer score = 25682.
+...................
+Placer score = 63684.
 Finished Placer Phase 1.  REAL time: 2 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  25652
+Placer score =  62217
 Finished Placer Phase 2.  REAL time: 2 secs 
 
 
@@ -552,12 +615,14 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Quadrants All (TL, TR, BL, BR) - Global Clocks:
-  PRIMARY "sys_clk_c" from comp "sys_clk" on PIO site "C1 (PL4A)", clk load = 69
-  SECONDARY "u_uart_recv/rx_flag" from Q0 on comp "u_uart_recv/SLICE_50" on site "R12C17A", clk load = 0, ce load = 0, sr load = 13
-  SECONDARY "m_beep/n254" from F1 on comp "SLICE_83" on site "R12C17D", clk load = 0, ce load = 0, sr load = 10
+  PRIMARY "sys_clk_c" from comp "sys_clk" on PIO site "C1 (PL4A)", clk load = 89
+  PRIMARY "divide_1ms/clk_p" from Q1 on comp "divide_1ms/SLICE_61" on site "R3C16B", clk load = 32
+  SECONDARY "divide_1ms/n2004" from F0 on comp "divide_1ms/SLICE_228" on site "R12C15C", clk load = 0, ce load = 0, sr load = 17
+  SECONDARY "u_uart_recv/rx_flag" from Q0 on comp "u_uart_recv/SLICE_125" on site "R12C17C", clk load = 0, ce load = 0, sr load = 13
+  SECONDARY "m_beep/n326" from F0 on comp "SLICE_150" on site "R12C15D", clk load = 0, ce load = 0, sr load = 10
 
-  PRIMARY  : 1 out of 8 (12%)
-  SECONDARY: 2 out of 8 (25%)
+  PRIMARY  : 2 out of 8 (25%)
+  SECONDARY: 3 out of 8 (37%)
 
 Edge Clocks:
   No edge clock selected.
@@ -566,9 +631,9 @@ Edge Clocks:
 
 
 I/O Usage Summary (final):
-   7 + 4(JTAG) out of 280 (3.9%) PIO sites used.
-   7 + 4(JTAG) out of 105 (10.5%) bonded PIO sites used.
-   Number of PIO comps: 7; differential: 0.
+   8 + 4(JTAG) out of 280 (4.3%) PIO sites used.
+   8 + 4(JTAG) out of 105 (11.4%) bonded PIO sites used.
+   Number of PIO comps: 8; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
@@ -577,7 +642,7 @@ I/O Bank Usage Summary:
 +----------+---------------+------------+-----------+
 | 0        | 2 / 26 (  7%) | 2.5V       | -         |
 | 1        | 2 / 26 (  7%) | 2.5V       | -         |
-| 2        | 2 / 28 (  7%) | 2.5V       | -         |
+| 2        | 3 / 28 ( 10%) | 2.5V       | -         |
 | 3        | 0 / 7 (  0%)  | -          | -         |
 | 4        | 0 / 8 (  0%)  | -          | -         |
 | 5        | 1 / 10 ( 10%) | 2.5V       | -         |
@@ -592,14 +657,12 @@ Dumping design to file music_player_impl1.dir/5_1.ncd.
 INFO - par: ASE feature is off due to non timing-driven settings.  
 -----------------------------------------------------------------
 
-0 connections routed; 677 unrouted.
+0 connections routed; 1651 unrouted.
 Starting router resource preassignment
 
-    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=sys_clk_c_enable_13 loads=5 clock_loads=1"  />
+Completed router resource preassignment. Real time: 3 secs 
 
-Completed router resource preassignment. Real time: 2 secs 
-
-Start NBR router at 01:49:23 02/21/21
+Start NBR router at 11:50:18 02/21/21
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -614,34 +677,30 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 01:49:23 02/21/21
+Start NBR special constraint process at 11:50:18 02/21/21
 
-Start NBR section for initial routing at 01:49:23 02/21/21
+Start NBR section for initial routing at 11:50:18 02/21/21
 Level 4, iteration 1
-32(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+44(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 01:49:23 02/21/21
+Start NBR section for normal routing at 11:50:18 02/21/21
 Level 4, iteration 1
-16(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+16(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 Level 4, iteration 2
-10(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+7(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 Level 4, iteration 3
-4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 Level 4, iteration 4
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 5
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 6
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 
-Start NBR section for re-routing at 01:49:23 02/21/21
+Start NBR section for re-routing at 11:50:18 02/21/21
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 
-Start NBR section for post-routing at 01:49:23 02/21/21
+Start NBR section for post-routing at 11:50:18 02/21/21
 
 End NBR router with 0 unrouted connection
 
@@ -656,12 +715,10 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
 
 
 
-    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=sys_clk_c_enable_13 loads=5 clock_loads=1"  />
-
 Total CPU time 2 secs 
-Total REAL time: 2 secs 
+Total REAL time: 3 secs 
 Completely routed.
-End of route.  677 routed (100.00%); 0 unrouted.
+End of route.  1651 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -678,8 +735,8 @@ PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
 PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 2 secs 
-Total REAL time to completion: 3 secs 
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 4 secs 
 
 par done!
 

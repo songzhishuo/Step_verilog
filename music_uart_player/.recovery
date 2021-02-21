@@ -2,27 +2,27 @@
 <BaliProject version="3.2" title="music_player" device="LCMXO2-4000HC-4MG132C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="top"/>
+        <Options def_top="music_play"/>
         <Source name="Top.v" type="Verilog" type_short="Verilog">
-            <Options top_module="top"/>
+            <Options/>
         </Source>
         <Source name="uart_send.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="uart_send"/>
         </Source>
         <Source name="uart_recv.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="uart_recv"/>
         </Source>
         <Source name="uart_loop.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="uart_loop"/>
         </Source>
         <Source name="beep.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="Beeper"/>
         </Source>
         <Source name="clock.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="divide"/>
         </Source>
         <Source name="music_player.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="music_play"/>
         </Source>
         <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>

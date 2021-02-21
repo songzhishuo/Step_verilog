@@ -88,11 +88,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         self.pB_connect.clicked.connect(self.display)
         self.pB_play.clicked.connect(self.play_music)
+        self.sB_Temp_threshold.valueChanged.connect(self.temp_threshold)
+
         self.serial = serial.Serial()     #初始化串口
         self.lE_com.setText("COM2")
         self.cB_baud.setCurrentText("115200")
-        self.cnt = 0
-        self.connect_flag = False
+        self.cnt = 0                        #数据发送计数器        
+        self.connect_flag = False           #串口连接成功标志
+        self.temp_threshold_val = self.sB_Temp_threshold.value()   #温度报警阈值   
 
         # 定时器接收数据
         self.timer = QTimer(self)
@@ -132,12 +135,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         print("port test:" + self.serial.port)
         #self.serial.open()
     def play_music(self):
-        cnt = 0
-        while cnt < len(music):
-            self.serial.write(bytes.fromhex("%.2x" % music[cnt]))
-            #mTimer_ms(delay_time[cnt])
-            mTimer_ms(200)
-            cnt  = cnt + 1
+        if  self.connect_flag == True :                               
+            cnt = 0
+            while cnt < len(music):
+                self.serial.write(bytes.fromhex("%.2x" % music[cnt]))
+                mTimer_ms(200)
+                cnt  = cnt + 1
+        else    :
+            QMessageBox.critical(self,"Port error","串口未打开")
+
+    def temp_threshold(self):           #温度报警阈值设置
+        self.temp_threshold_val = self.sB_Temp_threshold.value()
+        #print("当前值为：",self.temp_threshold_val)
+        print("temp threshold val[%d]" % self.temp_threshold_val)
 
     # 接收数据
     def data_receive(self):
@@ -153,46 +163,35 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             data = self.serial.read(num)
             num  = len(data)
 
-            #print("data["+str(data)+"]\r\n")
-
-            #data = str((data))[4:-1]
             data = str(binascii.b2a_hex(data))[2:-1]
             temp_val = int(data,16)
 
-
-            #print("data[" + str(data) + "]\r\n")
-            #print("data[" + str(temp_val) + "]\r\n")
             if temp_val <= 99 and temp_val >= 0 :           #温度发送
                 self.lb_temp.setText(str(temp_val))
                 self.vS_temp.setValue(temp_val)
-            if temp_val == 80 :
-                #串口阻塞发送
-                #str_time =  time.asctime( time.localtime(time.time()) ) + "\r\n"
-                #self.serial.write(str_time.encode("gbk"))
-                #self.serial.write(binascii.b2a_hex(0x11))
-                #mTimer_ms(200)  #延时200ms
-                #str_time =  time.asctime( time.localtime(time.time()) ) + "\r\n"
-                #self.serial.write(str_time.encode("gbk"))
-                #a = bytes.fromhex(music[1])
-                #send_data = hex(music[1])
-                #self.serial.write(bytes.fromhex(str(send_data)))
-                cnt = 0
-                while cnt < len(music):
-                    self.serial.write(bytes.fromhex("%.2x" % music[cnt]))
-                    #mTimer_ms(delay_time[cnt])
-                    mTimer_ms(200)
-                    cnt  = cnt + 1
-                # self.serial.write(bytes.fromhex("%.2x" % 0x66))
-                # print("array len ="+str(len(music)))
-                #print(str(hex(music[1])))
                 
-  
-                
-                #time.sleep(2) 
-                
-            #if int(temp_val,16) <= 100 and int(temp_val,16) >= 0 :
-            #self.label_3.setText(temp_val)
-           
+
+                if temp_val >= int(self.temp_threshold_val) :        #报警阈值
+                    #串口阻塞发送
+                    #mTimer_ms(1500)
+                    self.play_music()
+                    #str_time =  time.asctime( time.localtime(time.time()) ) + "\r\n"
+                    #self.serial.write(str_time.encode("gbk"))
+                    #self.serial.write(binascii.b2a_hex(0x11))
+                    #mTimer_ms(200)  #延时200ms
+                    #str_time =  time.asctime( time.localtime(time.time()) ) + "\r\n"
+                    #self.serial.write(str_time.encode("gbk"))
+                    #a = bytes.fromhex(music[1])
+                    #send_data = hex(music[1])
+                    #self.serial.write(bytes.fromhex(str(send_data)))
+                    
+                    # cnt = 0
+                    # while cnt < len(music):
+                    #     self.serial.write(bytes.fromhex("%.2x" % music[cnt]))
+                    #     #mTimer_ms(delay_time[cnt])
+                    #     mTimer_ms(200)
+                    #     cnt  = cnt + 1
+            
 
 
 

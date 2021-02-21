@@ -162,7 +162,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             #print("data[" + str(data) + "]\r\n")
             #print("data[" + str(temp_val) + "]\r\n")
-            if temp_val <= 100 and temp_val >= 0 :
+            if temp_val <= 99 and temp_val >= 0 :           #温度发送
                 self.lb_temp.setText(str(temp_val))
                 self.vS_temp.setValue(temp_val)
             if temp_val == 80 :

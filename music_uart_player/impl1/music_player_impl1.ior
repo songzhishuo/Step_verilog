@@ -1,0 +1,71 @@
+Loading design for application iotiming from file music_player_impl1.ncd.
+Design name: uart_loop
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 5
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file music_player_impl1.ncd.
+Design name: uart_loop
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 6
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file music_player_impl1.ncd.
+Design name: uart_loop
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: uart_loop
+// Package: CSBGA132
+// ncd File: music_player_impl1.ncd
+// Version: Diamond (64-bit) 3.8.0.115.3
+// Written on Sun Feb 21 13:07:46 2021
+// M: Minimum Performance Grade
+// iotiming music_player_impl1.ncd music_player_impl1.prf -gui
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5, 4):
+
+// Input Setup and Hold Times
+
+Port         Clock   Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+recv_data[0] sys_clk R    -0.185      M       2.067     4
+recv_data[1] sys_clk R    -0.342      M       2.482     4
+recv_data[2] sys_clk R    -0.342      M       2.482     4
+recv_data[3] sys_clk R    -0.240      M       2.223     4
+recv_data[4] sys_clk R    -0.497      M       2.809     4
+recv_data[5] sys_clk R    -0.240      M       2.223     4
+recv_data[6] sys_clk R    -0.396      M       2.550     4
+recv_data[7] sys_clk R    -0.396      M       2.550     4
+recv_done    sys_clk R    -0.349      M       2.501     4
+tx_busy      sys_clk R     0.080      6       2.215     4
+
+
+// Clock to Output Delay
+
+Port         Clock   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+send_data[0] sys_clk R    10.181         4        2.931          M
+send_data[1] sys_clk R     9.848         4        2.855          M
+send_data[2] sys_clk R    10.558         4        3.049          M
+send_data[3] sys_clk R     9.826         4        2.854          M
+send_data[4] sys_clk R     9.826         4        2.854          M
+send_data[5] sys_clk R    10.161         4        2.938          M
+send_data[6] sys_clk R     9.826         4        2.854          M
+send_data[7] sys_clk R     9.848         4        2.855          M
+send_en      sys_clk R    10.181         4        2.931          M
+WARNING: you must also run trce with hold speed: 4
+WARNING: you must also run trce with setup speed: 6
+WARNING: you must also run trce with setup speed: M

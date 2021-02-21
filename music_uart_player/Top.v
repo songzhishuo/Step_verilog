@@ -11,29 +11,23 @@ module top(
 
     output          beep,               //蜂鸣器接口
 
-    output       blink
+    output          blink
     );
- 
+   
 //parameter define
 parameter  CLK_FREQ = 12000000;         //定义系统时钟频率
 parameter  UART_BPS = 115200;           //定义串口波特率
 
 localparam [31:0] div_1ms	= 23'd12_000;
- 
+  
 
 
 //wire define   
-wire       uart_recv_done;              //UART接收完成
-wire [7:0] uart_recv_data;              //UART接收数据
-wire       uart_send_en;                //UART发送使能
+wire        uart_recv_done;              //UART接收完成
+wire  [7:0] uart_recv_data;              //UART接收数据
+wire        uart_send_en;                //UART发送使能
 wire  [7:0] uart_send_data;              //UART发送数据
-wire       uart_tx_busy;                //UART发送忙状态标志
-
-
-
-
-
-   
+wire        uart_tx_busy;                //UART发送忙状态标志
 
 //reg    [7:0]     music_time;
 //reg    [4:0]    music_note;
@@ -41,11 +35,7 @@ wire       uart_tx_busy;                //UART发送忙状态标志
 
 wire [7:0]  music_tone;                     //音调
 
-
 wire 		clk_1ms;
-
-
-//reg [15:0]	music_time [100:0];	//拍子
 
 //*****************************************************
 //**                    main code
@@ -64,36 +54,8 @@ u_uart_recv(
     .uart_data      (uart_recv_data)
     );
 
-//串口发送模块    
-uart_send #(                          
-    .CLK_FREQ       (CLK_FREQ),         //设置系统时钟频率
-    .UART_BPS       (UART_BPS))         //设置串口发送波特率
-u_uart_send(                 
-    .sys_clk        (sys_clk),
-    .sys_rst_n      (sys_rst_n),
-     
-    .uart_en        (uart_send_en),
-    .uart_din       (uart_send_data),
-    .uart_tx_busy   (uart_tx_busy),
-    .uart_txd       (uart_txd)
-    );
-    
-//串口环回模块    
-uart_loop u_uart_loop(
-    .sys_clk        (sys_clk),             
-    .sys_rst_n      (sys_rst_n),           
-   
-    .recv_done      (uart_recv_done),   //接收一帧数据完成标志信号
-    .recv_data      (uart_recv_data),   //接收的数据
-   
-    .tx_busy        (uart_tx_busy),     //发送忙状态标志      
-    .send_en        (uart_send_en),     //发送使能信号
-    .send_data      (uart_send_data)    //待发送数据
-    );
-
-
 Beeper  m_beep(
-	.clk_in	(sys_clk),		//系统时钟
+	.clk_in	    (sys_clk),		//系统时钟
     .rst_n_in	(sys_rst_n),	//系统复位，低有效
     .tone_en	(switch_1),		//蜂鸣器使能信号
     .tone		(music_tone),	//蜂鸣器音节控制
@@ -114,11 +76,12 @@ music_play  m_music_play(
 
     .clk_1ms    (clk_1ms),            //1ms时钟输入
 
-    .uart_done     (uart_recv_done),     //串口接收数据标志
+    .uart_done          (uart_recv_done),     //串口接收数据标志
     .uart_recv_data     (uart_recv_data),     //串口数据
-    .switch_2           (switch_2),             //测试本地播放
-    .blink              (blink),
+    .music_stop           (switch_2),             //测试本地播放
+    //.blink              (blink),
     .music_tone         (music_tone)        //输出音调
+
     );
 
 
@@ -146,6 +109,32 @@ music_play  m_music_play(
 
 
 
+// //串口发送模块    
+// uart_send #(                          
+//     .CLK_FREQ       (CLK_FREQ),         //设置系统时钟频率
+//     .UART_BPS       (UART_BPS))         //设置串口发送波特率
+// u_uart_send(                 
+//     .sys_clk        (sys_clk),
+//     .sys_rst_n      (sys_rst_n),
+     
+//     .uart_en        (uart_send_en),
+//     .uart_din       (uart_send_data),
+//     .uart_tx_busy   (uart_tx_busy),
+//     .uart_txd       (uart_txd)
+//     );
+    
+// //串口环回模块    
+// uart_loop u_uart_loop(
+//     .sys_clk        (sys_clk),             
+//     .sys_rst_n      (sys_rst_n),           
+   
+//     .recv_done      (uart_recv_done),   //接收一帧数据完成标志信号
+//     .recv_data      (uart_recv_data),   //接收的数据
+   
+//     .tx_busy        (uart_tx_busy),     //发送忙状态标志      
+//     .send_en        (uart_send_en),     //发送使能信号
+//     .send_data      (uart_send_data)    //待发送数据
+//     );
 
 
 

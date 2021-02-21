@@ -7,6 +7,7 @@ module  music_play(
     input           recv_done_flag,     //串口接收数据标志
     inout   [7:0]   uart_recv_data,     //串口数据
 
+	//output   [6:0] led_debug,
     output          music_tone        //输出音调
     );
 
@@ -40,9 +41,10 @@ always @(posedge clk_1ms or negedge sys_rst_n) begin
     end
     else if(recv_done_flag == 1'b1) begin
 
-        //blink <= ~blink;
+        blink <= ~blink;
         music_note <= uart_recv_data;
-        //if(uart_recv_data == 8'd22)
+		//led_debug <= uart_recv_data;
+		//if(uart_recv_data == 8'd22)
             //music_en <= 1'b0;
         //else
         //    music_en <= 1'b1; 

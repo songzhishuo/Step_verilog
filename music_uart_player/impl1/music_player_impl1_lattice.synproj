@@ -32,12 +32,11 @@
 -lpf 1
 -p "C:/Users/Argon/Desktop/Verilog/music_uart_player"
 -ver "C:/Users/Argon/Desktop/Verilog/music_uart_player/Top.v"
-"C:/Users/Argon/Desktop/Verilog/music_uart_player/uart_send.v"
 "C:/Users/Argon/Desktop/Verilog/music_uart_player/uart_recv.v"
-"C:/Users/Argon/Desktop/Verilog/music_uart_player/uart_loop.v"
 "C:/Users/Argon/Desktop/Verilog/music_uart_player/beep.v"
 "C:/Users/Argon/Desktop/Verilog/music_uart_player/clock.v"
 "C:/Users/Argon/Desktop/Verilog/music_uart_player/music_player.v"
+-top top
 
 
 -p "C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data" "C:/Users/Argon/Desktop/Verilog/music_uart_player/impl1" "C:/Users/Argon/Desktop/Verilog/music_uart_player"

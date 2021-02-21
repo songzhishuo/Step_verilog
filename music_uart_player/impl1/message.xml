@@ -6,43 +6,6 @@
             <Severity>Info</Severity>
         </Message>
         <Message>
-            <ID>35001200</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>top</Dynamic>
-        </Message>
-        <Message>
-            <ID>35901208</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(236): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>236</Navigation>
-        </Message>
-        <Message>
-            <ID>35901208</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(238): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>238</Navigation>
-        </Message>
-        <Message>
-            <ID>35901208</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(240): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>240</Navigation>
-        </Message>
-        <Message>
-            <ID>35901208</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(242): </Dynamic>
-            <Dynamic>1</Dynamic>
-            <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>242</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
             <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/top.v(1): </Dynamic>
@@ -61,22 +24,6 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/uart_send.v(23): </Dynamic>
-            <Dynamic>uart_send(CLK_FREQ=12000000,UART_BPS=115200)</Dynamic>
-            <Navigation>c:/users/argon/desktop/verilog/music_uart_player/uart_send.v</Navigation>
-            <Navigation>23</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/uart_loop.v(23): </Dynamic>
-            <Dynamic>uart_loop</Dynamic>
-            <Navigation>c:/users/argon/desktop/verilog/music_uart_player/uart_loop.v</Navigation>
-            <Navigation>23</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
             <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/beep.v(18): </Dynamic>
             <Dynamic>Beeper</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/music_uart_player/beep.v</Navigation>
@@ -85,12 +32,12 @@
         <Message>
             <ID>35901330</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/top.v(99): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/top.v(61): </Dynamic>
             <Dynamic>8</Dynamic>
             <Dynamic>5</Dynamic>
             <Dynamic>tone</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/music_uart_player/top.v</Navigation>
-            <Navigation>99</Navigation>
+            <Navigation>61</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -103,34 +50,34 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(1): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(8): </Dynamic>
             <Dynamic>music_play</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>1</Navigation>
+            <Navigation>8</Navigation>
         </Message>
         <Message>
             <ID>35931002</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(24): </Dynamic>
-            <Dynamic>\i586/note_96_0</Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(32): </Dynamic>
+            <Dynamic>\i590/note_96_0</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>24</Navigation>
+            <Navigation>32</Navigation>
         </Message>
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(24): </Dynamic>
-            <Dynamic>\m_music_play/\i586/note_0_0</Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(32): </Dynamic>
+            <Dynamic>\m_music_play/\i590/note_0_0</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>24</Navigation>
+            <Navigation>32</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(24): </Dynamic>
-            <Dynamic>\m_music_play/\i586/note_0_1</Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(32): </Dynamic>
+            <Dynamic>\m_music_play/\i590/note_0_1</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>24</Navigation>
+            <Navigation>32</Navigation>
         </Message>
         <Message>
             <ID>35001774</ID>
@@ -139,18 +86,12 @@
             <Dynamic>one-hot</Dynamic>
         </Message>
         <Message>
-            <ID>35001774</ID>
-            <Severity>Info</Severity>
-            <Dynamic>\u_uart_send/tx_cnt</Dynamic>
-            <Dynamic>one-hot</Dynamic>
-        </Message>
-        <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(278): </Dynamic>
-            <Dynamic>\m_music_play/music_delay_i0_i6</Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/music_uart_player/music_player.v(302): </Dynamic>
+            <Dynamic>\m_music_play/music_delay_i0_i7</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/music_uart_player/music_player.v</Navigation>
-            <Navigation>278</Navigation>
+            <Navigation>302</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

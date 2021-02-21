@@ -1,17 +1,25 @@
-module  music_play(
-    input           sys_clk,            //外部50M时钟
-    input           sys_rst_n,          //外部复位信号，低有效
+/**
+    注意：
+    1.在串口播放时候 播放完成会发送一个 uart_recv_data == 8'd22 可以在外部判断是否播放完
+    2.设备本地播放时候在暂停时候无法保证声音消失，所以需要在外部对music_tone 设置 8'd22 进行消音处理
 
-    input           clk_1ms,            //1ms时钟输入
-	input 			switch_2,
+***/
+ 
+module  music_play(
+    input               sys_clk,            //外部50M时钟
+    input               sys_rst_n,          //外部复位信号，低有效
+
+    input               clk_1ms,            //1ms时钟输入
+	input 			    music_stop,
 
     
-    input           uart_done,     //串口接收数据标志
-    input   [7:0]   uart_recv_data,     //串口数据
+    input               uart_done,     //串口接收数据标志
+    input   [7:0]       uart_recv_data,     //串口数据
 
-	output 	reg	    blink,
+	//output 	reg	        blink,
+    output  reg  [6:0]  led_debug,
 
-    output    reg  [7:0]    music_tone        //输出音调
+    output  reg  [7:0]  music_tone        //输出音调
     );
 
 localparam			IDLE	=	3'd0;
@@ -35,16 +43,16 @@ reg [15:0]	music_delay;
 
 reg	[8:0]	music_cnt;			//音乐播放计数器()
 
-reg         recv_done_d0;
-reg         recv_done_d1;
+reg [15:0]  clk_cnt;            //delay时钟计数器
 
-wire        recv_done_flag;
+wire recv_done_flag;
+reg recv_done_d0;
+reg recv_done_d1;
 
 
 //捕获recv_done上升沿，得到一个时钟周期的脉冲信号
 assign recv_done_flag = (~recv_done_d1) & recv_done_d0;
-
-
+                                                 
 //对发送使能信号recv_done延迟两个时钟周期
 always @(posedge sys_clk or negedge sys_rst_n) begin         
     if (!sys_rst_n) begin
@@ -55,10 +63,13 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         recv_done_d0 <= uart_done;                               
         recv_done_d1 <= recv_done_d0;                            
     end
+//    if (recv_done_flag == 1'b1)
+//        blink <= ~blink;
 end
 
+
 //串口数据转发到音频模块
-always @(posedge clk_1ms or negedge sys_rst_n) begin         
+always @(posedge sys_clk or negedge sys_rst_n) begin         
     if (!sys_rst_n) begin
         state <= IDLE;
         cnt_run <= 8'd0;
@@ -66,17 +77,16 @@ always @(posedge clk_1ms or negedge sys_rst_n) begin
 //        music_note <= 5'd0;
     end
     else if(recv_done_flag == 1'b1) begin
-        music_tone <= uart_recv_data[7:3];
-		blink <= ~blink;
+        music_tone <= uart_recv_data;
+        //led_debug <= uart_recv_data[7:3];
+		//blink <= ~blink;
         //if(uart_recv_data == 8'd22)				//播放完成
 
     end
-	else begin                              //正常播放
-		if (switch_2 == 1'b0) begin
-			//music_tone <= 8'd22;
+	else begin                    //正常播放
+		if (music_stop == 1'b0) begin
 		end
 		else begin
- //		blink <= ~blink;
 			case (state)
 				IDLE: begin		
 					// if(music_en == 1'b0)	begin//不播放音乐
@@ -231,15 +241,15 @@ always @(posedge clk_1ms or negedge sys_rst_n) begin
 							cnt_run<=cnt_run+1'b1;
 							end							
 						7'd1:begin	
-							if(note[music_cnt][2:0] == 1'd1)
+							if(note[music_cnt][2:0] == 4'd1)
 								music_delay <= 16'd200; 
-							else if(note[music_cnt][3:0] == 1'd2)
+							else if(note[music_cnt][3:0] == 4'd2)
 								music_delay <= 16'd500; 
-							else if(note[music_cnt][3:0] == 1'd3)    
+							else if(note[music_cnt][3:0] == 4'd3)    
 								music_delay <= 16'd1000;
-							else if(note[music_cnt][3:0] == 1'd4)    
+							else if(note[music_cnt][3:0] == 4'd4)    
 								music_delay <= 16'd2000;
-							else if(note[music_cnt][3:0] == 1'd5)    
+							else if(note[music_cnt][3:0] == 4'd5)    
 								music_delay <= 16'd4000;   
 							state <= DELAY; state_back<=RUN; 
 							cnt_run<=cnt_run+1'b1;
@@ -257,20 +267,34 @@ always @(posedge clk_1ms or negedge sys_rst_n) begin
 				DELAY:begin
 					// if(clk_1ms == 1'b1) begin
 					//     //clkout_1ms <= 1'b0;
-					//     cnt_delay <= cnt_delay + 1'b1;
-					// end    
-					// if(cnt_delay >= music_delay) begin
+					   
+                    //     if(cnt_delay >= 16'd200) begin
 					//     cnt_delay <= 16'd0;
 					//     state <= state_back; 
 					//     blink <= ~ blink;                //LED测试
-					// end
+					//     end
+                    //     else begin 
+                    //         cnt_delay <= cnt_delay + 1'b1;   
+                    //     end
+
+					// end    
+
 					
+                    if(clk_cnt == 16'd12_000) begin
+                        clk_cnt <= 16'b0;
+                        if(cnt_delay >= music_delay) begin
+						    cnt_delay <= 16'd0;
+						    state <= state_back; 
+					    end 
+                        else 
+                            cnt_delay <= cnt_delay + 1'b1;
+                    end
+                    else begin
+                        clk_cnt <= clk_cnt + 1'b1;
 
-
-					if(cnt_delay >= music_delay) begin
-						cnt_delay <= 16'd0;
-						state <= state_back; 
-					end else cnt_delay <= cnt_delay + 1'b1;
+                    end
+                    
+				
 
 				end
 			endcase		

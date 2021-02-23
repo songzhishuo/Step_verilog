@@ -80,6 +80,9 @@ music = [6,7,8,9,
 
         ]
 delay_time = [200,10,200]
+
+
+
 class MainWindow(QMainWindow, Ui_MainWindow):
     
     def __init__(self, parent=None):
@@ -95,7 +98,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.cB_baud.setCurrentText("115200")
         self.sB_Temp_threshold.setValue(40)
 
-
+        self.old_temp_val = 0
         self.cnt = 0                        #数据发送计数器        
         self.connect_flag = False           #串口连接成功标志
         self.temp_threshold_val = self.sB_Temp_threshold.value()   #温度报警阈值   
@@ -115,6 +118,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_1.setText("hello cnt:%d" %self.cnt)
             self.cnt = self.cnt + 1
             
+
             self.serial.baudrate = int(self.cB_baud.currentText())  #波特率 
             self.serial.port = self.lE_com.text()                   #获取端口号             
             self.serial.stopbits = 1                                #停止位1
@@ -168,13 +172,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             data = str(binascii.b2a_hex(data))[2:-1]
             temp_val = int(data,16)
+            
+            print("old val %d" % self.old_temp_val)
 
-            if temp_val <= 99 and temp_val >= 0 :           #温度发送
+            if self.old_temp_val <= 99 and self.old_temp_val >= 0 :           #温度发送
                 self.lb_temp.setText(str(temp_val))
                 self.vS_temp.setValue(temp_val)
                 
-
-                if temp_val >= int(self.temp_threshold_val) :        #报警阈值
+                if self.old_temp_val >= int(self.temp_threshold_val) :        #报警阈值
                     #串口阻塞发送
                     #mTimer_ms(1500)
                     self.play_music()
@@ -195,6 +200,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     #     mTimer_ms(200)
                     #     cnt  = cnt + 1
             
+                self.old_temp_val = temp_val
 
 
 

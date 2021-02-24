@@ -6,49 +6,17 @@ import binascii
 from PyQt5.QtWidgets import QApplication, QMainWindow,QSlider
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtCore import QTimer,QThread
-#import Ui_untitled
+
 from Ui_untitled import Ui_MainWindow
-
-
-
-
-# class MyThread(QThread):
-#     def __init__(self,parent=None):
-#         super(MyThread,self).__init__(parent)
-#         self.run()
-
-#     def run(self):
-#         #while True:
-#         print("hello thread")
-#         time.sleep(2) 
-           
-
-
-    # sinOut = pyqtSignal(str)
-
-    # def __init__(self,parent=None):
-    #     super(MyThread,self).__init__(parent)
- 
-    #     self.identity = None
- 
-    # def setIdentity(self,text):
-    #     self.identity = text
- 
-    # def setVal(self,val):
-    #     self.times = int(val)
- 
-    #     ##执行线程的run方法
-    #     self.start()
- 
-    # def run(self):
-    #     while self.times > 0 and self.identity:
-    #         ##发射信号
-    #         self.sinOut.emit(self.identity+" "+str(self.times))
-    #         self.times -= 1
 
 def mTimer_ms(cnt) :
     time.sleep(cnt/1000) 
 
+
+#####################音乐数据#########################
+
+
+####################音调##############################
 music = [6,7,8,9,
         10,0,13,12,
         10,0,13,0,
@@ -79,7 +47,12 @@ music = [6,7,8,9,
         22 ###停止
 
         ]
+
+####################拍子##############################
 delay_time = [200,10,200]
+
+######################################################
+
 class MainWindow(QMainWindow, Ui_MainWindow):
     
     def __init__(self, parent=None):
@@ -88,17 +61,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         self.pB_connect.clicked.connect(self.display)
         self.pB_play.clicked.connect(self.play_music)
-        self.sB_Temp_threshold.valueChanged.connect(self.temp_threshold)
+        #self.sB_Temp_threshold.valueChanged.connect(self.temp_threshold)   #阈值关联槽函数
 
-        self.serial = serial.Serial()     #初始化串口
+        self.serial = serial.Serial()                                       #初始化串口
         self.lE_com.setText("COM2")
         self.cB_baud.setCurrentText("115200")
-        self.sB_Temp_threshold.setValue(40)
+        #self.sB_Temp_threshold.setValue(40)                                #初始化阈值为40度
 
 
-        self.cnt = 0                        #数据发送计数器        
-        self.connect_flag = False           #串口连接成功标志
-        self.temp_threshold_val = self.sB_Temp_threshold.value()   #温度报警阈值   
+        #self.cnt = 0                                                       #串口连接计数器        
+        self.connect_flag = False                                           #串口连接成功标志
+        #self.temp_threshold_val = self.sB_Temp_threshold.value()           #温度报警阈值读取   
 
         # 定时器接收数据
         self.timer = QTimer(self)
@@ -112,8 +85,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def display(self):
         if self.connect_flag == False :                             #建立连接                
-            self.label_1.setText("hello cnt:%d" %self.cnt)
-            self.cnt = self.cnt + 1
+            #self.label_1.setText("hello cnt:%d" %self.cnt)
+            #self.cnt = self.cnt + 1
             self.temp_flag = 0
 
             self.serial.baudrate = int(self.cB_baud.currentText())  #波特率 
@@ -148,15 +121,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         else    :
             QMessageBox.critical(self,"Port error","串口未打开")
 
-    def temp_threshold(self):           #温度报警阈值设置
-        self.temp_threshold_val = self.sB_Temp_threshold.value()
-        #print("当前值为：",self.temp_threshold_val)
-        print("temp threshold val[%d]" % self.temp_threshold_val)
+    # def temp_threshold(self):                                     #温度报警阈值设置
+    #     self.temp_threshold_val = self.sB_Temp_threshold.value()
+    #     #print("当前值为：",self.temp_threshold_val)
+    #     print("temp threshold val[%d]" % self.temp_threshold_val)
 
     # 接收数据
     def data_receive(self):
         try:
-            num = self.serial.inWaiting()   #监测接收字符 inWaitting返回接收字符串的长度值
+            num = self.serial.inWaiting()                           #监测接收字符 inWaitting返回接收字符串的长度值
             
         except:
             self.port_close()
@@ -167,39 +140,44 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             data = self.serial.read(num)
             num  = len(data)
 
-            data = str(binascii.b2a_hex(data))[2:-1]
+            data = str(binascii.b2a_hex(data))[2:-1]                #去除串口数据中的无用字符
             temp_val = int(data,16)
 
-            if temp_val <= 99 and temp_val >= 0 :           #温度发送
-                self.lb_temp.setText(str(temp_val))
-                self.vS_temp.setValue(temp_val)
+            if(temp_val == 0xff):                                   #温度报警
+                self.play_music()
+            else:
+                self.lb_temp.setText(str(temp_val))                 #刷新温度显示label UI
+                self.vS_temp.setValue(temp_val)                     #刷新温度显示进度条（模拟温度计）UI
+            # if temp_val <= 99 and temp_val >= 0 :                 #串口数据 温度在有效范围 进行数据处理
+            #     self.lb_temp.setText(str(temp_val))
+            #     self.vS_temp.setValue(temp_val)
                 
 
-                if temp_val >= int(self.temp_threshold_val) :        #报警阈值
-                    #串口阻塞发送
-                    #mTimer_ms(1500)
-                    self.temp_flag = self.temp_flag + 1
-                    if self.temp_flag == 2:
-                        self.temp_flag = 0
-                        self.lb_temp.setText(str(temp_val))
-                        self.vS_temp.setValue(temp_val)
-                        self.play_music()
-                        #str_time =  time.asctime( time.localtime(time.time()) ) + "\r\n"
-                        #self.serial.write(str_time.encode("gbk"))
-                        #self.serial.write(binascii.b2a_hex(0x11))
-                        #mTimer_ms(200)  #延时200ms
-                        #str_time =  time.asctime( time.localtime(time.time()) ) + "\r\n"
-                        #self.serial.write(str_time.encode("gbk"))
-                        #a = bytes.fromhex(music[1])
-                        #send_data = hex(music[1])
-                        #self.serial.write(bytes.fromhex(str(send_data)))
+            #     if temp_val >= int(self.temp_threshold_val) :        #报警阈值
+            #         #串口阻塞发送
+            #         #mTimer_ms(1500)
+            #         self.temp_flag = self.temp_flag + 1
+            #         if self.temp_flag == 2:
+            #             self.temp_flag = 0
+            #             self.lb_temp.setText(str(temp_val))
+            #             self.vS_temp.setValue(temp_val)
+            #             self.play_music()
+            #             #str_time =  time.asctime( time.localtime(time.time()) ) + "\r\n"
+            #             #self.serial.write(str_time.encode("gbk"))
+            #             #self.serial.write(binascii.b2a_hex(0x11))
+            #             #mTimer_ms(200)  #延时200ms
+            #             #str_time =  time.asctime( time.localtime(time.time()) ) + "\r\n"
+            #             #self.serial.write(str_time.encode("gbk"))
+            #             #a = bytes.fromhex(music[1])
+            #             #send_data = hex(music[1])
+            #             #self.serial.write(bytes.fromhex(str(send_data)))
                         
-                        # cnt = 0
-                        # while cnt < len(music):
-                        #     self.serial.write(bytes.fromhex("%.2x" % music[cnt]))
-                        #     #mTimer_ms(delay_time[cnt])
-                        #     mTimer_ms(200)
-                        #     cnt  = cnt + 1
+            #             # cnt = 0
+            #             # while cnt < len(music):
+            #             #     self.serial.write(bytes.fromhex("%.2x" % music[cnt]))
+            #             #     #mTimer_ms(delay_time[cnt])
+            #             #     mTimer_ms(200)
+            #             #     cnt  = cnt + 1
             
 
 

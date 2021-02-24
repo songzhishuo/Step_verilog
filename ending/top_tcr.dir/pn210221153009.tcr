@@ -1,0 +1,9 @@
+#Start recording tcl command: 2/21/2021 15:17:15
+#Project Location: D:/new porject/top-xu; Project name: top
+D:/new porject/topcorrect
+top
+#Start recording tcl command: 2/21/2021 15:30:09
+#Project Location: D:/new porject/topcorrect; Project name: top
+prj_project open "D:/new porject/top-xu/top.ldf"
+prj_project saveas -name "top" -dir "D:/new porject/topcorrect"
+#Stop recording: 2/21/2021 15:30:09

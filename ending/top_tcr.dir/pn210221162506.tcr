@@ -1,0 +1,36 @@
+#Start recording tcl command: 2/21/2021 15:30:17
+#Project Location: D:/new porject/top-xu; Project name: top
+D:/new porject/song/Step_verilog/5.DS18B20
+ds18b20
+#Start recording tcl command: 2/21/2021 16:25:05
+#Project Location: D:/new porject/song/Step_verilog/5.DS18B20; Project name: ds18b20
+prj_project open "D:/new porject/top-xu/top.ldf"
+prj_src add "D:/new porject/top-xu/music_player.v" "D:/new porject/top-xu/beep.v" "D:/new porject/top-xu/uart_recv.v"
+prj_run Export -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Export -impl impl1
+pgr_project open "D:/new porject/top-xu/impl1/impl1.xcf"
+pgr_program run
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Map -impl impl1 -task MapTrace
+prj_run Synthesis -impl impl1
+prj_run Export -impl impl1
+pgr_program run
+prj_run Export -impl impl1
+pgr_program run
+pgr_program run
+pgr_program run
+prj_run Export -impl impl1
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project save "D:/new porject/top-xu/impl1/impl1.xcf"
+prj_project save
+prj_project close
+prj_project open "D:/new porject/song/Step_verilog/5.DS18B20/ds18b20.ldf"
+#Stop recording: 2/21/2021 16:25:06

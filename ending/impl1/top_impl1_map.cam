@@ -1,0 +1,266 @@
+[ START MERGED ]
+n13515 u_DS18B20Z/one_wire_N_632
+n11735 warning_time_7__N_144
+m_music_play/n38730 m_music_play/cnt_run_1
+u_uart_recv/n38690 u_uart_recv/rx_flag
+u_uart_recv/n22347 u_uart_recv/uart_data_7__N_1456
+oled1/rst_n_in_N_1482 sys_rst_n_c
+u_uart_send/n22353 u_uart_send/uart_tx_busy
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+VCC_net
+m_beep/add_1816_1/S0
+m_beep/add_1816_1/CI
+m_beep/add_1816_19/CO
+m_beep/time_cnt_2904_add_4_1/S0
+m_beep/time_cnt_2904_add_4_1/CI
+m_beep/time_cnt_2904_add_4_19/S1
+m_beep/time_cnt_2904_add_4_19/CO
+key_3/cnt_2898_add_4_1/S0
+key_3/cnt_2898_add_4_1/CI
+key_3/cnt_2898_add_4_19/S1
+key_3/cnt_2898_add_4_19/CO
+add_15_1/S0
+add_15_1/CI
+oled1/divide_1Hz/cnt_p_2905_add_4_1/S0
+oled1/divide_1Hz/cnt_p_2905_add_4_1/CI
+oled1/divide_1Hz/cnt_p_2905_add_4_33/S1
+oled1/divide_1Hz/cnt_p_2905_add_4_33/CO
+oled1/divide_1Hz/add_24705_2/S1
+oled1/divide_1Hz/add_24705_2/S0
+oled1/divide_1Hz/add_24705_2/CI
+oled1/divide_1Hz/add_24705_4/S1
+oled1/divide_1Hz/add_24705_4/S0
+oled1/divide_1Hz/add_24705_6/S1
+oled1/divide_1Hz/add_24705_6/S0
+oled1/divide_1Hz/add_24705_8/S1
+oled1/divide_1Hz/add_24705_8/S0
+oled1/divide_1Hz/add_24705_10/S1
+oled1/divide_1Hz/add_24705_10/S0
+oled1/divide_1Hz/add_24705_12/S1
+oled1/divide_1Hz/add_24705_12/S0
+oled1/divide_1Hz/add_24705_14/S1
+oled1/divide_1Hz/add_24705_14/S0
+oled1/divide_1Hz/add_24705_16/S1
+oled1/divide_1Hz/add_24705_16/S0
+oled1/divide_1Hz/add_24705_18/S1
+oled1/divide_1Hz/add_24705_18/S0
+oled1/divide_1Hz/add_24705_20/S1
+oled1/divide_1Hz/add_24705_20/S0
+oled1/divide_1Hz/add_24705_22/S1
+oled1/divide_1Hz/add_24705_22/S0
+oled1/divide_1Hz/add_24705_24/S1
+oled1/divide_1Hz/add_24705_24/S0
+oled1/divide_1Hz/add_24705_cout/S1
+oled1/divide_1Hz/add_24705_cout/CO
+oled1/sub_2283_add_2_13/S1
+oled1/sub_2283_add_2_13/S0
+oled1/add_57_1/S0
+oled1/add_57_1/CI
+oled1/sub_2283_add_2_15/S1
+oled1/sub_2283_add_2_15/S0
+oled1/sub_2283_add_2_17/S0
+oled1/sub_2283_add_2_17/CO
+oled1/add_57_17/S1
+oled1/add_57_17/CO
+oled1/add_131_1/S0
+oled1/add_131_1/CI
+oled1/add_131_17/S1
+oled1/add_131_17/CO
+oled1/num_2894_add_4_1/S0
+oled1/num_2894_add_4_1/CI
+oled1/sub_2283_add_2_1/S1
+oled1/sub_2283_add_2_1/S0
+oled1/sub_2283_add_2_1/CI
+oled1/num_2894_add_4_9/S1
+oled1/num_2894_add_4_9/CO
+oled1/sub_2283_add_2_3/S1
+oled1/sub_2283_add_2_3/S0
+oled1/sub_2283_add_2_5/S1
+oled1/sub_2283_add_2_5/S0
+oled1/sub_2283_add_2_7/S1
+oled1/sub_2283_add_2_7/S0
+oled1/sub_2283_add_2_9/S1
+oled1/sub_2283_add_2_9/S0
+oled1/sub_2283_add_2_11/S1
+oled1/sub_2283_add_2_11/S0
+equal_2886_11/S1
+equal_2886_11/S0
+u_DS18B20Z/add_48_21/S1
+u_DS18B20Z/add_48_21/CO
+u_DS18B20Z/sub_2282_add_2_1/S1
+u_DS18B20Z/sub_2282_add_2_1/S0
+u_DS18B20Z/sub_2282_add_2_1/CI
+u_DS18B20Z/sub_2282_add_2_3/S1
+u_DS18B20Z/sub_2282_add_2_3/S0
+u_DS18B20Z/sub_2282_add_2_5/S1
+u_DS18B20Z/sub_2282_add_2_5/S0
+u_DS18B20Z/sub_2282_add_2_7/S1
+u_DS18B20Z/sub_2282_add_2_7/S0
+u_DS18B20Z/sub_2282_add_2_9/S1
+u_DS18B20Z/sub_2282_add_2_9/S0
+u_DS18B20Z/sub_2282_add_2_11/S1
+u_DS18B20Z/sub_2282_add_2_11/S0
+u_DS18B20Z/sub_2282_add_2_13/S1
+u_DS18B20Z/sub_2282_add_2_13/S0
+u_DS18B20Z/sub_2282_add_2_15/S1
+u_DS18B20Z/sub_2282_add_2_15/S0
+u_DS18B20Z/sub_2282_add_2_17/S1
+u_DS18B20Z/sub_2282_add_2_17/S0
+u_DS18B20Z/sub_2282_add_2_19/S1
+u_DS18B20Z/sub_2282_add_2_19/S0
+u_DS18B20Z/sub_2282_add_2_21/S0
+u_DS18B20Z/sub_2282_add_2_21/CO
+u_DS18B20Z/add_48_1/S0
+u_DS18B20Z/add_48_1/CI
+u_uart_send/clk_cnt_2901_add_4_1/S0
+u_uart_send/clk_cnt_2901_add_4_1/CI
+u_uart_send/clk_cnt_2901_add_4_17/S1
+u_uart_send/clk_cnt_2901_add_4_17/CO
+devide_1s/cnt_p_2895_add_4_33/S1
+devide_1s/cnt_p_2895_add_4_33/CO
+devide_1s/cnt_p_2895_add_4_1/S0
+devide_1s/cnt_p_2895_add_4_1/CI
+devide_1s/add_24704_2/S1
+devide_1s/add_24704_2/S0
+devide_1s/add_24704_2/CI
+devide_1s/add_24704_4/S1
+devide_1s/add_24704_4/S0
+devide_1s/add_24704_6/S1
+devide_1s/add_24704_6/S0
+devide_1s/add_24704_8/S1
+devide_1s/add_24704_8/S0
+devide_1s/add_24704_10/S1
+devide_1s/add_24704_10/S0
+devide_1s/add_24704_12/S1
+devide_1s/add_24704_12/S0
+devide_1s/add_24704_14/S1
+devide_1s/add_24704_14/S0
+devide_1s/add_24704_16/S1
+devide_1s/add_24704_16/S0
+devide_1s/add_24704_18/S1
+devide_1s/add_24704_18/S0
+devide_1s/add_24704_20/S1
+devide_1s/add_24704_20/S0
+devide_1s/add_24704_22/S1
+devide_1s/add_24704_22/S0
+devide_1s/add_24704_24/S1
+devide_1s/add_24704_24/S0
+devide_1s/add_24704_cout/S1
+devide_1s/add_24704_cout/CO
+u_uart_recv/clk_cnt_2903_add_4_1/S0
+u_uart_recv/clk_cnt_2903_add_4_1/CI
+u_uart_recv/clk_cnt_2903_add_4_17/S1
+u_uart_recv/clk_cnt_2903_add_4_17/CO
+equal_2886_13/S1
+equal_2886_13/S0
+m_music_play/sub_2284_add_2_10/S1
+m_music_play/sub_2284_add_2_10/S0
+m_music_play/sub_2284_add_2_12/S1
+m_music_play/sub_2284_add_2_12/S0
+m_music_play/sub_2284_add_2_14/S0
+m_music_play/sub_2284_add_2_14/CO
+m_music_play/add_114_1/S0
+m_music_play/add_114_1/CI
+m_music_play/add_114_9/S1
+m_music_play/add_114_9/CO
+m_music_play/add_132_1/S0
+m_music_play/add_132_1/CI
+m_music_play/add_132_9/CO
+m_music_play/add_147_1/S0
+m_music_play/add_147_1/CI
+m_music_play/add_147_17/S1
+m_music_play/add_147_17/CO
+m_music_play/add_150_1/S0
+m_music_play/add_150_1/CI
+m_music_play/add_150_17/S1
+m_music_play/add_150_17/CO
+m_music_play/sub_2284_add_2_2/S1
+m_music_play/sub_2284_add_2_2/S0
+m_music_play/sub_2284_add_2_2/CI
+m_music_play/sub_2284_add_2_4/S1
+m_music_play/sub_2284_add_2_4/S0
+m_music_play/sub_2284_add_2_6/S1
+m_music_play/sub_2284_add_2_6/S0
+m_music_play/sub_2284_add_2_8/S1
+m_music_play/sub_2284_add_2_8/S0
+equal_2886_15/S1
+equal_2886_15/S0
+key_1/cnt_2896_add_4_1/S0
+key_1/cnt_2896_add_4_1/CI
+key_1/cnt_2896_add_4_19/S1
+key_1/cnt_2896_add_4_19/CO
+key_2/cnt_2897_add_4_1/S0
+key_2/cnt_2897_add_4_1/CI
+key_2/cnt_2897_add_4_19/S1
+key_2/cnt_2897_add_4_19/CO
+add_18_1/S0
+add_18_1/CI
+equal_2886_16/S0
+equal_2886_16/CO
+equal_2886_0/S1
+equal_2886_0/S0
+equal_2886_0/CI
+add_1805_1/S1
+add_1805_1/S0
+add_1805_1/CI
+add_118_1/S0
+add_118_1/CI
+add_1805_9/CO
+add_118_9/S1
+add_118_9/CO
+sub_50_add_2_1/S0
+sub_50_add_2_1/CI
+sub_50_add_2_9/S1
+sub_50_add_2_9/CO
+sub_47_add_2_1/S0
+sub_47_add_2_1/CI
+add_132_1/S0
+add_132_1/CI
+sub_47_add_2_9/S1
+sub_47_add_2_9/CO
+add_1814_1/S1
+add_1814_1/S0
+add_1814_1/CI
+add_1814_9/CO
+add_1796_1/S1
+add_1796_1/S0
+add_1796_1/CI
+add_132_9/S1
+add_132_9/CO
+add_133_1/S0
+add_133_1/CI
+add_1796_9/CO
+add_18_9/S1
+add_18_9/CO
+add_133_9/S1
+add_133_9/CO
+add_15_9/S1
+add_15_9/CO
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Tue Feb 23 21:58:57 2021
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF ;
+LOCATE COMP "sys_rst_n" SITE "N14" ;
+LOCATE COMP "sys_clk" SITE "C1" ;
+LOCATE COMP "led" SITE "P9" ;
+LOCATE COMP "oled_mosi" SITE "F12" ;
+LOCATE COMP "oled_sck" SITE "E12" ;
+LOCATE COMP "oled_dc" SITE "F13" ;
+LOCATE COMP "oled_cs" SITE "F14" ;
+LOCATE COMP "oled_res" SITE "G12" ;
+LOCATE COMP "uart_txd" SITE "B8" ;
+LOCATE COMP "beep" SITE "P8" ;
+LOCATE COMP "one_wire" SITE "N7" ;
+LOCATE COMP "key3" SITE "M14" ;
+LOCATE COMP "key2" SITE "M13" ;
+LOCATE COMP "key1" SITE "L14" ;
+LOCATE COMP "uart_rxd" SITE "C8" ;
+LOCATE COMP "sw2" SITE "M8" ;
+LOCATE COMP "sw1" SITE "M7" ;
+FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

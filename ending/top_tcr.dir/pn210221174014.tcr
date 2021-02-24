@@ -1,0 +1,21 @@
+#Start recording tcl command: 2/21/2021 17:20:09
+#Project Location: D:/new porject/top-xu; Project name: top
+D:/new porject/top-1-2-3
+top
+#Start recording tcl command: 2/21/2021 17:40:14
+#Project Location: D:/new porject/top-1-2-3; Project name: top
+prj_project open "D:/new porject/top-xu/top.ldf"
+prj_src add "D:/new porject/top-xu/uart.v"
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+pgr_project open "D:/new porject/top-xu/impl1/impl1.xcf"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+pgr_program run
+pgr_project save "D:/new porject/top-xu/impl1/impl1.xcf"
+prj_project saveas -name "top" -dir "D:/new porject/top-1-2-3"
+#Stop recording: 2/21/2021 17:40:14

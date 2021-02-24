@@ -1,0 +1,187 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat Feb 20 16:14:00 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     KEY
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets sys_clk_c]
+            235 items scored, 33 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.229ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             cnt_36__i1  (from sys_clk_c +)
+   Destination:    FD1P3AY    SP             key_sec_29  (to sys_clk_c +)
+
+   Delay:                   5.944ns  (32.4% logic, 67.6% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.944ns data_path cnt_36__i1 to key_sec_29 violates
+      5.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 4.715ns) by 1.229ns
+
+ Path Details: cnt_36__i1 to key_sec_29
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              cnt_36__i1 (from sys_clk_c)
+Route         2   e 1.198                                  cnt[1]
+LUT4        ---     0.493              A to Z              i10_4_lut
+Route         1   e 0.941                                  n28
+LUT4        ---     0.493              C to Z              i16_4_lut
+Route         1   e 0.941                                  n34
+LUT4        ---     0.493              B to Z              i17_4_lut
+Route         1   e 0.941                                  sys_clk_c_enable_1
+                  --------
+                    5.944  (32.4% logic, 67.6% route), 4 logic levels.
+
+
+Error:  The following path violates requirements by 1.229ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             cnt_36__i4  (from sys_clk_c +)
+   Destination:    FD1P3AY    SP             key_sec_29  (to sys_clk_c +)
+
+   Delay:                   5.944ns  (32.4% logic, 67.6% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.944ns data_path cnt_36__i4 to key_sec_29 violates
+      5.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 4.715ns) by 1.229ns
+
+ Path Details: cnt_36__i4 to key_sec_29
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              cnt_36__i4 (from sys_clk_c)
+Route         2   e 1.198                                  cnt[4]
+LUT4        ---     0.493              D to Z              i13_4_lut
+Route         1   e 0.941                                  n31
+LUT4        ---     0.493              A to Z              i16_4_lut
+Route         1   e 0.941                                  n34
+LUT4        ---     0.493              B to Z              i17_4_lut
+Route         1   e 0.941                                  sys_clk_c_enable_1
+                  --------
+                    5.944  (32.4% logic, 67.6% route), 4 logic levels.
+
+
+Error:  The following path violates requirements by 1.229ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             cnt_36__i6  (from sys_clk_c +)
+   Destination:    FD1P3AY    SP             key_sec_29  (to sys_clk_c +)
+
+   Delay:                   5.944ns  (32.4% logic, 67.6% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.944ns data_path cnt_36__i6 to key_sec_29 violates
+      5.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 4.715ns) by 1.229ns
+
+ Path Details: cnt_36__i6 to key_sec_29
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              cnt_36__i6 (from sys_clk_c)
+Route         2   e 1.198                                  cnt[6]
+LUT4        ---     0.493              B to Z              i10_4_lut
+Route         1   e 0.941                                  n28
+LUT4        ---     0.493              C to Z              i16_4_lut
+Route         1   e 0.941                                  n34
+LUT4        ---     0.493              B to Z              i17_4_lut
+Route         1   e 0.941                                  sys_clk_c_enable_1
+                  --------
+                    5.944  (32.4% logic, 67.6% route), 4 logic levels.
+
+Warning: 6.229 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets sys_clk_c]               |     5.000 ns|     6.229 ns|     4 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n187                                    |       1|      25|     75.76%
+                                        |        |        |
+n188                                    |       1|      25|     75.76%
+                                        |        |        |
+n189                                    |       1|      25|     75.76%
+                                        |        |        |
+n186                                    |       1|      23|     69.70%
+                                        |        |        |
+n190                                    |       1|      23|     69.70%
+                                        |        |        |
+n185                                    |       1|      17|     51.52%
+                                        |        |        |
+n191                                    |       1|      17|     51.52%
+                                        |        |        |
+n34                                     |       1|       8|     24.24%
+                                        |        |        |
+sys_clk_c_enable_1                      |       1|       8|     24.24%
+                                        |        |        |
+cnt[0]                                  |       2|       7|     21.21%
+                                        |        |        |
+n78                                     |       1|       7|     21.21%
+                                        |        |        |
+n184                                    |       1|       7|     21.21%
+                                        |        |        |
+n192                                    |       1|       7|     21.21%
+                                        |        |        |
+cnt[1]                                  |       2|       6|     18.18%
+                                        |        |        |
+cnt[2]                                  |       2|       5|     15.15%
+                                        |        |        |
+n79                                     |       1|       5|     15.15%
+                                        |        |        |
+n80                                     |       1|       5|     15.15%
+                                        |        |        |
+cnt[4]                                  |       2|       4|     12.12%
+                                        |        |        |
+n28                                     |       1|       4|     12.12%
+                                        |        |        |
+n31                                     |       1|       4|     12.12%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 33  Score: 15020
+
+Constraints cover  235 paths, 57 nets, and 114 connections (95.0% coverage)
+
+
+Peak memory: 57868288 bytes, TRCE: 770048 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

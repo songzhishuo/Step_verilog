@@ -1,0 +1,1119 @@
+synthesis:  version Diamond (64-bit) 3.8.0.115.3
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Feb 23 21:58:36 2021
+
+
+Command Line:  synthesis -f top_impl1_lattice.synproj -gui -msgset C:/Users/Argon/Desktop/Verilog/ending/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+Optimization goal = Balanced
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/Users/Argon/Desktop/Verilog/ending (searchpath added)
+-p C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data (searchpath added)
+-p C:/Users/Argon/Desktop/Verilog/ending/impl1 (searchpath added)
+-p C:/Users/Argon/Desktop/Verilog/ending (searchpath added)
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/top.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/clock.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/oled.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/bcd.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/key.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/music_player.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/beep.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/uart_recv.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/ds18b20.v
+Verilog design file = C:/Users/Argon/Desktop/Verilog/ending/uart.v
+NGD file = top_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.8_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/top.v. VERI-1482
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/top.v(343): identifier uart_en is used before its declaration. VERI-1875
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/top.v(355): identifier uart_en is used before its declaration. VERI-1875
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/top.v(356): identifier uart_send_data is used before its declaration. VERI-1875
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/top.v(359): identifier uart_en is used before its declaration. VERI-1875
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/clock.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/oled.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/bcd.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/key.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/music_player.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/beep.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/uart_recv.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/ds18b20.v. VERI-1482
+Analyzing Verilog file c:/users/argon/desktop/verilog/ending/uart.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.8_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Top module name (Verilog): top
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/top.v(1): compiling module top. VERI-1018
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/clock.v(1): compiling module divide(WIDTH=32,N=12000000). VERI-1018
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/key.v(1): compiling module KEY. VERI-1018
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/bcd.v(1): compiling module BCD. VERI-1018
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/bcd.v(24): expression size 32 truncated to fit in target size 4. VERI-1209
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/bcd.v(22): expression size 32 truncated to fit in target size 4. VERI-1209
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/ds18b20.v(18): compiling module DS18B20Z. VERI-1018
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/uart.v(1): compiling module uart_send. VERI-1018
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/oled.v(1): compiling module OLED12832. VERI-1018
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/uart_recv.v(23): compiling module uart_recv(CLK_FREQ=12000000,UART_BPS=115200). VERI-1018
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/beep.v(18): compiling module Beeper. VERI-1018
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/top.v(473): actual bit length 8 differs from formal bit length 5 for port tone. VERI-1330
+INFO - synthesis: c:/users/argon/desktop/verilog/ending/music_player.v(9): compiling module music_play. VERI-1018
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/top.v(480): net clk does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/top.v(481): net rst_n does not have a driver. VDB-1002
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.8_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = top.
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/oled.v(40): Register cmd_0_0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/oled.v(40): Register cmd_0_1 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/oled.v(41): Register mem_0_0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/oled.v(41): Register mem_0_1 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/oled.v(41): net \i393/mem_16_0 does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/music_player.v(35): net \i601/note_96_0 does not have a driver. VDB-1002
+######## Missing driver on net clk. Patching with GND.
+######## Missing driver on net rst_n. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_16_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_17_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_18_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_19_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_20_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_21_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_22_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_23_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_24_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_25_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_26_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_27_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_28_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_29_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_30_39. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_0. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_1. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_2. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_3. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_4. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_5. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_6. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_7. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_8. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_9. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_10. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_11. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_12. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_13. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_14. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_15. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_16. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_17. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_18. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_19. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_20. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_21. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_22. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_23. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_24. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_25. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_26. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_27. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_28. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_29. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_30. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_31. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_32. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_33. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_34. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_35. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_36. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_37. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_38. Patching with GND.
+######## Missing driver on net \oled1/\i393/mem_31_39. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_96_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_96_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_96_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_96_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_96_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_96_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_96_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_96_7. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_97_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_97_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_97_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_97_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_97_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_97_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_97_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_97_7. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_98_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_98_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_98_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_98_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_98_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_98_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_98_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_98_7. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_99_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_99_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_99_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_99_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_99_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_99_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_99_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_99_7. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_100_0. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_100_1. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_100_2. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_100_3. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_100_4. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_100_5. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_100_6. Patching with GND.
+######## Missing driver on net \m_music_play/\i601/note_100_7. Patching with GND.
+WARNING - synthesis: Bit 0 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: Bit 31 of Register \divide_1kHz/cnt_p is stuck at Zero
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/music_player.v(35): Register \m_music_play/\i601/note_0_0 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/music_player.v(35): Register \m_music_play/\i601/note_0_1 is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register '\u_uart_recv/rx_cnt' with one-hot encoding
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
+
+INFO - synthesis: Extracted state machine for register '\u_uart_send/tx_cnt' with one-hot encoding
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
+
+
+
+
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/oled.v(192): Register \oled1/x_pl_i0_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/top.v(364): Register Temp_H_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/uart.v(66): Register \u_uart_send/tx_data_i7 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/ds18b20.v(263): Register \u_DS18B20Z/data_wr_i0_i2 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/music_player.v(324): Register \m_music_play/music_delay_i0_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/music_player.v(324): Register \m_music_play/music_delay_i0_i7 is stuck at One. VDB-5014
+WARNING - synthesis: c:/users/argon/desktop/verilog/ending/ds18b20.v(263): Register \u_DS18B20Z/data_wr_i0_i0 is stuck at Zero. VDB-5013
+GSR instance connected to net sys_rst_n_c.
+Duplicate register/latch removal. \u_DS18B20Z/data_wr_i0_i7 is a one-to-one match with \u_DS18B20Z/data_wr_i0_i3.
+Duplicate register/latch removal. \u_DS18B20Z/data_wr_i0_i5 is a one-to-one match with \u_DS18B20Z/data_wr_i0_i4.
+Duplicate register/latch removal. \u_DS18B20Z/data_wr_i0_i1 is a one-to-one match with \u_DS18B20Z/data_wr_i0_i5.
+Duplicate register/latch removal. \u_DS18B20Z/num_delay_i0_i19 is a one-to-one match with \u_DS18B20Z/num_delay_i0_i17.
+Duplicate register/latch removal. \u_DS18B20Z/num_delay_i0_i16 is a one-to-one match with \u_DS18B20Z/num_delay_i0_i19.
+Duplicate register/latch removal. \u_DS18B20Z/num_delay_i0_i14 is a one-to-one match with \u_DS18B20Z/num_delay_i0_i16.
+Duplicate register/latch removal. \u_DS18B20Z/num_delay_i0_i13 is a one-to-one match with \u_DS18B20Z/num_delay_i0_i14.
+Duplicate register/latch removal. \u_DS18B20Z/num_delay_i0_i12 is a one-to-one match with \u_DS18B20Z/num_delay_i0_i13.
+Duplicate register/latch removal. \u_DS18B20Z/num_delay_i0_i8 is a one-to-one match with \u_DS18B20Z/num_delay_i0_i7.
+Duplicate register/latch removal. \oled1/y_p_i0_i7 is a one-to-one match with \oled1/y_p_i0_i5.
+Duplicate register/latch removal. \oled1/y_p_i0_i4 is a one-to-one match with \oled1/y_p_i0_i7.
+Duplicate register/latch removal. \oled1/char_i0_i8 is a one-to-one match with \oled1/char_i0_i10.
+Duplicate register/latch removal. \oled1/char_i0_i11 is a one-to-one match with \oled1/char_i0_i26.
+Duplicate register/latch removal. \oled1/char_i0_i14 is a one-to-one match with \oled1/char_i0_i8.
+Duplicate register/latch removal. \oled1/char_i0_i16 is a one-to-one match with \oled1/char_i0_i14.
+Duplicate register/latch removal. \oled1/char_i0_i18 is a one-to-one match with \oled1/char_i0_i16.
+Duplicate register/latch removal. \oled1/char_i0_i19 is a one-to-one match with \oled1/char_i0_i24.
+Duplicate register/latch removal. \oled1/char_i0_i22 is a one-to-one match with \oled1/char_i0_i18.
+Duplicate register/latch removal. \oled1/char_i0_i27 is a one-to-one match with \oled1/char_i0_i19.
+Duplicate register/latch removal. \oled1/char_i0_i28 is a one-to-one match with \oled1/char_i0_i11.
+Duplicate register/latch removal. \oled1/char_i0_i30 is a one-to-one match with \oled1/char_i0_i22.
+Duplicate register/latch removal. \oled1/char_i0_i34 is a one-to-one match with \oled1/char_i0_i27.
+Duplicate register/latch removal. \oled1/char_i0_i36 is a one-to-one match with \oled1/char_i0_i34.
+Duplicate register/latch removal. \oled1/char_i0_i38 is a one-to-one match with \oled1/char_i0_i36.
+Duplicate register/latch removal. \u_DS18B20Z/data_wr_buffer_i0_i7 is a one-to-one match with \u_DS18B20Z/data_wr_buffer_i0_i3.
+Duplicate register/latch removal. \u_DS18B20Z/data_wr_buffer_i0_i5 is a one-to-one match with \u_DS18B20Z/data_wr_buffer_i0_i1.
+Duplicate register/latch removal. \u_DS18B20Z/data_wr_buffer_i0_i4 is a one-to-one match with \u_DS18B20Z/data_wr_buffer_i0_i5.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.8_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file top_impl1.ngd.
+
+################### Begin Area Report (top)######################
+Number of register bits => 605 of 4635 (13 % )
+BB => 1
+CCU2D => 272
+FD1P3AX => 121
+FD1P3AY => 9
+FD1P3IX => 203
+FD1P3JX => 3
+FD1S3AX => 77
+FD1S3AY => 12
+FD1S3IX => 180
+GSR => 1
+IB => 8
+L6MUX21 => 7
+LUT4 => 1298
+OB => 8
+PFUMX => 123
+ROM128X1A => 39
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : sys_clk_c, loads : 568
+  Net : u_DS18B20Z/clk_1mhz, loads : 18
+  Net : oled1/divide_1Hz/clk_in_1Hz, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 84
+Top 10 highest fanout Clock Enables:
+  Net : m_music_play/sys_clk_c_enable_100, loads : 32
+  Net : u_DS18B20Z/sys_clk_c_enable_150, loads : 20
+  Net : oled1/sys_clk_c_enable_303, loads : 17
+  Net : m_music_play/sys_clk_c_enable_234, loads : 16
+  Net : u_uart_recv/sys_clk_c_enable_306, loads : 16
+  Net : u_uart_send/sys_clk_c_enable_308, loads : 16
+  Net : oled1/sys_clk_c_enable_279, loads : 16
+  Net : led_N_184, loads : 10
+  Net : m_music_play/sys_clk_c_enable_138, loads : 9
+  Net : oled1/sys_clk_c_enable_305, loads : 9
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : oled1/state_2, loads : 79
+  Net : oled1/state_0, loads : 69
+  Net : u_DS18B20Z/state_0, loads : 56
+  Net : u_DS18B20Z/state_back_2_N_482_2, loads : 49
+  Net : oled1/state_3, loads : 49
+  Net : oled1/cnt_main_0, loads : 45
+  Net : oled1/cnt_main_2, loads : 42
+  Net : oled1/cnt_init_0, loads : 42
+  Net : u_DS18B20Z/state_1, loads : 41
+  Net : sw1_c, loads : 39
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets \oled1/clk_in_1Hz]       |  200.000 MHz|  291.036 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets \u_DS18B20Z/clk_1mhz]    |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_1s]                  |  200.000 MHz|  103.252 MHz|     9 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets sys_clk_c]               |  200.000 MHz|   47.474 MHz|    15 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 112.777  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 17.563  secs
+--------------------------------------------------------------

@@ -1,0 +1,172 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    1083.00        100.0
+                                  LUT4	    1610.00        100.0
+                                 IOBUF	         17        100.0
+                                PFUREG	        605        100.0
+                                RIPPLE	        272        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             uart_send	          1         2.4
+uart_recv(CLK_FREQ=12000000,UART_BPS=115200)	          1         2.8
+                            music_play	          1         8.4
+        divide(WIDTH=32,N=12000000)_U2	          1         3.2
+                                KEY_U0	          1         1.4
+                                KEY_U1	          1         1.5
+                                   KEY	          1         1.3
+                              DS18B20Z	          1        12.4
+                                BCD_U5	          1         1.3
+                                Beeper	          1         3.4
+                                BCD_U7	          1         0.9
+                                BCD_U6	          1         1.3
+                                BCD_U3	          1         1.2
+                                BCD_U4	          1         0.8
+                                   BCD	          1         1.2
+                             OLED12832	          1        29.2
+---------------------------------------------------
+Report for cell BCD_U5
+   Instance path: top/bcd_hour_warning
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      14.50         1.3
+                                  LUT4	      29.00         1.8
+---------------------------------------------------
+Report for cell KEY_U0
+   Instance path: top/key_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.00         1.4
+                                  LUT4	      11.00         0.7
+                                PFUREG	         22         3.6
+                                RIPPLE	         10         3.7
+---------------------------------------------------
+Report for cell KEY_U1
+   Instance path: top/key_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      16.17         1.5
+                                  LUT4	      11.00         0.7
+                                PFUREG	         22         3.6
+                                RIPPLE	         10         3.7
+---------------------------------------------------
+Report for cell music_play
+   Instance path: top/m_music_play
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      90.83         8.4
+                                  LUT4	     101.00         6.3
+                                PFUREG	         61        10.1
+                                RIPPLE	         35        12.9
+---------------------------------------------------
+Report for cell uart_recv(CLK_FREQ=12000000,UART_BPS=115200)
+   Instance path: top/u_uart_recv
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      30.25         2.8
+                                  LUT4	      38.00         2.4
+                                PFUREG	         52         8.6
+                                RIPPLE	          9         3.3
+---------------------------------------------------
+Report for cell BCD_U3
+   Instance path: top/bcd_min_warning
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      12.58         1.2
+                                  LUT4	      25.67         1.6
+---------------------------------------------------
+Report for cell BCD_U4
+   Instance path: top/bcd_min
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       8.83         0.8
+                                  LUT4	      17.67         1.1
+---------------------------------------------------
+Report for cell divide(WIDTH=32,N=12000000)_U2
+   Instance path: top/devide_1s
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      35.00         3.2
+                                  LUT4	      12.00         0.7
+                                PFUREG	         33         5.5
+                                RIPPLE	         30        11.0
+---------------------------------------------------
+Report for cell uart_send
+   Instance path: top/u_uart_send
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      25.83         2.4
+                                  LUT4	      34.00         2.1
+                                PFUREG	         43         7.1
+                                RIPPLE	          9         3.3
+---------------------------------------------------
+Report for cell DS18B20Z
+   Instance path: top/u_DS18B20Z
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     134.08        12.4
+                                  LUT4	     214.00        13.3
+                                PFUREG	         87        14.4
+                                RIPPLE	         22         8.1
+---------------------------------------------------
+Report for cell OLED12832
+   Instance path: top/oled1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     316.75        29.2
+                                  LUT4	     512.00        31.8
+                                PFUREG	        151        25.0
+                                RIPPLE	         62        22.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+           divide(WIDTH=32,N=12000000)	          1         3.2
+---------------------------------------------------
+Report for cell divide(WIDTH=32,N=12000000)
+   Instance path: top/oled1/divide_1Hz
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      35.00         3.2
+                                  LUT4	      12.00         0.7
+                                PFUREG	         33         5.5
+                                RIPPLE	         30        11.0
+---------------------------------------------------
+Report for cell BCD_U6
+   Instance path: top/bcd_hour
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      13.75         1.3
+                                  LUT4	      28.00         1.7
+---------------------------------------------------
+Report for cell KEY
+   Instance path: top/key_3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      14.50         1.3
+                                  LUT4	       9.00         0.6
+                                PFUREG	         22         3.6
+                                RIPPLE	         10         3.7
+---------------------------------------------------
+Report for cell BCD
+   Instance path: top/bcd_sec
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      13.17         1.2
+                                  LUT4	      26.33         1.6
+---------------------------------------------------
+Report for cell Beeper
+   Instance path: top/m_beep
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.08         3.4
+                                  LUT4	      39.00         2.4
+                                PFUREG	         19         3.1
+                                RIPPLE	         20         7.4
+---------------------------------------------------
+Report for cell BCD_U7
+   Instance path: top/bcd_T
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      10.08         0.9
+                                  LUT4	      21.00         1.3

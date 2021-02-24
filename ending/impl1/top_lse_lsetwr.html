@@ -1,0 +1,535 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Tue Feb 23 21:58:53 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets \oled1/clk_in_1Hz]
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 1.564ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \oled1/flash_bit_319  (from \oled1/clk_in_1Hz +)
+   Destination:    FD1S3IX    D              \oled1/flash_bit_319  (to \oled1/clk_in_1Hz +)
+
+   Delay:                   3.276ns  (28.6% logic, 71.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.276ns data_path \oled1/flash_bit_319 to \oled1/flash_bit_319 meets
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 1.564ns
+
+ Path Details: \oled1/flash_bit_319 to \oled1/flash_bit_319
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \oled1/flash_bit_319 (from \oled1/clk_in_1Hz)
+Route         4   e 1.398                                  \oled1/flash_bit
+LUT4        ---     0.493              A to Z              \oled1/flash_bit_I_0_1_lut
+Route         1   e 0.941                                  \oled1/flash_bit_N_1389
+                  --------
+                    3.276  (28.6% logic, 71.4% route), 2 logic levels.
+
+Report: 3.436 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets \u_DS18B20Z/clk_1mhz]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets clk_1s]
+            675 items scored, 600 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 4.685ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             sec_i2  (from clk_1s +)
+   Destination:    FD1S3AX    D              min_i7  (to clk_1s +)
+
+   Delay:                   9.525ns  (40.1% logic, 59.9% route), 9 logic levels.
+
+ Constraint Details:
+
+      9.525ns data_path sec_i2 to min_i7 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 4.685ns
+
+ Path Details: sec_i2 to min_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              sec_i2 (from clk_1s)
+Route        10   e 1.662                                  sec[2]
+LUT4        ---     0.493              B to Z              i3450_3_lut
+Route         1   e 0.941                                  n6_adj_1863
+LUT4        ---     0.493              A to Z              i3_4_lut_adj_325
+Route         2   e 1.141                                  n19982
+A1_TO_FCO   ---     0.827           C[2] to COUT           add_132_1
+Route         1   e 0.020                                  n33447
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_132_3
+Route         1   e 0.020                                  n33448
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_132_5
+Route         1   e 0.020                                  n33449
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_132_7
+Route         1   e 0.020                                  n33450
+FCI_TO_F    ---     0.598            CIN to S[2]           add_132_9
+Route         1   e 0.941                                  n742
+LUT4        ---     0.493              D to Z              i18490_4_lut
+Route         1   e 0.941                                  min_7__N_11[7]
+                  --------
+                    9.525  (40.1% logic, 59.9% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 4.582ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             sec_i1  (from clk_1s +)
+   Destination:    FD1S3AX    D              min_i7  (to clk_1s +)
+
+   Delay:                   9.422ns  (40.5% logic, 59.5% route), 9 logic levels.
+
+ Constraint Details:
+
+      9.422ns data_path sec_i1 to min_i7 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 4.582ns
+
+ Path Details: sec_i1 to min_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              sec_i1 (from clk_1s)
+Route         7   e 1.559                                  sec[1]
+LUT4        ---     0.493              C to Z              i3450_3_lut
+Route         1   e 0.941                                  n6_adj_1863
+LUT4        ---     0.493              A to Z              i3_4_lut_adj_325
+Route         2   e 1.141                                  n19982
+A1_TO_FCO   ---     0.827           C[2] to COUT           add_132_1
+Route         1   e 0.020                                  n33447
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_132_3
+Route         1   e 0.020                                  n33448
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_132_5
+Route         1   e 0.020                                  n33449
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_132_7
+Route         1   e 0.020                                  n33450
+FCI_TO_F    ---     0.598            CIN to S[2]           add_132_9
+Route         1   e 0.941                                  n742
+LUT4        ---     0.493              D to Z              i18490_4_lut
+Route         1   e 0.941                                  min_7__N_11[7]
+                  --------
+                    9.422  (40.5% logic, 59.5% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 4.508ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             sec_i2  (from clk_1s +)
+   Destination:    FD1S3AX    D              min_i5  (to clk_1s +)
+
+   Delay:                   9.348ns  (39.2% logic, 60.8% route), 8 logic levels.
+
+ Constraint Details:
+
+      9.348ns data_path sec_i2 to min_i5 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 4.508ns
+
+ Path Details: sec_i2 to min_i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              sec_i2 (from clk_1s)
+Route        10   e 1.662                                  sec[2]
+LUT4        ---     0.493              B to Z              i3450_3_lut
+Route         1   e 0.941                                  n6_adj_1863
+LUT4        ---     0.493              A to Z              i3_4_lut_adj_325
+Route         2   e 1.141                                  n19982
+A1_TO_FCO   ---     0.827           C[2] to COUT           add_132_1
+Route         1   e 0.020                                  n33447
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_132_3
+Route         1   e 0.020                                  n33448
+FCI_TO_FCO  ---     0.157            CIN to COUT           add_132_5
+Route         1   e 0.020                                  n33449
+FCI_TO_F    ---     0.598            CIN to S[2]           add_132_7
+Route         1   e 0.941                                  n744
+LUT4        ---     0.493              D to Z              i18493_4_lut
+Route         1   e 0.941                                  min_7__N_11[5]
+                  --------
+                    9.348  (39.2% logic, 60.8% route), 8 logic levels.
+
+Warning: 9.685 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets sys_clk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 16.064ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             min_warning__i7  (from sys_clk_c +)
+   Destination:    FD1P3IX    D              \oled1/char_i0_i3  (to sys_clk_c +)
+
+   Delay:                  20.904ns  (31.4% logic, 68.6% route), 15 logic levels.
+
+ Constraint Details:
+
+     20.904ns data_path min_warning__i7 to \oled1/char_i0_i3 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 16.064ns
+
+ Path Details: min_warning__i7 to \oled1/char_i0_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              min_warning__i7 (from sys_clk_c)
+Route        10   e 1.662                                  min_warning[7]
+LUT4        ---     0.493              C to Z              \bcd_min_warning/i3656_3_lut_4_lut_3_lut
+Route         9   e 1.574                                  \bcd_min_warning/hundres_1__N_305[1]
+LUT4        ---     0.493              C to Z              \bcd_min_warning/i3307_3_lut_rep_631
+Route         2   e 1.141                                  \bcd_min_warning/n38536
+LUT4        ---     0.493              B to Z              \bcd_min_warning/i4207_2_lut_rep_587_3_lut
+Route         3   e 1.258                                  \bcd_min_warning/n38492
+LUT4        ---     0.493              D to Z              \bcd_min_warning/i3461_3_lut_rep_576_4_lut
+Route         1   e 0.941                                  \bcd_min_warning/n38481
+LUT4        ---     0.493              D to Z              \bcd_min_warning/i4202_3_lut_4_lut
+Route         4   e 1.340                                  \bcd_min_warning/hundres_1__N_307[1]
+LUT4        ---     0.493              C to Z              \bcd_min_warning/i4055_3_lut_4_lut_3_lut_4_lut
+Route         2   e 1.141                                  hundres_0__N_316[3]_adj_1861
+LUT4        ---     0.493              A to Z              \oled1/hundres_0__N_316[3]_bdd_4_lut_28313
+Route         1   e 0.020                                  \oled1/n37667
+MUXL5       ---     0.233           ALUT to Z              \oled1/i28314
+Route         1   e 0.941                                  \oled1/n37669
+LUT4        ---     0.493              B to Z              \oled1/mux_3386_i1_4_lut
+Route         6   e 1.457                                  \oled1/n9943
+LUT4        ---     0.493              A to Z              \oled1/i12397_3_lut
+Route         1   e 0.941                                  \oled1/n21105
+LUT4        ---     0.493              B to Z              \oled1/i4139_4_lut
+Route         1   e 0.020                                  n11652
+MUXL5       ---     0.233           ALUT to Z              mux_3160_i4
+Route         1   e 0.020                                  n9269
+MUXL5       ---     0.233             D1 to Z              \oled1/mux_2475_i4
+Route         1   e 0.941                                  \oled1/n9393
+LUT4        ---     0.493              C to Z              \oled1/mux_2488_i4_3_lut_4_lut
+Route         1   e 0.941                                  \oled1/char_167__N_1072[3]
+                  --------
+                   20.904  (31.4% logic, 68.6% route), 15 logic levels.
+
+
+Error:  The following path violates requirements by 16.034ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             min_warning__i5  (from sys_clk_c +)
+   Destination:    FD1P3IX    D              \oled1/char_i0_i3  (to sys_clk_c +)
+
+   Delay:                  20.874ns  (31.5% logic, 68.5% route), 15 logic levels.
+
+ Constraint Details:
+
+     20.874ns data_path min_warning__i5 to \oled1/char_i0_i3 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 16.034ns
+
+ Path Details: min_warning__i5 to \oled1/char_i0_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              min_warning__i5 (from sys_clk_c)
+Route         9   e 1.632                                  min_warning[5]
+LUT4        ---     0.493              A to Z              \bcd_min_warning/i3656_3_lut_4_lut_3_lut
+Route         9   e 1.574                                  \bcd_min_warning/hundres_1__N_305[1]
+LUT4        ---     0.493              C to Z              \bcd_min_warning/i3307_3_lut_rep_631
+Route         2   e 1.141                                  \bcd_min_warning/n38536
+LUT4        ---     0.493              B to Z              \bcd_min_warning/i4207_2_lut_rep_587_3_lut
+Route         3   e 1.258                                  \bcd_min_warning/n38492
+LUT4        ---     0.493              D to Z              \bcd_min_warning/i3461_3_lut_rep_576_4_lut
+Route         1   e 0.941                                  \bcd_min_warning/n38481
+LUT4        ---     0.493              D to Z              \bcd_min_warning/i4202_3_lut_4_lut
+Route         4   e 1.340                                  \bcd_min_warning/hundres_1__N_307[1]
+LUT4        ---     0.493              C to Z              \bcd_min_warning/i4055_3_lut_4_lut_3_lut_4_lut
+Route         2   e 1.141                                  hundres_0__N_316[3]_adj_1861
+LUT4        ---     0.493              A to Z              \oled1/hundres_0__N_316[3]_bdd_4_lut_28313
+Route         1   e 0.020                                  \oled1/n37667
+MUXL5       ---     0.233           ALUT to Z              \oled1/i28314
+Route         1   e 0.941                                  \oled1/n37669
+LUT4        ---     0.493              B to Z              \oled1/mux_3386_i1_4_lut
+Route         6   e 1.457                                  \oled1/n9943
+LUT4        ---     0.493              A to Z              \oled1/i12397_3_lut
+Route         1   e 0.941                                  \oled1/n21105
+LUT4        ---     0.493              B to Z              \oled1/i4139_4_lut
+Route         1   e 0.020                                  n11652
+MUXL5       ---     0.233           ALUT to Z              mux_3160_i4
+Route         1   e 0.020                                  n9269
+MUXL5       ---     0.233             D1 to Z              \oled1/mux_2475_i4
+Route         1   e 0.941                                  \oled1/n9393
+LUT4        ---     0.493              C to Z              \oled1/mux_2488_i4_3_lut_4_lut
+Route         1   e 0.941                                  \oled1/char_167__N_1072[3]
+                  --------
+                   20.874  (31.5% logic, 68.5% route), 15 logic levels.
+
+
+Error:  The following path violates requirements by 16.034ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             min_warning__i6  (from sys_clk_c +)
+   Destination:    FD1P3IX    D              \oled1/char_i0_i3  (to sys_clk_c +)
+
+   Delay:                  20.874ns  (31.5% logic, 68.5% route), 15 logic levels.
+
+ Constraint Details:
+
+     20.874ns data_path min_warning__i6 to \oled1/char_i0_i3 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 16.034ns
+
+ Path Details: min_warning__i6 to \oled1/char_i0_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              min_warning__i6 (from sys_clk_c)
+Route         9   e 1.632                                  min_warning[6]
+LUT4        ---     0.493              B to Z              \bcd_min_warning/i3656_3_lut_4_lut_3_lut
+Route         9   e 1.574                                  \bcd_min_warning/hundres_1__N_305[1]
+LUT4        ---     0.493              C to Z              \bcd_min_warning/i3307_3_lut_rep_631
+Route         2   e 1.141                                  \bcd_min_warning/n38536
+LUT4        ---     0.493              B to Z              \bcd_min_warning/i4207_2_lut_rep_587_3_lut
+Route         3   e 1.258                                  \bcd_min_warning/n38492
+LUT4        ---     0.493              D to Z              \bcd_min_warning/i3461_3_lut_rep_576_4_lut
+Route         1   e 0.941                                  \bcd_min_warning/n38481
+LUT4        ---     0.493              D to Z              \bcd_min_warning/i4202_3_lut_4_lut
+Route         4   e 1.340                                  \bcd_min_warning/hundres_1__N_307[1]
+LUT4        ---     0.493              C to Z              \bcd_min_warning/i4055_3_lut_4_lut_3_lut_4_lut
+Route         2   e 1.141                                  hundres_0__N_316[3]_adj_1861
+LUT4        ---     0.493              A to Z              \oled1/hundres_0__N_316[3]_bdd_4_lut_28313
+Route         1   e 0.020                                  \oled1/n37667
+MUXL5       ---     0.233           ALUT to Z              \oled1/i28314
+Route         1   e 0.941                                  \oled1/n37669
+LUT4        ---     0.493              B to Z              \oled1/mux_3386_i1_4_lut
+Route         6   e 1.457                                  \oled1/n9943
+LUT4        ---     0.493              A to Z              \oled1/i12397_3_lut
+Route         1   e 0.941                                  \oled1/n21105
+LUT4        ---     0.493              B to Z              \oled1/i4139_4_lut
+Route         1   e 0.020                                  n11652
+MUXL5       ---     0.233           ALUT to Z              mux_3160_i4
+Route         1   e 0.020                                  n9269
+MUXL5       ---     0.233             D1 to Z              \oled1/mux_2475_i4
+Route         1   e 0.941                                  \oled1/n9393
+LUT4        ---     0.493              C to Z              \oled1/mux_2488_i4_3_lut_4_lut
+Route         1   e 0.941                                  \oled1/char_167__N_1072[3]
+                  --------
+                   20.874  (31.5% logic, 68.5% route), 15 logic levels.
+
+Warning: 21.064 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets \oled1/clk_in_1Hz]       |     5.000 ns|     3.436 ns|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets \u_DS18B20Z/clk_1mhz]    |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_1s]                  |     5.000 ns|     9.685 ns|     9 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets sys_clk_c]               |     5.000 ns|    21.064 ns|    15 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\oled1/char_167__N_1072[2]              |       1|    1242|     26.45%
+                                        |        |        |
+\oled1/char_167__N_1072[3]              |       1|    1186|     25.26%
+                                        |        |        |
+hundres_0__N_321_adj_1858               |       1|    1040|     22.15%
+                                        |        |        |
+n9917                                   |       6|    1040|     22.15%
+                                        |        |        |
+\oled1/n9479                            |       1|     853|     18.16%
+                                        |        |        |
+\oled1/n9478                            |       1|     834|     17.76%
+                                        |        |        |
+hundres_0__N_316[3]_adj_1857            |       4|     795|     16.93%
+                                        |        |        |
+\oled1/n9401                            |       1|     781|     16.63%
+                                        |        |        |
+\bcd_hour_warning/n38423                |       1|     768|     16.35%
+                                        |        |        |
+\bcd_min_warning/hundres_1__N_307[1]    |       4|     750|     15.97%
+                                        |        |        |
+hour_warning[7]                         |      11|     750|     15.97%
+                                        |        |        |
+\oled1/char_167__N_1072[1]              |       1|     709|     15.10%
+                                        |        |        |
+\oled1/n36726                           |       1|     699|     14.89%
+                                        |        |        |
+hundres_0__N_316[3]_adj_1861            |       2|     697|     14.84%
+                                        |        |        |
+\oled1/n9943                            |       6|     653|     13.91%
+                                        |        |        |
+\oled1/n37667                           |       1|     653|     13.91%
+                                        |        |        |
+\oled1/n37669                           |       1|     653|     13.91%
+                                        |        |        |
+\oled1/n9265                            |       1|     647|     13.78%
+                                        |        |        |
+\oled1/n9278                            |       1|     647|     13.78%
+                                        |        |        |
+\bcd_hour_warning/hundres_1__N_305[1]   |       6|     638|     13.59%
+                                        |        |        |
+\bcd_hour_warning/n38564                |       6|     638|     13.59%
+                                        |        |        |
+\bcd_hour_warning/hundres_1__N_305[2]   |       6|     636|     13.54%
+                                        |        |        |
+\bcd_min_warning/n38481                 |       1|     629|     13.39%
+                                        |        |        |
+\bcd_hour_warning/hundres_1__N_306[2]   |       4|     622|     13.25%
+                                        |        |        |
+\bcd_hour_warning/n38498                |       4|     622|     13.25%
+                                        |        |        |
+\bcd_hour_warning/hundres_1__N_306[1]   |       4|     620|     13.20%
+                                        |        |        |
+\bcd_min_warning/n38536                 |       2|     598|     12.73%
+                                        |        |        |
+hour_warning[5]                         |       9|     598|     12.73%
+                                        |        |        |
+\oled1/n34                              |       1|     596|     12.69%
+                                        |        |        |
+hour_warning[6]                         |       9|     564|     12.01%
+                                        |        |        |
+\bcd_min_warning/hundres_1__N_305[1]    |       9|     531|     11.31%
+                                        |        |        |
+\bcd_min_warning/n38492                 |       3|     504|     10.73%
+                                        |        |        |
+n21135                                  |       1|     488|     10.39%
+                                        |        |        |
+\bcd_hour_warning/hundres_1__N_307[1]   |       4|     481|     10.24%
+                                        |        |        |
+\bcd_hour_warning/hundres_1__N_307[2]   |       4|     481|     10.24%
+                                        |        |        |
+\bcd_hour_warning/n38464                |       4|     479|     10.20%
+                                        |        |        |
+\bcd_min_warning/hundres_1__N_307[2]    |       4|     477|     10.16%
+                                        |        |        |
+\oled1/n36725                           |       1|     477|     10.16%
+                                        |        |        |
+n9120                                   |       1|     477|     10.16%
+                                        |        |        |
+min_warning[7]                          |      10|     475|     10.11%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 4696  Score: 47490507
+
+Constraints cover  35378 paths, 2572 nets, and 7403 connections (92.2% coverage)
+
+
+Peak memory: 117837824 bytes, TRCE: 4993024 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

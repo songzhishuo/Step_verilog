@@ -1,7 +1,7 @@
 module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res, key1, key2, key3, oled_cs, oled_dc, oled_sck, oled_mosi, led);
 	
-	input sys_clk;						//系统时钟
-	input sys_rst_n;					//系统复位
+	input sys_clk;							//系统时钟
+	input sys_rst_n;						//系统复位
 	input key1;							//功能+
 	input key2;							//功能-
 	input key3;							//模式切换
@@ -9,23 +9,23 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	output reg led;
 	input sw1;							//走时和报警设置切换
 	input sw2;							//音频暂停开关
-	input           uart_rxd;           //UART接收端口
+	input           uart_rxd;           				//UART接收端口
 	
-	output oled_res;					//OLED复位IO
-	output oled_cs;						//OLED片选IO
-	output oled_dc;						//OLED
+	output oled_res;						//OLED复位IO
+	output oled_cs;							//OLED片选IO
+	output oled_dc;							//OLED
 	output oled_sck;
 	output oled_mosi;
 
-	output          beep;        		//蜂鸣器接口
-	output  uart_txd;            		//UART发送端口
+	output          beep;        					//蜂鸣器接口
+	output  uart_txd;            					//UART发送端口
 
 	
-	inout	one_wire;					//单总线信号线
+	inout	one_wire;						//单总线信号线
 	
-	reg [7 : 0] sec;					//时钟秒
-	reg [7 : 0] min;					//时钟分
-	reg [7 : 0] hour;					//时钟小时
+	reg [7 : 0] sec;						//时钟秒
+	reg [7 : 0] min;						//时钟分
+	reg [7 : 0] hour;						//时钟小时
 	
 	wire clk_1s;			
 
@@ -82,11 +82,11 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 				hour_t <= 8'd0;
 				min_t <= 8'd0;
 				sec_t <= 8'd0;
-				min_warning <= 8'd1;
+				min_warning <= 8'd5;
 				hour_warning <= 8'd0;
-				min_waning_t <= 8'd1;
+				min_waning_t <= 8'd5;
 				hour_waning_t <= 8'd0;
-				TEM_high <= 8'd33;
+	
 			end else begin
 				if (key1_pulse) begin
 						if(sw1 == 0)//判断SW1处于走时/报警设定
@@ -172,7 +172,7 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 								end
 							endcase
 						end else 
-							if (!key_mode) begin
+							if (!key_mode) begin		//重新赋值
 								sec_t <= sec;
 								min_t <= min;
 								hour_t <= hour;
@@ -185,17 +185,14 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	always @(posedge clk_1s or negedge sys_rst_n) begin//报警检测
 		if (!sys_rst_n) begin
 			warning_time <= 8'd0;
-			led <= 1'b1;
 			warning <= 1'b0;
 		end else begin
 			if((min_waning_t == min) && (hour_waning_t == hour)) begin//报警时刻
 				if(warning_time <= 9) begin//本地音乐播放的时间
 					warning <= 1'b1;
-					led = ~led;
 					warning_time <= warning_time + 8'd1;
 				end else begin
 					warning <= 1'b0;
-					led <= 1'b1;
 				end
 			end else begin
 				warning_time <= 8'd0;
@@ -230,7 +227,7 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	end
 	
 	
-	wire [3 : 0] sec_tens;
+	wire [3 : 0] sec_tens;				//BCD转换之后的个位和十位
 	wire [3 : 0] sec_ones;
 	
 	wire [3 : 0] min_tens;
@@ -310,13 +307,13 @@ DS18B20Z  u_DS18B20Z(
 	.data_out			(ds18b20_data)
 );
 reg	[7:0]	Temp_H;
-reg	[7:0]	TEM_high;
+reg	[7:0]	TEM_LIMIT;		//温度报警阈值	
+
 always@(posedge sys_clk or negedge sys_rst_n) begin
-	if (1)	begin
 		if (!sys_rst_n) begin				//系统复位
 			uart_en <= 1'b0;		
 			Temp_H <= 8'b0;
-
+			TEM_LIMIT <= 8'd35;				//报警阈值设置
 		end
 		else begin					
 			if(clk_1s == 1'b1) begin	//1S时间到
@@ -325,19 +322,25 @@ always@(posedge sys_clk or negedge sys_rst_n) begin
 				Temp_H[3:0] <= ds18b20_data[7:4];
 				
 				//Temp_H <= ((Temp_H<<4) &8'h70 | (Temp_L >>4) & 8'h0f);
-				if(Temp_H >= TEM_high) begin
-					uart_en  <= 1'b1;                               //拉高发送使能信号这里需要的是边沿触发	
-					uart_send_data <= 8'hff;	
+				if(Temp_H >= TEM_LIMIT) begin//判断温度，是否报警，是否发送串口数据
+					
+					if(warning_TEM == 1) begin
+						uart_en  <= 1'b1;                              
+						uart_send_data <= 8'hff;	
+					end
+					
 				end
-				else if(warning_time) begin
-					uart_en  <= 1'b1;                               //拉高发送使能信号这里需要的是边沿触发	
-					uart_send_data <= Temp_H;
+				else begin
+					if(warning_time) begin//如果时间已经报警，发送温度
+						uart_en  <= 1'b1;                               
+						uart_send_data <= Temp_H;
+					end
+
 				end
 			end
 			else	
 					uart_en  <= 1'b0;
 		end
-	end
 end
 
 reg		uart_en;
@@ -353,8 +356,7 @@ uart_send u_uart_send(
     .uart_tx_busy	(uart_tx_busy),             //发送忙状态标志      
     .uart_txd		(uart_txd)                  //UART发送端口
 );
-// Temp_H[6:4] <= ds18b20_data[10:8];
-// Temp_H[3:0] <= ds18b20_data[7:4];
+
 	
 	//时间显示模块
 
@@ -377,6 +379,7 @@ uart_send u_uart_send(
 		.T_high(Tem_high),
 		.T_lower(Tem_lower),
 		.warning_TEM(warning_TEM),
+
 		
 		.time_set(time_set),
 		.warningtime_min_lower(min_warning_ones),

@@ -88,7 +88,8 @@ module OLED12832
 					end
 				MAIN:begin
 						if(cnt_main >= 5'd16) cnt_main <= 5'd7;
-						else if(warning_TEM) cnt_main <= cnt_main + 1'b1;
+						else if(warning_TEM ) cnt_main <= cnt_main + 1'b1;
+						if(warning_TEM == 1)
 						case(cnt_main)	//MAIN״̬
 							5'd0:	begin state <= INIT; end
 							5'd1:	begin y_p <= 8'hb0; x_ph <= 8'h10; x_pl <= 8'h00; num <= 8'd128; char <= "                                                                                                                                ";state <= SCAN;end
@@ -191,7 +192,8 @@ module OLED12832
 						if(cnt_delay >= num_delay) begin
 							cnt_delay <= 16'd0; state <= state_back; 
 						end else cnt_delay <= cnt_delay + 1'b1;
-					end				
+					end
+				
 				default:state <= IDLE;
 			endcase
 		end

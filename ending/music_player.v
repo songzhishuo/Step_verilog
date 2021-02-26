@@ -7,14 +7,14 @@
 ***/
  
 module  music_play(
-    input               sys_clk,            //外部50M时钟
-    input               sys_rst_n,          //外部复位信号，低有效
+    input               sys_clk,            	//外部50M时钟
+    input               sys_rst_n,          	//外部复位信号，低有效
 
-    input               clk_1ms,            //1ms时钟输入
+    input               clk_1ms,            	//1ms时钟输入
 	input 			    music_stop,
 
     input               uart_done,     		//串口接收数据标志
-    input   [7:0]       uart_recv_data,     //串口数据
+    input   [7:0]       uart_recv_data,     	//串口数据
     
     output  reg  	   uart_data_busy,     	//串口收到数据拉低 ,接收完成 拉高
     output  reg [6:0]  led_debug,			//数据调试接口
@@ -27,12 +27,12 @@ localparam			RUN		=	3'd1;
 localparam			DELAY	=	3'd2;
 
 
-localparam [15:0]	NUM_DELAY = 16'd1_000;		//1s   
+localparam [15:0]	NUM_DELAY = 16'd1_000;	//1s   
 
 reg	[8:0]	note	[100:0];		//音调
-reg	[7:0]	cnt_run;	//运行状态跳转
+reg	[7:0]	cnt_run;			//运行状态跳转
 
-reg         music_en;                //音频模块使能
+reg         music_en;                		//音频模块使能
 reg         music_busy;  
 
 reg [4:0]	state;
@@ -43,7 +43,7 @@ reg [15:0]	music_delay;
 
 reg	[8:0]	music_cnt;			//音乐播放计数器()
 
-reg [15:0]  clk_cnt;            //delay时钟计数器
+reg [15:0]  clk_cnt;            		//delay时钟计数器
 
 wire recv_done_flag;
 reg recv_done_d0;
@@ -96,12 +96,12 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         //if(uart_recv_data == 8'd22)				//播放完成
 
     end
-	else begin                                      //正常播放
+	else begin                                      	//正常播放
 		if (music_stop == 1'b0)  begin
-            if(uart_music_mode == 1'b0) begin   //本地播放模式        
+            if(uart_music_mode == 1'b0) begin   		//本地播放模式        
                 music_tone <= 8'd22;
             end
-            else begin                          //串口播放模式
+            else begin                          		//串口播放模式
                 
             end
 		end

@@ -4,10 +4,10 @@
         <Message>
             <ID>1100679</ID>
             <Severity>Warning</Severity>
-            <Dynamic>C:/Users/Argon/Desktop/Verilog/ending/top.lpf(21): Semantic error in &quot;LOCATE COMP &quot;sw4&quot; SITE &quot;M10&quot; ;&quot;: </Dynamic>
+            <Dynamic>C:/Users/Argon/Desktop/Verilog/ending/top.lpf(20): Semantic error in &quot;LOCATE COMP &quot;sw4&quot; SITE &quot;M10&quot; ;&quot;: </Dynamic>
             <Dynamic>sw4</Dynamic>
             <Navigation>C:/Users/Argon/Desktop/Verilog/ending/top.lpf</Navigation>
-            <Navigation>21</Navigation>
+            <Navigation>20</Navigation>
         </Message>
         <Message>
             <ID>1104062</ID>
@@ -29,34 +29,58 @@
         <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(343): </Dynamic>
-            <Dynamic>uart_en</Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(89): </Dynamic>
+            <Dynamic>TEM_high</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
-            <Navigation>343</Navigation>
+            <Navigation>89</Navigation>
         </Message>
         <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(355): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(317): </Dynamic>
             <Dynamic>uart_en</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
-            <Navigation>355</Navigation>
+            <Navigation>317</Navigation>
         </Message>
         <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(356): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(329): </Dynamic>
+            <Dynamic>uart_en</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
+            <Navigation>329</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(330): </Dynamic>
             <Dynamic>uart_send_data</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
-            <Navigation>356</Navigation>
+            <Navigation>330</Navigation>
         </Message>
         <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(359): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(333): </Dynamic>
             <Dynamic>uart_en</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
-            <Navigation>359</Navigation>
+            <Navigation>333</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(334): </Dynamic>
+            <Dynamic>uart_send_data</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
+            <Navigation>334</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(338): </Dynamic>
+            <Dynamic>uart_en</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
+            <Navigation>338</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -93,20 +117,20 @@
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/bcd.v(24): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/bcd.v(21): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>4</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/bcd.v</Navigation>
-            <Navigation>24</Navigation>
+            <Navigation>21</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/bcd.v(22): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/bcd.v(19): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>4</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/bcd.v</Navigation>
-            <Navigation>22</Navigation>
+            <Navigation>19</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -133,10 +157,46 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/oled.v(94): </Dynamic>
+            <Dynamic>1022</Dynamic>
+            <Dynamic>168</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/oled.v</Navigation>
+            <Navigation>94</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/oled.v(95): </Dynamic>
+            <Dynamic>1022</Dynamic>
+            <Dynamic>168</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/oled.v</Navigation>
+            <Navigation>95</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/oled.v(96): </Dynamic>
+            <Dynamic>1022</Dynamic>
+            <Dynamic>168</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/oled.v</Navigation>
+            <Navigation>96</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/oled.v(97): </Dynamic>
+            <Dynamic>1022</Dynamic>
+            <Dynamic>168</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/oled.v</Navigation>
+            <Navigation>97</Navigation>
+        </Message>
+        <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
             <Dynamic>c:/users/argon/desktop/verilog/ending/uart_recv.v(23): </Dynamic>
-            <Dynamic>uart_recv(CLK_FREQ=12000000,UART_BPS=115200)</Dynamic>
+            <Dynamic>uart_recv(CLK_FREQ=12000000)</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/uart_recv.v</Navigation>
             <Navigation>23</Navigation>
         </Message>
@@ -151,12 +211,12 @@
         <Message>
             <ID>35901330</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(473): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(423): </Dynamic>
             <Dynamic>8</Dynamic>
             <Dynamic>5</Dynamic>
             <Dynamic>tone</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
-            <Navigation>473</Navigation>
+            <Navigation>423</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -169,18 +229,18 @@
         <Message>
             <ID>35931002</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(480): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(430): </Dynamic>
             <Dynamic>clk</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
-            <Navigation>480</Navigation>
+            <Navigation>430</Navigation>
         </Message>
         <Message>
             <ID>35931002</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(481): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(431): </Dynamic>
             <Dynamic>rst_n</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
-            <Navigation>481</Navigation>
+            <Navigation>431</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
@@ -218,17 +278,17 @@
             <ID>35931002</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/argon/desktop/verilog/ending/oled.v(41): </Dynamic>
-            <Dynamic>\i393/mem_16_0</Dynamic>
+            <Dynamic>\i382/mem_16_0</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/oled.v</Navigation>
             <Navigation>41</Navigation>
         </Message>
         <Message>
             <ID>35931002</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(35): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(32): </Dynamic>
             <Dynamic>\i601/note_96_0</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/music_player.v</Navigation>
-            <Navigation>35</Navigation>
+            <Navigation>32</Navigation>
         </Message>
         <Message>
             <ID>35001747</ID>
@@ -425,18 +485,18 @@
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(35): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(32): </Dynamic>
             <Dynamic>\m_music_play/\i601/note_0_0</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/music_player.v</Navigation>
-            <Navigation>35</Navigation>
+            <Navigation>32</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(35): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(32): </Dynamic>
             <Dynamic>\m_music_play/\i601/note_0_1</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/music_player.v</Navigation>
-            <Navigation>35</Navigation>
+            <Navigation>32</Navigation>
         </Message>
         <Message>
             <ID>35001774</ID>
@@ -451,50 +511,58 @@
             <Dynamic>one-hot</Dynamic>
         </Message>
         <Message>
-            <ID>35935013</ID>
+            <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/oled.v(192): </Dynamic>
-            <Dynamic>\oled1/x_pl_i0_i0</Dynamic>
-            <Navigation>c:/users/argon/desktop/verilog/ending/oled.v</Navigation>
-            <Navigation>192</Navigation>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(182): </Dynamic>
+            <Dynamic>TEM_high_i0</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
+            <Navigation>182</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(364): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(339): </Dynamic>
             <Dynamic>Temp_H_i7</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
-            <Navigation>364</Navigation>
-        </Message>
-        <Message>
-            <ID>35935014</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/ds18b20.v(263): </Dynamic>
-            <Dynamic>\u_DS18B20Z/data_wr_i0_i2</Dynamic>
-            <Navigation>c:/users/argon/desktop/verilog/ending/ds18b20.v</Navigation>
-            <Navigation>263</Navigation>
+            <Navigation>339</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(324): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/top.v(182): </Dynamic>
+            <Dynamic>TEM_high_i7</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/top.v</Navigation>
+            <Navigation>182</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(321): </Dynamic>
             <Dynamic>\m_music_play/music_delay_i0_i0</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/music_player.v</Navigation>
-            <Navigation>324</Navigation>
+            <Navigation>321</Navigation>
         </Message>
         <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(324): </Dynamic>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/music_player.v(321): </Dynamic>
             <Dynamic>\m_music_play/music_delay_i0_i7</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/music_player.v</Navigation>
-            <Navigation>324</Navigation>
+            <Navigation>321</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/argon/desktop/verilog/ending/ds18b20.v(263): </Dynamic>
             <Dynamic>\u_DS18B20Z/data_wr_i0_i0</Dynamic>
+            <Navigation>c:/users/argon/desktop/verilog/ending/ds18b20.v</Navigation>
+            <Navigation>263</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/argon/desktop/verilog/ending/ds18b20.v(263): </Dynamic>
+            <Dynamic>\u_DS18B20Z/data_wr_i0_i2</Dynamic>
             <Navigation>c:/users/argon/desktop/verilog/ending/ds18b20.v</Navigation>
             <Navigation>263</Navigation>
         </Message>

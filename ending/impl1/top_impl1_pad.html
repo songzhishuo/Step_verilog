@@ -14,16 +14,16 @@ Performance Grade:      4
 PACKAGE:          CSBGA132
 Package Status:                     Final          Version 1.44
 
-Tue Feb 23 21:59:35 2021
+Wed Feb 24 22:41:10 2021
 
 Pinout by Port Name:
 +-----------+----------+---------------+-------+-----------+-----------+----------------------------------------------------------+
 | Port Name | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                               |
 +-----------+----------+---------------+-------+-----------+-----------+----------------------------------------------------------+
 | beep      | P8/2     | LVCMOS25_OUT  | PB21A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| key1      | L14/1    | LVCMOS25_IN   | PR16A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| key1      | M14/1    | LVCMOS25_IN   | PR18B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
 | key2      | M13/1    | LVCMOS25_IN   | PR16B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
-| key3      | M14/1    | LVCMOS25_IN   | PR18B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| key3      | L14/1    | LVCMOS25_IN   | PR16A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
 | led       | P9/2     | LVCMOS25_OUT  | PB23A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
 | oled_cs   | F14/1    | LVCMOS25_OUT  | PR8B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
 | oled_dc   | F13/1    | LVCMOS25_OUT  | PR8A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
@@ -129,7 +129,7 @@ Vccio by Bank:
 | K13/1    |     unused, PULL:DOWN |            |               | PR15A | DQ1            |           |           |
 | K14/1    |     unused, PULL:DOWN |            |               | PR15B | DQ1            |           |           |
 | L3/3     |     unused, PULL:DOWN |            |               | PL19B |                |           |           |
-| L14/1    | key1                  | LOCATED    | LVCMOS25_IN   | PR16A | DQ1            |           |           |
+| L14/1    | key3                  | LOCATED    | LVCMOS25_IN   | PR16A | DQ1            |           |           |
 | M1/3     |     unused, PULL:DOWN |            |               | PL20A |                |           |           |
 | M2/3     |     unused, PULL:DOWN |            |               | PL20B |                |           |           |
 | M3/2     |     unused, PULL:DOWN |            |               | PB4B  |                |           |           |
@@ -142,7 +142,7 @@ Vccio by Bank:
 | M11/2    |     unused, PULL:DOWN |            |               | PB29A |                |           |           |
 | M12/1    |     unused, PULL:DOWN |            |               | PR18A | DQ1            |           |           |
 | M13/1    | key2                  | LOCATED    | LVCMOS25_IN   | PR16B | DQ1            |           |           |
-| M14/1    | key3                  | LOCATED    | LVCMOS25_IN   | PR18B | DQ1            |           |           |
+| M14/1    | key1                  | LOCATED    | LVCMOS25_IN   | PR18B | DQ1            |           |           |
 | N2/2     |     unused, PULL:DOWN |            |               | PB3B  |                |           |           |
 | N3/2     |     unused, PULL:DOWN |            |               | PB7A  |                |           |           |
 | N4/2     |     unused, PULL:DOWN |            |               | PB9B  | SO/SPISO       |           |           |
@@ -359,9 +359,9 @@ List of All Pins' Locate Preferences Based on Final Placement After PAR
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
 LOCATE  COMP  "beep"  SITE  "P8";
-LOCATE  COMP  "key1"  SITE  "L14";
+LOCATE  COMP  "key1"  SITE  "M14";
 LOCATE  COMP  "key2"  SITE  "M13";
-LOCATE  COMP  "key3"  SITE  "M14";
+LOCATE  COMP  "key3"  SITE  "L14";
 LOCATE  COMP  "led"  SITE  "P9";
 LOCATE  COMP  "oled_cs"  SITE  "F14";
 LOCATE  COMP  "oled_dc"  SITE  "F13";
@@ -386,7 +386,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Feb 23 21:59:35 2021
+Wed Feb 24 22:41:10 2021
 
 
 

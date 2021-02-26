@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Users/Argon/Desktop/Verilog/ending/impl1/top_impl1.jed</File>
-			<FileTime>02/23/21 22:00:06</FileTime>
-			<JedecChecksum>0xE824</JedecChecksum>
+			<FileTime>02/24/21 22:41:36</FileTime>
+			<JedecChecksum>0xAFA2</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

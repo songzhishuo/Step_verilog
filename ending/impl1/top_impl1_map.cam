@@ -1,11 +1,11 @@
 [ START MERGED ]
-n13515 u_DS18B20Z/one_wire_N_632
 n11735 warning_time_7__N_144
+n13515 u_DS18B20Z/one_wire_N_632
 m_music_play/n38730 m_music_play/cnt_run_1
 u_uart_recv/n38690 u_uart_recv/rx_flag
 u_uart_recv/n22347 u_uart_recv/uart_data_7__N_1456
-oled1/rst_n_in_N_1482 sys_rst_n_c
 u_uart_send/n22353 u_uart_send/uart_tx_busy
+oled1/rst_n_in_N_1482 sys_rst_n_c
 [ END MERGED ]
 [ START CLIPPED ]
 GND_net
@@ -241,7 +241,7 @@ add_15_9/CO
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Tue Feb 23 21:58:57 2021
+# map:  version Diamond (64-bit) 3.8.0.115.3 -- WARNING: Map write only section -- Wed Feb 24 22:40:44 2021
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF ;
 LOCATE COMP "sys_rst_n" SITE "N14" ;
@@ -255,9 +255,9 @@ LOCATE COMP "oled_res" SITE "G12" ;
 LOCATE COMP "uart_txd" SITE "B8" ;
 LOCATE COMP "beep" SITE "P8" ;
 LOCATE COMP "one_wire" SITE "N7" ;
-LOCATE COMP "key3" SITE "M14" ;
+LOCATE COMP "key3" SITE "L14" ;
 LOCATE COMP "key2" SITE "M13" ;
-LOCATE COMP "key1" SITE "L14" ;
+LOCATE COMP "key1" SITE "M14" ;
 LOCATE COMP "uart_rxd" SITE "C8" ;
 LOCATE COMP "sw2" SITE "M8" ;
 LOCATE COMP "sw1" SITE "M7" ;

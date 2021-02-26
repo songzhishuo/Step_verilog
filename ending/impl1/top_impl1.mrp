@@ -14,7 +14,7 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-4000HCCSBGA132
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.8.0.115.3
-Mapped on:  02/23/21  21:58:55
+Mapped on:  02/24/21  22:40:42
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ Design Summary (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Design Summary (cont)
 ---------------------
@@ -198,7 +198,7 @@ Design Summary (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Design Summary (cont)
 ---------------------
@@ -238,7 +238,7 @@ Design Summary (cont)
 Design Errors/Warnings
 ----------------------
 
-WARNING - map: C:/Users/Argon/Desktop/Verilog/ending/top.lpf(21): Semantic error
+WARNING - map: C:/Users/Argon/Desktop/Verilog/ending/top.lpf(20): Semantic error
      in "LOCATE COMP "sw4" SITE "M10" ;": COMP "sw4" cannot be found in design.
      This preference has been disabled.
 WARNING - map: Preference parsing results:  1 semantic error detected.
@@ -264,7 +264,7 @@ IO (PIO) Attributes
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -330,7 +330,7 @@ Signal key_3/cnt_2898_add_4_1/CI undriven or does not drive anything - clipped.
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Removed logic (cont)
 --------------------
@@ -396,7 +396,7 @@ Signal oled1/divide_1Hz/add_24705_20/S0 undriven or does not drive anything -
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Removed logic (cont)
 --------------------
@@ -462,7 +462,7 @@ Signal u_DS18B20Z/sub_2282_add_2_1/S1 undriven or does not drive anything -
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Removed logic (cont)
 --------------------
@@ -528,7 +528,7 @@ Signal devide_1s/cnt_p_2895_add_4_33/S1 undriven or does not drive anything -
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Removed logic (cont)
 --------------------
@@ -594,7 +594,7 @@ Signal m_music_play/sub_2284_add_2_14/S0 undriven or does not drive anything -
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Removed logic (cont)
 --------------------
@@ -660,7 +660,7 @@ Signal equal_2886_16/S0 undriven or does not drive anything - clipped.
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 Removed logic (cont)
 --------------------
@@ -726,7 +726,7 @@ Memory Usage
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage
 ---------
@@ -792,7 +792,7 @@ GSR Component:
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage (cont)
 ----------------
@@ -858,7 +858,7 @@ GSR Usage (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage (cont)
 ----------------
@@ -924,7 +924,7 @@ GSR Usage (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage (cont)
 ----------------
@@ -990,7 +990,7 @@ GSR Usage (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage (cont)
 ----------------
@@ -1056,7 +1056,7 @@ GSR Usage (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage (cont)
 ----------------
@@ -1122,7 +1122,7 @@ GSR Usage (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage (cont)
 ----------------
@@ -1188,7 +1188,7 @@ GSR Usage (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage (cont)
 ----------------
@@ -1254,7 +1254,7 @@ GSR Usage (cont)
 
 
 
-Design:  top                                           Date:  02/23/21  21:58:55
+Design:  top                                           Date:  02/24/21  22:40:42
 
 GSR Usage (cont)
 ----------------

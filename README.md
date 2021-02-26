@@ -15,4 +15,9 @@
 | 5.DS18B20   | DS18B20 串口输出 |
 | 6.SPI       | SPI OLED的使用   |
 | 7.clock_div | 分频器的使用     |
+| ending | 完整功能程序 |
+
+详细的文档说明请参考：
+
+https://github.com/songzhishuo/Step_verilog/blob/master/%E6%96%87%E6%A1%A3%E8%BE%93%E5%87%BA/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3.md
 
